@@ -84,12 +84,13 @@ include_directories(${HEADER_PATHS})
 
 # target ei (libei)
 
-#set(LIB_EI_SOURCES
-#     ${SRC}/un_fichier_source.c
-#     ${SRC}/un_autre_fichier_source.c
-#)
-#
-#add_library(ei STATIC			${LIB_EI_SOURCES})
+set(LIB_EI_SOURCES
+     ${SRC}/ei_application.c
+		${SRC}/ei_geometrymanager.c
+		${SRC}/ei_widget.c
+        src/ei_draw.c src/ei_event.c src/ei_parser.c src/ei_types.cpp src/ei_utils.c src/ei_widgetclass.c src/ei_interface.c)
+
+add_library(ei STATIC			${LIB_EI_SOURCES})
 
 # target minimal
 
@@ -103,7 +104,7 @@ target_link_libraries(frame		ei ${PLATFORM_LIB_FLAGS})
 
 # target button
 
-add_executable(button			${TESTS_SRC}/button.c)
+add_executable(button			${TESTS_SRC}/button.c )
 target_link_libraries(button		ei ${PLATFORM_LIB_FLAGS})
 
 # target hello_world
