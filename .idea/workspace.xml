@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9fc4179-ea8b-4ef0-9583-19c243a8c495" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_widgetclass.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_widgetclass.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28ewV3hbUvMUiWY09ZzoQOHeeH5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +53,8 @@
       <workItem from="1651592944428" duration="4000" />
       <workItem from="1651593249420" duration="73000" />
       <workItem from="1651675710190" duration="581000" />
-      <workItem from="1651676306182" duration="1856000" />
+      <workItem from="1651676306182" duration="2580000" />
+      <workItem from="1651679012718" duration="337000" />
     </task>
     <servers />
   </component>
