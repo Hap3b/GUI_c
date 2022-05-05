@@ -9,7 +9,6 @@
     <list default="true" id="d9fc4179-ea8b-4ef0-9583-19c243a8c495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_widget.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_widget.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_widgetclass.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_widgetclass.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
       <workItem from="1651676306182" duration="2580000" />
       <workItem from="1651679012718" duration="2408000" />
       <workItem from="1651691445744" duration="227000" />
-      <workItem from="1651762011184" duration="1810000" />
+      <workItem from="1651762011184" duration="2336000" />
     </task>
     <servers />
   </component>

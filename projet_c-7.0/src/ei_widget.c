@@ -22,6 +22,8 @@ typedef struct ei_frame_t {
 
 };
 
+ei_widgetclass_t classe_frame;
+
 void			ei_frame_configure		(ei_widget_t*		widget,
                                            ei_size_t*		requested_size,
                                            const ei_color_t*	color,
@@ -64,3 +66,7 @@ void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame)
     free(frame.img_rect);
     free(frame.img_anchor);
 }
+
+classe_frame.name = "frame";
+classe_frame.allocfunc = ei_frame_allocfunc_t;
+classe_frame.releasefunc = ei_frame_releasefunc_t;
