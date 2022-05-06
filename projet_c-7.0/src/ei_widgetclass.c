@@ -13,7 +13,7 @@
  * @param	clipper		If not NULL, the drawing is restricted within this rectangle
  *				(expressed in the surface reference frame).
  */
-typedef void	(*ei_widgetclass_drawfunc_t)		(struct ei_widget_t*	widget,
+typedef void	(*frame_drawfunc_t)		(struct ei_widget_t*	widget,
 							 ei_surface_t		surface,
 							 ei_surface_t		pick_surface,
                                                          ei_rect_t*		clipper)
@@ -29,7 +29,7 @@ typedef void	(*ei_widgetclass_drawfunc_t)		(struct ei_widget_t*	widget,
  * @param	widget		A pointer to the widget instance to initialize.
  */
 
-typedef void	(*ei_widgetclass_setdefaultsfunc_t)	(struct ei_widget_t*	widget)
+typedef void	(*frame_setdefaultsfunc_t)	(struct ei_widget_t*	widget)
         {
         widget<-pick_color = {0x77, 0x77, 0x77, 0x255}; /* Couleur de base est un gris opaque*/
         widget<-user_data = NULL;
