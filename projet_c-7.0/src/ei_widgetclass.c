@@ -31,7 +31,9 @@ typedef void	(*frame_drawfunc_t)		(struct ei_widget_t*	widget,
 
 typedef void	(*frame_setdefaultsfunc_t)	(struct ei_widget_t*	widget)
         {
-        widget<-pick_color = {0x77, 0x77, 0x77, 0x255}; /* Couleur de base est un gris opaque*/
+        widget<-pick_color = ei_default_background_color;
+        widget<-wclass = "frame";
+        widget<-pick_id = 0; /* widget racine */
         widget<-user_data = NULL;
         widget<-destructor = NULL;
         widget<-parent = NULL;
