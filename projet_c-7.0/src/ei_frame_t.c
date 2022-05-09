@@ -75,7 +75,7 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol3.next = &pol4;
         pol4.point = final;
         pol4.next = NULL;
-        ei_draw_polygon(surface, &pol1,*widget->pick_color, clipper);/*Si bug ça vient du top left*/
+        ei_draw_polygon(surface, &pol1,*widget->pick_color, clipper);
         ei_draw_polygon(pick_surface, &pol1,trans, clipper);
 }
 
@@ -85,26 +85,25 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
  * @param	widget		A pointer to the widget instance to initialize.
  */
 
-void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	widget)
+void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	frame)
 {
-        struct ei_frame_t frame = &widget;
-        frame.color = &ei_default_background_color;
-        widget->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
-        widget->requested_size.width = 960;
-        frame.relief = ei_relief_none;
-        frame.fonte = ei_default_font;
-        frame.title = NULL;
-        frame.ancre = ei_anc_center;
-        frame.img_anchor = ei_anc_center;
-        frame.img = NULL;
-        frame.img_rect = NULL;
-        widget->user_data = NULL;
-        widget->destructor = NULL;
-        widget->parent = NULL;
-        widget->children_head = NULL;
-        widget->children_tail = NULL;
-        widget->next_sibling = NULL;
-        widget->geom_params = NULL;
+        frame->color = &ei_default_background_color;
+        frame->widget.requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
+        frame->widget.requested_size.width = 960;
+        frame->relief = ei_relief_none;
+        frame->fonte = ei_default_font;
+        frame->title = NULL;
+        frame->ancre = ei_anc_center;
+        frame->img_anchor = ei_anc_center;
+        frame->img = NULL;
+        frame->img_rect = NULL;
+        frame->widget.user_data = NULL;
+        frame->widget.destructor = NULL;
+        frame->widget.parent = NULL;
+        frame->widget.children_head = NULL;
+        frame->widget.children_tail = NULL;
+        frame->widget.next_sibling = NULL;
+        frame->widget.geom_params = NULL;
 }
 
 extern ei_widgetclass_t classe_frame =
