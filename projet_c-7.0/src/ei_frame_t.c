@@ -111,8 +111,8 @@ extern ei_widgetclass_t classe_frame =
                 "frame",
                 &ei_frame_allocfunc_t,
                 &ei_frame_releasefunc_t,
-                NULL,
-                NULL,
+                &ei_frame_drawfunc_t,
+                &ei_frame_setdefaultsfunc_t,
                 NULL,
                 NULL
         };
