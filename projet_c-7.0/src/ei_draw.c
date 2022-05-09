@@ -10,7 +10,7 @@ uint32_t		ei_map_rgba		(ei_surface_t surface, ei_color_t color)
     uint32_t tot = 0;
     tot += color.red << (8 * (*ir));
     tot += color.blue << (8 * (*ib));
-    tot += color.green << (8* (*ir));
+    tot += color.green << (8 * (*ig));
     if (*ia == -1) {
         return tot
     };
