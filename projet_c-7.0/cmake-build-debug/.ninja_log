@@ -1,2 +1,14 @@
 # ninja log v5
+3	1895	1652186711598816966	CMakeFiles/ei.dir/src/ei_draw.c.o	2b09fd7c7c8e3a4
+5	1737	1652186711438805747	CMakeFiles/ei.dir/src/ei_event.c.o	45c95ff292dcb182
 21	2679	1651582096366580579	CMakeFiles/button.dir/tests/button.c.o	4d0403dedd7971be
+6	1737	1652186711438805747	CMakeFiles/ei.dir/src/ei_parser.c.o	801e13915d215922
+2	1881	1652186711586816125	CMakeFiles/ei.dir/src/ei_widget.c.o	8a143d73489bc783
+1	1879	1652186711582815844	CMakeFiles/ei.dir/src/ei_geometrymanager.c.o	2816cc02bd758e3b
+1	1739	1652187661297406726	CMakeFiles/ei.dir/src/ei_types.cpp.o	d7aa66e25afd053f
+1	1742	1652187661301407006	CMakeFiles/ei.dir/src/ei_widgetclass.c.o	530ee0a030963123
+1	1744	1652187661301407006	CMakeFiles/ei.dir/src/ei_interface.c.o	eaba113520cda13c
+1	1744	1652187661301407006	CMakeFiles/ei.dir/src/ei_utils.c.o	d17ecf3ea54e173
+1	1747	1652187661305407287	CMakeFiles/frame.dir/tests/frame.c.o	6895e9ce6cf894a7
+0	43	1652187704740452815	CMakeFiles/ei.dir/src/ei_application.c.o	97dcf7ff6060fde9
+44	279	1652187704976469364	libei.a	d702838393e0edca

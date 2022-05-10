@@ -1,6 +1,4 @@
-//
-// Created by jules on 06/05/22.
-//
+
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
 typedef struct ei_frame_t {
@@ -103,7 +101,6 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	frame)
         frame->widget.children_head = NULL;
         frame->widget.children_tail = NULL;
         frame->widget.next_sibling = NULL;
-        frame->widget.geom_params = NULL;
 }
 
 extern ei_widgetclass_t classe_frame =

@@ -88,7 +88,7 @@ set(LIB_EI_SOURCES
      ${SRC}/ei_application.c
 		${SRC}/ei_geometrymanager.c
 		${SRC}/ei_widget.c
-        src/ei_draw.c src/ei_event.c src/ei_parser.c src/ei_types.cpp src/ei_utils.c src/ei_widgetclass.c src/ei_interface.c)
+        src/ei_draw.c src/ei_event.c src/ei_parser.c src/ei_types.cpp src/ei_utils.c src/ei_widgetclass.c src/ei_interface.c include/ei_frame_t.h)
 
 add_library(ei STATIC			${LIB_EI_SOURCES})
 
