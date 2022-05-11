@@ -1,9 +1,5 @@
-//
-// Created by hugo on 10/05/22.
-//
-
-#ifndef PROJETC_IG_EI_FRAME_T_H
-#define PROJETC_IG_EI_FRAME_T_H
+#include<ei_widgetclass.h>
+#include<ei_widget.h>
 
 typedef struct ei_frame_t {
         ei_widget_t     widget;
@@ -38,5 +34,3 @@ extern ei_widgetclass_t classe_frame =
                 NULL,
                 NULL
         };
-
-#endif //PROJETC_IG_EI_FRAME_T_H

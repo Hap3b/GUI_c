@@ -12,3 +12,9 @@
 1	1747	1652187661305407287	CMakeFiles/frame.dir/tests/frame.c.o	6895e9ce6cf894a7
 0	43	1652187704740452815	CMakeFiles/ei.dir/src/ei_application.c.o	97dcf7ff6060fde9
 44	279	1652187704976469364	libei.a	d702838393e0edca
+5	1475	1652189802943572021	CMakeFiles/ei.dir/src/ei_draw.c.o	2b09fd7c7c8e3a4
+3	1477	1652189802947572303	CMakeFiles/ei.dir/src/ei_geometrymanager.c.o	2816cc02bd758e3b
+0	44	1652190034019774323	CMakeFiles/ei.dir/src/ei_application.c.o	97dcf7ff6060fde9
+44	253	1652190034231789189	libei.a	d702838393e0edca
+2	165	1652191107987077452	CMakeFiles/ei.dir/src/ei_application.c.o	97dcf7ff6060fde9
+165	290	1652191108111086147	libei.a	d702838393e0edca
