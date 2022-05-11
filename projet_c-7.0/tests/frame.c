@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "ei_application.h"
 #include "ei_event.h"
 #include "hw_interface.h"

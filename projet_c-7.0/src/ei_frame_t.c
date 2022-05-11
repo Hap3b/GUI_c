@@ -83,10 +83,10 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
  * @param	widget		A pointer to the widget instance to initialize.
  */
 
-void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	frame)
+void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	widget)
 {
         frame->color = &ei_default_background_color;
-        frame->widget.requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
+        frame->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
         frame->widget.requested_size.width = 960;
         frame->relief = ei_relief_none;
         frame->fonte = ei_default_font;
@@ -95,12 +95,12 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	frame)
         frame->img_anchor = ei_anc_center;
         frame->img = NULL;
         frame->img_rect = NULL;
-        frame->widget.user_data = NULL;
-        frame->widget.destructor = NULL;
-        frame->widget.parent = NULL;
-        frame->widget.children_head = NULL;
-        frame->widget.children_tail = NULL;
-        frame->widget.next_sibling = NULL;
+        frame->user_data = NULL;
+        frame->destructor = NULL;
+        frame->parent = NULL;
+        frame->children_head = NULL;
+        frame->children_tail = NULL;
+        frame->next_sibling = NULL;
 }
 
 extern ei_widgetclass_t classe_frame =
