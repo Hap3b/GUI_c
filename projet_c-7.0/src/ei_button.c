@@ -97,3 +97,79 @@ ei_linked_point_t*       rounded_frame              (ei_rect_t     rectangle,
     }
 }
 
+typedef struct ei_button_t {
+    ei_widget_t widget;
+    ei_relief_t *relief;
+    char *title;
+    ei_font_t *fonte;
+    ei_color_t *color;
+    ei_anchor_t *ancre;
+    ei_surface_t *img;
+    ei_rect_t *img_rect;
+    ei_anchor_t *img_anchor;
+} ei_button_t;
+
+struct ei_button_t*      ei_button_allocfunc_t        (void)
+{
+    struct ei_button_t *button = calloc(1, sizeof(ei_button_t));
+    return button;
+};
+
+void        ei_button_releasefunc_t      (struct ei_button_t*	button)
+{
+    free(button -> relief);
+    free(button -> title);
+    free(button -> fonte);
+    free(button ->color);
+    free(button -> ancre);
+    free(button-> img);
+    free(button-> img_rect);
+    free(button -> img_anchor);
+};
+
+void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
+                                    ei_surface_t		surface,
+                                    ei_surface_t		pick_surface,
+                                    ei_rect_t*		clipper)
+{
+    ei_color_t trans = {0xff, 0xff, 0xff, 0x00};
+    ei_draw_polygon(pick_surface, rounded_frame(widget->screen_location, 5.0, 2),trans, clipper);
+    ei_color_t col_sombre = {min(255, widget->pick_color->red + 30), min(255, widget->pick_color->green + 30), min(255, widget->pick_color->blue + 30), widget->pick_color->alpha};
+    ei_color_t col_claire = {max(0, widget->pick_color->red - 30), max(0, widget->pick_color->green - 30), max(0, widget->pick_color->blue - 30), widget->pick_color->alpha};
+    ei_draw_polygon(surface, rounded_frame(widget->screen_location, 5.0, 0), col_claire,clipper);
+    ei_draw_polygon(surface, rounded_frame(widget->screen_location, 5.0, 1), col_sombre,clipper);
+    ei_rect_t nv_rect = {{screen_location.top_left.x + screen_location.size.width/10, screen_location.top_left.y + screen_location.size.height/10}, {screen_location.size.width*8/10, screen_location.size.height*8/10}};
+    ei_draw_polygon(surface, rounded_frame(nv_rect, 5.0, 2), *widget->pick_color ,clipper);
+};
+
+void	ei_button_setdefaultsfunc_t	(struct ei_frame_t*	frame)
+{
+    frame->color = &ei_default_background_color;
+    frame->widget.requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
+    frame->widget.requested_size.width = 960;
+    frame->relief = ei_relief_none;
+    frame->fonte = ei_default_font;
+    frame->title = NULL;
+    frame->ancre = ei_anc_center;
+    frame->img_anchor = ei_anc_center;
+    frame->img = NULL;
+    frame->img_rect = NULL;
+    frame->widget.user_data = NULL;
+    frame->widget.destructor = NULL;
+    frame->widget.parent = NULL;
+    frame->widget.children_head = NULL;
+    frame->widget.children_tail = NULL;
+    frame->widget.next_sibling = NULL;
+    frame->widget.geom_params = NULL;
+};
+
+extern ei_widgetclass_t classe_frame =
+        {
+                "frame",
+                &ei_button_allocfunc_t,
+                &ei_button_releasefunc_t,
+                &ei_button_drawfunc_t,
+                &ei_button_setdefaultsfunc_t,
+                NULL,
+                NULL
+        };
