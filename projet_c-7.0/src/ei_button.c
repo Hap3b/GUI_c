@@ -1,15 +1,18 @@
 #include <math.h>
 
+#define min(a, b) = a < b ? a : b;
+#define max(a, b) = a > b ? a : b;
+
 ei_linked_point_t*       arc[2]            (ei_point_t     centre,
-                                        float          rayon,
+                                        int          rayon,
                                         float          pre_angle,
                                         float          deu_angle)
 {
     ei_linked_point_t *lis;
     ei_linked_point *deb;
     ei_point_t nv_point = malloc(sizeof(ei_point_t));
-    nv_point.x = centre.x + (int) (rayon * math.cos(pre_angle));
-    nv_point.y = centre.y + (int) (rayon * math.sin(pre_angle));
+    nv_point.x = centre.x + (int) ((float) rayon * math.cos(pre_angle));
+    nv_point.y = centre.y + (int) ((float) rayon * math.sin(pre_angle));
     deb->point = nv_point;
     lis->point = nv_point;
     lis->next = NULL;
@@ -17,8 +20,8 @@ ei_linked_point_t*       arc[2]            (ei_point_t     centre,
     for (int i = 1; i <= 100; i++) {
         float pas = pre_angle + i * (deu_angle - pre_angle) / 100;
         ei_point_t nv_point = malloc(sizeof(ei_point_t));
-        nv_point.x = centre.x + (int) (rayon * math.cos(pas));
-        nv_point.y = centre.y + (int) (rayon * math.sin(pas));
+        nv_point.x = centre.x + (int) ((float) rayon * math.cos(pas));
+        nv_point.y = centre.y + (int) ((float) rayon * math.sin(pas));
         lis = lis->suivant;
         lis->point = nv_point;
         lis->next = NULL;
@@ -27,21 +30,21 @@ ei_linked_point_t*       arc[2]            (ei_point_t     centre,
 }
 
 ei_linked_point_t*       rounded_frame              (ei_rect_t     rectangle,
-                                                    float          rayon,
+                                                    int          rayon,
                                                     int            partie)
 {
     int h = min(rectangle.width, rectangle.height);
     ei_point_t centre_r = malloc(sizeof(ei_point_t));
     // Si partie = 0, on dessine la partie haute; si partie = 1, on dessine la partie basse; si partie = 2, on dessine tout le button
     if (partie == 2) {
-        centre_r.x = (int) rayon;
-        centre_r.y = (int) rayon;
+        centre_r.x = rayon;
+        centre_r.y = rayon;
         ei_linked_point couple0[2] = arc(centre_r, rayon, -math.pi, -math.pi/2);
-        centre_r.x = rectangle.width - (int) rayon;
+        centre_r.x = rectangle.width - rayon;
         ei_linked_point couple1[2] = arc(centre_r, rayon, -math.pi/2, 0);
-        centre_r.y = rectangle.height - (int) rayon;
+        centre_r.y = rectangle.height - rayon;
         ei_linked_point couple2[2] = arc(centre_r, rayon, 0, math.pi/2);
-        centre_r.x = (int) rayon;
+        centre_r.x = rayon;
         ei_linked_point couple3[2] = arc(centre_r, rayon, math.pi/2, math.pi);
         free(centre_r);
         couple2[1]->suivant = couple3[0];
@@ -62,13 +65,13 @@ ei_linked_point_t*       rounded_frame              (ei_rect_t     rectangle,
     linked_m_g->point = centre_m_g;
 
     if (partie == 0){
-        centre_r.x = (int) rayon;
-        centre_r.y = (int) rayon;
+        centre_r.x = rayon;
+        centre_r.y = rayon;
         ei_linked_point couple0[2] = arc(centre_r, rayon, -math.pi, -math.pi/2);
-        centre_r.x = rectangle.width - (int) rayon;
+        centre_r.x = rectangle.width - rayon;
         ei_linked_point couple1[2] = arc(centre_r, rayon, -math.pi/2, -math.pi/4);
-        centre_r.x = (int) rayon;
-        centre_r.y = rectangle.height - (int) rayon;
+        centre_r.x = rayon;
+        centre_r.y = rectangle.height - rayon;
         ei_linked_point couple2[2] = arc(centre_r, rayon, 3*math.pi/4, math.pi);
         free(centre_r);
         couple2[1]->suivant = couple0[0];
@@ -79,13 +82,13 @@ ei_linked_point_t*       rounded_frame              (ei_rect_t     rectangle,
         return couple2[0];
     }
     if (partie == 1){
-        centre_r.x = rectangle.width - (int) rayon;
-        centre_r.y = rectangle.height - (int) rayon;
+        centre_r.x = rectangle.width - rayon;
+        centre_r.y = rectangle.height - rayon;
         ei_linked_point couple0[2] = arc(centre_r, rayon, 0, math.pi/2);
-        centre_r.x = (int) rayon;
+        centre_r.x = rayon;
         ei_linked_point couple1[2] = arc(centre_r, rayon, math.pi/2, 3*math.pi/4);
-        centre_r.x = rectangle.width - (int) rayon;
-        centre_r.y = (int) rayon;
+        centre_r.x = rectangle.width - rayon;
+        centre_r.y = rayon;
         ei_linked_point couple2[2] = arc(centre_r, rayon, -math.pi/4, 0);
         free(centre_r);
         couple2[1]->suivant = couple0[0];
@@ -98,15 +101,21 @@ ei_linked_point_t*       rounded_frame              (ei_rect_t     rectangle,
 }
 
 typedef struct ei_button_t {
-    ei_widget_t widget;
-    ei_relief_t *relief;
-    char *title;
-    ei_font_t *fonte;
-    ei_color_t *color;
-    ei_anchor_t *ancre;
-    ei_surface_t *img;
-    ei_rect_t *img_rect;
-    ei_anchor_t *img_anchor;
+    ei_widget_t* widget;
+    ei_size_t* requested_size;
+    const ei_color_t* color;
+    int* border_width;
+    int* corner_radius;
+    ei_relief_t* relief;
+    char** text;
+    ei_font_t* text_font;
+    ei_color_t* text_color;
+    ei_anchor_t* text_anchor;
+    ei_surface_t* img;
+    ei_rect_t** img_rect;
+    ei_anchor_t* img_anchor;
+    ei_callback_t* callback;
+    void** user_param;
 } ei_button_t;
 
 struct ei_button_t*      ei_button_allocfunc_t        (void)
@@ -117,14 +126,20 @@ struct ei_button_t*      ei_button_allocfunc_t        (void)
 
 void        ei_button_releasefunc_t      (struct ei_button_t*	button)
 {
+    free(button -> requested_size);
+    free(button -> color);
+    free(button -> border_width);
+    free(button -> corner_radius);
     free(button -> relief);
-    free(button -> title);
-    free(button -> fonte);
-    free(button ->color);
-    free(button -> ancre);
-    free(button-> img);
-    free(button-> img_rect);
+    free(button -> text);
+    free(button-> text_font);
+    free(button -> text_color);
+    free(button -> text_anchor);
+    free(button -> img);
+    free(button -> img_rect);
     free(button -> img_anchor);
+    free(button -> callback);
+    free(button -> user_param);
 };
 
 void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
@@ -133,13 +148,24 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
                                     ei_rect_t*		clipper)
 {
     ei_color_t trans = {0xff, 0xff, 0xff, 0x00};
-    ei_draw_polygon(pick_surface, rounded_frame(widget->screen_location, 5.0, 2),trans, clipper);
-    ei_color_t col_sombre = {min(255, widget->pick_color->red + 30), min(255, widget->pick_color->green + 30), min(255, widget->pick_color->blue + 30), widget->pick_color->alpha};
-    ei_color_t col_claire = {max(0, widget->pick_color->red - 30), max(0, widget->pick_color->green - 30), max(0, widget->pick_color->blue - 30), widget->pick_color->alpha};
-    ei_draw_polygon(surface, rounded_frame(widget->screen_location, 5.0, 0), col_claire,clipper);
-    ei_draw_polygon(surface, rounded_frame(widget->screen_location, 5.0, 1), col_sombre,clipper);
-    ei_rect_t nv_rect = {{screen_location.top_left.x + screen_location.size.width/10, screen_location.top_left.y + screen_location.size.height/10}, {screen_location.size.width*8/10, screen_location.size.height*8/10}};
-    ei_draw_polygon(surface, rounded_frame(nv_rect, 5.0, 2), *widget->pick_color ,clipper);
+    ei_button_t* button = (ei_button_t*)widget;
+    ei_surface_t * racine_bis = addr_racine();
+    hw_surface_lock(racine_bis);
+
+    ei_draw_polygon(pick_surface, rounded_frame(button->screen_location, button->corner_radius, 2),trans, clipper);
+
+    ei_color_t col_sombre = {min(255, button->color->red + 30), min(255, button->color->green + 30), min(255, button->color->blue + 30), button->color->alpha};
+    ei_color_t col_claire = {max(0, button->color->red - 30), max(0, button->color->green - 30), max(0, button->color->blue - 30), button->color->alpha};
+    if (*button->relief == ei_relief_raised) {
+        ei_draw_polygon(surface, rounded_frame(button->screen_location, button->corner_radius, 0), col_claire,clipper);
+        ei_draw_polygon(surface, rounded_frame(button->screen_location, button->corner_radius, 1), col_sombre,clipper);
+    } elif (*button->relief == ei_relief_sunken) {
+        ei_draw_polygon(surface, rounded_frame(button->screen_location, button->corner_radius, 0), col_sombre,clipper);
+        ei_draw_polygon(surface, rounded_frame(button->screen_location, button->corner_radius, 1), col_claire,clipper);
+    }
+    ei_rect_t nv_rect = {{screen_location.top_left.x + button->border_width, screen_location.top_left.y + button->border_width}, {screen_location.size.width - 2*button->border_width, screen_location.size.height - 2*button->border_width}};
+    ei_draw_polygon(surface, rounded_frame(nv_rect, button->corner_radius, 2), *button->color ,clipper);
+    hw_surface_unlock(racine_bis);
 };
 
 void	ei_button_setdefaultsfunc_t	(struct ei_frame_t*	frame)
