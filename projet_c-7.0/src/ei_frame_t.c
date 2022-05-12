@@ -49,9 +49,9 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_point_t droite = depart;
         droite.x = droite.x + widget->requested_size.width;
         ei_point_t bdroite = droite;
-        bdroite.y = bdroite.y - widget->requested_size.height;
+        bdroite.y = bdroite.y + widget->requested_size.height;
         ei_point_t final = depart;
-        final.y = final.y - widget->requested_size.height;
+        final.y = final.y + widget->requested_size.height;
         ei_linked_point_t pol1;
         ei_linked_point_t pol2;
         ei_linked_point_t pol3;
@@ -84,6 +84,7 @@ static ei_widgetclass_t classe_frame =
 
 void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
 {
+
         frame -> wclass = &classe_frame;
         frame->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
         frame->requested_size.width = 960;

@@ -23,8 +23,8 @@ void	ei_runfunc_placeur_t    (struct ei_widget_t*	widget)
 {
         if (((ei_geometry_placeur_t*)(widget -> geom_params)) -> anchor =  ei_anc_northwest || ((ei_geometry_placeur_t*)(widget -> geom_params)) -> anchor ==  NULL)
         {
-                widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + ((ei_geometry_placeur_t*)(widget -> geom_params)) -> x;
-                widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + ((ei_geometry_placeur_t*)(widget -> geom_params)) -> y;
+                widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *((ei_geometry_placeur_t*)(widget -> geom_params)) -> x;
+                widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *((ei_geometry_placeur_t*)(widget -> geom_params)) -> y;
                 widget -> screen_location.size.width = ((ei_geometry_placeur_t*)(widget -> geom_params)) -> width;
                 widget -> screen_location.size.height = ((ei_geometry_placeur_t*)(widget -> geom_params)) -> height;
         }
@@ -129,8 +129,15 @@ void			ei_place			(ei_widget_t*		widget,
         placeur_widget -> anchor = anchor;
         placeur_widget ->x = x;
         placeur_widget -> y = y;
-        placeur_widget -> width = width;
-        placeur_widget -> height = height;
+        if (width ==NULL)
+        {
+            if (rel_width == NULL)
+            {
+                placeur_widget -> width = widget -> requested_size.width;
+                placeur_widget -> height = widget -> requested_size.height;
+            }
+        }
+
         placeur_widget -> rel_x = rel_x;
         placeur_widget -> rel_y = rel_y;
         placeur_widget -> rel_width = rel_width;
