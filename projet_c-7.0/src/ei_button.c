@@ -102,7 +102,6 @@ ei_linked_point_t*       rounded_frame              (ei_rect_t     rectangle,
 
 typedef struct ei_button_t {
     ei_widget_t* widget;
-    ei_size_t* requested_size;
     const ei_color_t* color;
     int* border_width;
     int* corner_radius;
@@ -126,7 +125,6 @@ struct ei_button_t*      ei_button_allocfunc_t        (void)
 
 void        ei_button_releasefunc_t      (struct ei_button_t*	button)
 {
-    free(button -> requested_size);
     free(button -> color);
     free(button -> border_width);
     free(button -> corner_radius);
@@ -168,30 +166,28 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
     hw_surface_unlock(racine_bis);
 };
 
-void	ei_button_setdefaultsfunc_t	(struct ei_frame_t*	frame)
+void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
 {
-    frame->color = &ei_default_background_color;
-    frame->widget.requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
-    frame->widget.requested_size.width = 960;
-    frame->relief = ei_relief_none;
-    frame->fonte = ei_default_font;
-    frame->title = NULL;
-    frame->ancre = ei_anc_center;
-    frame->img_anchor = ei_anc_center;
-    frame->img = NULL;
-    frame->img_rect = NULL;
-    frame->widget.user_data = NULL;
-    frame->widget.destructor = NULL;
-    frame->widget.parent = NULL;
-    frame->widget.children_head = NULL;
-    frame->widget.children_tail = NULL;
-    frame->widget.next_sibling = NULL;
-    frame->widget.geom_params = NULL;
+    ((ei_button_t *)button) -> color = &ei_default_background_color;
+    ((ei_button_t *)button) -> border_width = k_default_button_border_width;
+    ((ei_button_t *)button) -> corner_radius = k_default_button_corner_radius;
+    ((ei_button_t *)button) -> relief = ei_relief_raised;
+    ((ei_button_t *)button) -> text = NULL;
+    ((ei_button_t *)button) -> text_fonte = ei_default_font;
+    ((ei_button_t *)button) -> text_color = ei_font_default_color;
+    ((ei_button_t *)button) -> text_color = ei_font_default_color;
+    ((ei_button_t *)button) -> text_anchor = ei_anc_center;
+    ((ei_button_t *)button) -> img = NULL;
+    ((ei_button_t *)button) -> img_rect = NULL;
+    ((ei_button_t *)button) -> img_anchor = ei_anc_center;
+    ((ei_button_t *)button) -> callback = NULL;
+    ((ei_button_t *)button) -> user_param = NULL;
 };
 
-extern ei_widgetclass_t classe_frame =
+
+extern ei_widgetclass_t classe_button =
         {
-                "frame",
+                "button",
                 &ei_button_allocfunc_t,
                 &ei_button_releasefunc_t,
                 &ei_button_drawfunc_t,
