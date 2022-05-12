@@ -6,7 +6,7 @@
 #include "hw_interface.h"
 #include "ei_widget.h"
 #include "ei_geometrymanager.h"
-
+#include<ei_variable_globale.h>
 
 /*
  * main --
@@ -28,12 +28,14 @@ int main(int argc, char** argv)
 
 	/* Create the application and change the color of the background. */
 	ei_app_create(screen_size, EI_FALSE);
-	ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+        ei_widget_t * arbre_bis = ei_app_root_widget();
+
+        ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 	/* Create, configure and place the frame on screen. */
 	frame = ei_widget_create("frame", ei_app_root_widget(), NULL, NULL);
 	ei_frame_configure(frame, &frame_size, &frame_color,
-			    &frame_border_width, &frame_relief, NULL, NULL, NULL, NULL,
+		    &frame_border_width, &frame_relief, NULL, NULL, NULL, NULL,
 			    NULL, NULL, NULL);
 	ei_place(frame, NULL, &frame_x, &frame_y, NULL, NULL, NULL, NULL, NULL, NULL );
 

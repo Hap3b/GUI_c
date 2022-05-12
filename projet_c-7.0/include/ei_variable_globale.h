@@ -10,3 +10,5 @@
 ei_surface_t* addr_surface_cache();
 void ei_geometrymanager_register_tout();
 ei_widgetclass_t* addr_class_cree();
+ei_surface_t *addr_surface_cache();
+ei_surface_t *addr_racine();

@@ -2,8 +2,8 @@
 // Created by jules on 03/05/22.
 //
 #include<ei_widgetclass.h>
-
-static ei_widgetclass_t *classe_cree =NULL;
+#include<ei_frame_t.h>
+static ei_widgetclass_t *classe_cree = NULL;
 
 
 void ei_widgetclass_register(ei_widgetclass_t * widgetclass){

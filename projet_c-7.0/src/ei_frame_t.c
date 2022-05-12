@@ -3,6 +3,8 @@
 //
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
+#include "ei_variable_globale.h"
+void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame);
 typedef struct ei_frame_t {
         ei_widget_t     widget;
         ei_relief_t*     relief;
@@ -14,11 +16,8 @@ typedef struct ei_frame_t {
         ei_rect_t*       img_rect;
         ei_anchor_t*     img_anchor;
 
-
-
-
-
 }ei_frame_t;
+
 
 
 
@@ -65,32 +64,14 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol3.next = &pol4;
         pol4.point = final;
         pol4.next = NULL;
-        ei_draw_polygon(surface, &pol1,*widget->pick_color, clipper);
+        ei_frame_t* frame = (ei_frame_t*)widget;
+        ei_surface_t * racine_bis = addr_racine();
+        hw_surface_lock(racine_bis);
+        ei_draw_polygon(surface, &pol1,*(frame->color), clipper);
         ei_draw_polygon(pick_surface, &pol1,trans, clipper);
+        hw_surface_unlock(racine_bis);
 };
-
-void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	frame)
-{
-        frame->color = &ei_default_background_color;
-        frame->widget.requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
-        frame->widget.requested_size.width = 960;
-        frame->relief = ei_relief_none;
-        frame->fonte = ei_default_font;
-        frame->title = NULL;
-        frame->ancre = ei_anc_center;
-        frame->img_anchor = ei_anc_center;
-        frame->img = NULL;
-        frame->img_rect = NULL;
-        frame->widget.user_data = NULL;
-        frame->widget.destructor = NULL;
-        frame->widget.parent = NULL;
-        frame->widget.children_head = NULL;
-        frame->widget.children_tail = NULL;
-        frame->widget.next_sibling = NULL;
-        frame->widget.geom_params = NULL;
-};
-
-extern ei_widgetclass_t classe_frame =
+static ei_widgetclass_t classe_frame =
         {
                 "frame",
                 &ei_frame_allocfunc_t,
@@ -101,4 +82,31 @@ extern ei_widgetclass_t classe_frame =
                 NULL
         };
 
+void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
+{
+        frame -> wclass = &classe_frame;
+        frame->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
+        frame->requested_size.width = 960;
+        frame ->user_data = NULL;
+        frame-> destructor = NULL;
+        frame->parent = NULL;
+        frame->children_head = NULL;
+        frame->children_tail = NULL;
+        frame->next_sibling = NULL;
+        frame->geom_params = NULL;
+        ((ei_frame_t *)frame)->relief = ei_relief_none;
+        ((ei_frame_t *)frame)->fonte = ei_default_font;
+        ((ei_frame_t *)frame)->title = NULL;
+        ((ei_frame_t *)frame)->ancre = ei_anc_center;
+        ((ei_frame_t *)frame)->img_anchor = ei_anc_center;
+        ((ei_frame_t *)frame)->img = NULL;
+        ((ei_frame_t *)frame)->img_rect = NULL;
+        ((ei_frame_t*)frame)->color = &ei_default_background_color;
 
+};
+
+
+
+ei_widgetclass_t* addr_frame(){
+        return &classe_frame;
+}

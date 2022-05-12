@@ -124,7 +124,7 @@ void			ei_place			(ei_widget_t*		widget,
                                      float*			rel_height)
 {
 
-        struct ei_geometry_placeur_t* placeur_widget;
+        struct ei_geometry_placeur_t* placeur_widget = (ei_geometry_placeur_t *)malloc(sizeof(struct ei_geometry_placeur_t));
         placeur_widget -> manager = &geom_placeur_t;
         placeur_widget -> anchor = anchor;
         placeur_widget ->x = x;
