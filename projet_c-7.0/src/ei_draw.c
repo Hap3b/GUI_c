@@ -16,7 +16,7 @@ uint32_t		ei_map_rgba		(ei_surface_t surface, ei_color_t color)
     }
     tot += color.alpha << (8* (*ia));
     return tot;
-<<<<<<< HEAD
+
 }
 
 int ei_copy_surface (ei_surface_t		destination,
@@ -24,7 +24,74 @@ int ei_copy_surface (ei_surface_t		destination,
                      ei_surface_t		source,
                      const ei_rect_t*	src_rect,
                      ei_bool_t		alpha)
-;
+{
+        ei_size_t size_src;
+        ei_size_t size_dst;
+        int width;
+        int height;
+        if (dst_rect != NULL)
+        {
+                ei_size_t size_dst = dst_rect->size;
+        }
+        else
+        {
+                ei_size_t size_dst = hw_surface_get_size(destination);
+        }
+        if (src_rect != NULL)
+        {
+                ei_size_t size_src = src_rect->size;
+        }
+        else
+        {
+                ei_size_t size_src = hw_surface_get_size(source);
+        }
+        width = size_dst.width;
+        height = size_dst.height;
+        if ((size_src.height != size_dst.height) || (size_src.height != size_dst.height))
+        {
+                return 1;
+        }
+        else
+        {
+                hw_surface_lock(destination);
+                hw_surface_lock(source);
+                uint32_t* pixel_dst = hw_surface_get_buffer(destination);
+                uint32_t* pixel_src = hw_surface_get_buffer(source);
+                if (alpha == EI_FALSE)
+                {
+                        for (int j = 0; j < width; j++)
+                        {
+                                for (int i = 0; i < height; i++)
+                                {
+                                        *pixel_dst = *pixel_src;
+                                        pixel_dst++;
+                                        pixel_src++;
+                                }
+
+                        }
+                }
+                else
+                {
+                        for (int j = 0; j < width; j++)
+                        {
+                                for (int i = 0; i < height; i++)
+                                {
+                                        *pixel_dst = (*pixel_src + *pixel_dst)/2; /* Average */
+                                        int *ia;
+                                        int *ig;
+                                        int *ir;
+                                        int *ib;
+                                        hw_surface_get_channel_indices(destination, ir, ig, ib, ia);
+                                        *pixel_dst += 0xff << (8* (*ia)); /* Set the minimal transparence */
+                                        pixel_dst++;
+                                        pixel_src++;
+                                }
+
+                        }
+                }
+                return 0;
+        }
+}
 
 void			ei_fill			(ei_surface_t		surface,
                                                             const ei_color_t*	color,
@@ -101,6 +168,4 @@ void			ei_draw_text		(ei_surface_t		surface,
         hw_surface_unlock(surface);
         hw_surface_unlock(surfa_text);
 }
-=======
-}
->>>>>>> 0f05c62341a133a1b224e2eaf26c1d7149336ed9
+
