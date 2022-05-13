@@ -16,6 +16,7 @@ uint32_t		ei_map_rgba		(ei_surface_t surface, ei_color_t color)
     }
     tot += color.alpha << (8* (*ia));
     return tot;
+<<<<<<< HEAD
 }
 
 int ei_copy_surface (ei_surface_t		destination,
@@ -100,3 +101,6 @@ void			ei_draw_text		(ei_surface_t		surface,
         hw_surface_unlock(surface);
         hw_surface_unlock(surfa_text);
 }
+=======
+}
+>>>>>>> 0f05c62341a133a1b224e2eaf26c1d7149336ed9
