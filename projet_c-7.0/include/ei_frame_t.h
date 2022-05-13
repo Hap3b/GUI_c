@@ -1,19 +1,18 @@
-//
-// Created by jules on 10/05/22.
-//
-
-#ifndef PROJETC_IG_EI_FRAME_T_H
-#define PROJETC_IG_EI_FRAME_T_H
-
-#endif //PROJETC_IG_EI_FRAME_T_H
+#include<ei_widget.h>
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
+
+void dessine_tout_widget();
+
 typedef struct ei_frame_t {
         ei_widget_t     widget;
         ei_relief_t*     relief;
+        int*            border_width;
         char*           title;
-        ei_font_t*       fonte;
+        ei_font_t*       title_fonte;
+        ei_anchor_t*     title_anchor;
         ei_color_t*      color;
+        ei_color_t*     color_title;
         ei_anchor_t*     ancre;
         ei_surface_t*    img;
         ei_rect_t*       img_rect;
@@ -25,13 +24,13 @@ struct ei_frame_t*      ei_frame_allocfunc_t        (void);
 
 void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame);
 
-extern ei_widgetclass_t classe_frame =
-        {
-                "frame",
-                &ei_frame_allocfunc_t,
-                &ei_frame_releasefunc_t,
-                NULL,
-                NULL,
-                NULL,
-                NULL
-        };
+void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame);
+
+void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
+                                                ei_surface_t		surface,
+                                                ei_surface_t		pick_surface,
+                                                ei_rect_t*		clipper);
+
+
+ei_widgetclass_t* addr_frame();
+

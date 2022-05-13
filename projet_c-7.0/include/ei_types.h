@@ -93,7 +93,7 @@ static const ei_color_t	ei_default_background_color	= { 0xA0, 0xA0, 0xA0, 0xff }
  * @brief	Identifies one particular point of a rectangle.
  */
 typedef enum {
-	ei_anc_none		= 0,	///< No anchor defined.
+        ei_anc_none		= 0,	///< No anchor defined.
 	ei_anc_center,			///< Anchor in the center.
 	ei_anc_north,			///< Anchor on the top side, centered horizontally.
 	ei_anc_northeast,		///< Anchor on the top-right corner.

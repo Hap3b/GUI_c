@@ -87,7 +87,7 @@ ei_geometrymanager_t*	ei_geometrymanager_from_name	(ei_geometrymanager_name_t na
  * \brief	Tell the geometry manager in charge of a widget to forget it. This removes the
  *		widget from the screen. If the widget is not currently managed, this function
  *		returns silently.
- *		Side effects:
+ *		Side effects:e
  *		<ul>
  *			<li> the \ref ei_geometrymanager_releasefunc_t of the geometry manager in
  *				charge of this widget is called, </li>
