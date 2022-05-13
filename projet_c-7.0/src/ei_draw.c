@@ -27,26 +27,32 @@ int ei_copy_surface (ei_surface_t		destination,
 {
         ei_size_t size_src;
         ei_size_t size_dst;
-        int width;
-        int height;
+        ei_point_t dbt_dst;
+        ei_point_t dbt_src;
+        ei_size_t size_surface;
         if (dst_rect != NULL)
         {
                 ei_size_t size_dst = dst_rect->size;
+                ei_point_t dbt_dst = dst_rect->top_left;
         }
         else
         {
                 ei_size_t size_dst = hw_surface_get_size(destination);
+                ei_point_t dbt_dst = {0 , 0};
         }
         if (src_rect != NULL)
         {
                 ei_size_t size_src = src_rect->size;
+                ei_point_t dbt_src = src_rect->top_left;
         }
         else
         {
                 ei_size_t size_src = hw_surface_get_size(source);
+                ei_point_t dbt_src = {0, 0};
         }
-        width = size_dst.width;
-        height = size_dst.height;
+        int width = size_dst.width;
+        int height = size_dst.height;
+        int difference = size_surface.width - width;
         if ((size_src.height != size_dst.height) || (size_src.height != size_dst.height))
         {
                 return 1;
@@ -57,6 +63,20 @@ int ei_copy_surface (ei_surface_t		destination,
                 hw_surface_lock(source);
                 uint32_t* pixel_dst = hw_surface_get_buffer(destination);
                 uint32_t* pixel_src = hw_surface_get_buffer(source);
+                for (int y = 0; y < dbt_dst.y; y++)
+                {
+                        for (int x = 0; x < dbt_dst.x; x++)
+                        {
+                                pixel_dst++; /* Place the pointer to the right address */
+                        }
+                }
+                for (int y = 0; y < dbt_src.y; y++)
+                {
+                        for (int x = 0; x < dbt_src.x; x++)
+                        {
+                                pixel_src++; /* Place the pointer to the right address */
+                        }
+                }
                 if (alpha == EI_FALSE)
                 {
                         for (int j = 0; j < width; j++)
@@ -67,7 +87,11 @@ int ei_copy_surface (ei_surface_t		destination,
                                         pixel_dst++;
                                         pixel_src++;
                                 }
-
+                                for (int k = 0; k < difference; k++)
+                                {
+                                        pixel_dst++; /* case if one of the rectangle is not NULL, place the pointer to right address */
+                                        pixel_src++;
+                                }
                         }
                 }
                 else
@@ -76,17 +100,21 @@ int ei_copy_surface (ei_surface_t		destination,
                         {
                                 for (int i = 0; i < height; i++)
                                 {
-                                        *pixel_dst = (*pixel_src + *pixel_dst)/2; /* Average */
+                                        *pixel_dst = (*pixel_src + *pixel_dst)/2; /* Average in count of the alpha channel */
                                         int *ia;
                                         int *ig;
                                         int *ir;
                                         int *ib;
                                         hw_surface_get_channel_indices(destination, ir, ig, ib, ia);
-                                        *pixel_dst += 0xff << (8* (*ia)); /* Set the minimal transparence */
+                                        *pixel_dst += 0xff << (8* (*ia)); /* Set to opaque */
                                         pixel_dst++;
                                         pixel_src++;
                                 }
-
+                                for (int k = 0; k < difference; k++)
+                                {
+                                        pixel_dst++; /* case if one of the rectangle is not NULL, place the pointer to right address */
+                                        pixel_src++;
+                                }
                         }
                 }
                 return 0;
