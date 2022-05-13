@@ -191,9 +191,9 @@ void			ei_draw_text		(ei_surface_t		surface,
         ei_rect_t* src_rect;
         src_rect->top_left = *where;
         src_rect->size = *size;
-        ei_fill(surfa_text, &color, clipper);
-        ei_copy_surface(surface, src_rect, surfa_text, src_rect, EI_FALSE);
+        ei_copy_surface(surface, src_rect, surfa_text, src_rect, EI_TRUE);
         hw_surface_unlock(surface);
         hw_surface_unlock(surfa_text);
+        hw_surface_free(surfa_text);
 }
 
