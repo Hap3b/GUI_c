@@ -6,25 +6,50 @@
 #include<ei_frame_t.h>
 #include<ei_variable_globale.h>
 #include <ei_geometrymanager.h>
+<<<<<<< HEAD
 static ei_surface_t racine;
 static ei_surface_t surface_cache;
 void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 {
         ei_widgetclass_register(&classe_frame);
+=======
+
+static ei_surface_t racine = NULL;
+static ei_surface_t surface_cache = NULL;
+static ei_widget_t *arbre_de_widget = NULL;
+
+ei_surface_t *addr_racine(){
+        return racine;
+}
+ei_surface_t *addr_surface_cache(){
+        return surface_cache;
+}
+void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
+{
+        ei_widgetclass_register(addr_frame());
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
         ei_geometrymanager_register_tout();
         hw_init();
-        racine = hw_create_window( main_window_size, fullscreen);
-        surface_cache = hw_create_window(main_window_size, fullscreen);
+        racine = hw_create_window(main_window_size, fullscreen);
+        surface_cache = hw_surface_create(racine, main_window_size, EI_FALSE);
 }
 
+<<<<<<< HEAD
 ei_surface_t* addr_surface_cache()
 {
         return &surface_cache;
 }
+=======
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
 
 void ei_app_run(void)
 {
         dessine_tout_widget();
+<<<<<<< HEAD
+=======
+    hw_surface_update_rects(racine, NULL);
+        getchar();
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
 }
 
 void ei_app_free(void)
@@ -34,9 +59,20 @@ void ei_app_free(void)
 
 ei_widget_t* ei_app_root_widget(void)
 {
-
+        if (arbre_de_widget == NULL){
+                ei_widget_t* racine_bis = ei_widget_create("frame", NULL, NULL,NULL);
+                ei_size_t surface_racine = hw_surface_get_size(racine);
+                ei_frame_configure(racine_bis, &surface_racine, NULL, NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+                arbre_de_widget = racine_bis;
+        }
+        return arbre_de_widget;
 }
 
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
 ei_surface_t ei_app_root_surface(void)
 {
         return racine;

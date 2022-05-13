@@ -1,14 +1,21 @@
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Created by jules on 06/05/22.
 =======
 // Created by jules on 10/05/22.
 >>>>>>> ea6f1e68bf05b78dbbbf5c9959e6f2e9194aaf05
 //
+=======
 
-#ifndef PROJETC_IG_EI_FRAME_T_H
-#define PROJETC_IG_EI_FRAME_T_H
+// Created by jules on 06/05/22.
 
+// Created by jules on 10/05/22.
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
+
+//
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 #endif //PROJETC_IG_EI_FRAME_T_H*
 #include<ei_widget.h>
@@ -18,6 +25,12 @@
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
 >>>>>>> ea6f1e68bf05b78dbbbf5c9959e6f2e9194aaf05
+=======
+#include<ei_widget.h>
+#include<ei_widgetclass.h>
+#include<ei_widget.h>
+
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
 void dessine_tout_widget();
 
 typedef struct ei_frame_t {
@@ -34,15 +47,24 @@ typedef struct ei_frame_t {
 }ei_frame_t;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
 extern ei_widgetclass_t classe_frame;
 
 struct ei_frame_t*      ei_frame_allocfunc_t        (void);
 void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame);
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
 struct ei_frame_t*      ei_frame_allocfunc_t        (void);
 
 void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame);
 
+<<<<<<< HEAD
 extern ei_widgetclass_t classe_frame =
         {
                 "frame",
@@ -54,3 +76,6 @@ extern ei_widgetclass_t classe_frame =
                 NULL
         };
 >>>>>>> ea6f1e68bf05b78dbbbf5c9959e6f2e9194aaf05
+=======
+ei_widgetclass_t* addr_frame();
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
