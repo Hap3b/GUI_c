@@ -10,9 +10,6 @@
 
 ei_surface_t* addr_surface_cache();
 void ei_geometrymanager_register_tout();
-<<<<<<< HEAD
-ei_widgetclass_t* addr_class_cree();
-=======
 ei_widgetclass_t* addr_class_cree();
 ei_surface_t *addr_surface_cache();
 ei_surface_t *addr_racine();
@@ -29,4 +26,3 @@ typedef struct ei_geometry_placeur_t {
     float*			rel_width;
     float*			rel_height;
 }ei_geometry_placeur_t;
->>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
