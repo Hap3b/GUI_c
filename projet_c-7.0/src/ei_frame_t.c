@@ -8,13 +8,17 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame);
 typedef struct ei_frame_t {
         ei_widget_t     widget;
         ei_relief_t*     relief;
+        int*            border_width;
         char*           title;
-        ei_font_t*       fonte;
+        ei_font_t*       title_fonte;
+        ei_anchor_t*     title_anchor;
         ei_color_t*      color;
+        ei_color_t*     color_title;
         ei_anchor_t*     ancre;
         ei_surface_t*    img;
         ei_rect_t*       img_rect;
         ei_anchor_t*     img_anchor;
+
 
 }ei_frame_t;
 
@@ -30,9 +34,12 @@ struct ei_frame_t*      ei_frame_allocfunc_t        (void)
 void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame)
 {
         free(frame -> relief);
+        free(frame -> border_width);
         free(frame -> title);
-        free(frame-> fonte);
+        free(frame -> title_fonte);
+        free(frame-> title_anchor);
         free(frame ->color);
+        free(frame -> color_title);
         free(frame -> ancre);
         free(frame-> img);
         free(frame-> img_rect);
@@ -84,6 +91,12 @@ static ei_widgetclass_t classe_frame =
 
 void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
 {
+        ei_relief_t* base_relief = malloc(sizeof(ei_relief_t));
+        *base_relief = ei_relief_none;
+        int* zero = malloc( sizeof(int));
+        *zero = 0;
+        ei_anchor_t* base_anchor = malloc(sizeof(ei_anchor_t));
+        *base_anchor = ei_anc_center;
 
         frame -> wclass = &classe_frame;
         frame->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
@@ -95,14 +108,25 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
         frame->children_tail = NULL;
         frame->next_sibling = NULL;
         frame->geom_params = NULL;
-        ((ei_frame_t *)frame)->relief = ei_relief_none;
-        ((ei_frame_t *)frame)->fonte = ei_default_font;
+        ((ei_frame_t *)frame)->relief = base_relief;
+        ((ei_frame_t *)frame)->border_width = zero;
         ((ei_frame_t *)frame)->title = NULL;
-        ((ei_frame_t *)frame)->ancre = ei_anc_center;
-        ((ei_frame_t *)frame)->img_anchor = ei_anc_center;
+        ((ei_frame_t *)frame)->title_fonte = &ei_font_default_color;
+        ((ei_frame_t *)frame)->title_anchor = base_anchor;
+        ((ei_frame_t *)frame)->color = &ei_default_background_color;
+        ((ei_frame_t *)frame)->color_title = &ei_default_background_color;
         ((ei_frame_t *)frame)->img = NULL;
         ((ei_frame_t *)frame)->img_rect = NULL;
-        ((ei_frame_t*)frame)->color = &ei_default_background_color;
+        ((ei_frame_t*)frame)->img_anchor = base_anchor;
+
+        *base_anchor = ei_anc_northwest;
+
+        ((ei_frame_t *)frame)->ancre = base_anchor;
+
+        free(base_anchor);
+        free(base_relief);
+        free(zero);
+
 
 };
 

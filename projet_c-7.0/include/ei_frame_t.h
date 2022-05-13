@@ -15,9 +15,12 @@ void dessine_tout_widget();
 typedef struct ei_frame_t {
         ei_widget_t     widget;
         ei_relief_t*     relief;
+        int*            border_width;
         char*           title;
-        ei_font_t*       fonte;
+        ei_font_t*       title_fonte;
+        ei_anchor_t*     title_anchor;
         ei_color_t*      color;
+        ei_color_t*     color_title;
         ei_anchor_t*     ancre;
         ei_surface_t*    img;
         ei_rect_t*       img_rect;

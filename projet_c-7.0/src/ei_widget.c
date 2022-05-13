@@ -51,7 +51,14 @@ void			ei_frame_configure		(ei_widget_t*		widget,
                                            ei_anchor_t*		img_anchor)
 {
     ei_frame_t* frame = (ei_frame_t*)widget;
-    if (requested_size != NULL) {
+    int* zero = malloc(sizeof(int));
+    *zero = 0;
+    ei_anchor_t* base = malloc(sizeof(ei_anchor_t));
+    *base = ei_anc_center;
+    ei_relief_t* base2 = malloc(sizeof(ei_relief_t));
+    *base2 = ei_relief_none;
+    if (requested_size != NULL)
+    {
         widget->requested_size.width = requested_size->width;
         widget->requested_size.height = requested_size->height;
     }
@@ -65,6 +72,78 @@ void			ei_frame_configure		(ei_widget_t*		widget,
                 frame -> color = color;
         }
 
+        if(border_width != NULL)
+        {
+                frame -> border_width = border_width;
+        }
+        else
+        {
+                frame -> border_width = zero;
+        }
+
+        if (relief != NULL)
+        {
+                frame -> relief = relief;
+        }
+        else
+        {
+                frame -> relief = base2;
+        }
+
+        if (text != NULL)
+        {
+                frame -> title = text;
+        }
+
+        if ( text_font != NULL)
+        {
+                frame -> title_fonte = text_font;
+        }
+        else
+        {
+                frame -> title_fonte = &ei_default_font;
+        }
+
+        if (text_color != NULL)
+        {
+                frame -> color_title = text_color;
+        }
+        else
+        {
+                frame->color_title = &ei_font_default_color;
+        }
+
+        if (text_anchor != NULL)
+        {
+                frame -> title_anchor = text_anchor;
+        }
+        else
+        {
+                frame -> title_anchor = base;
+        }
+
+        if (img != NULL)
+        {
+                frame -> img = img;
+        }
+
+        if( img_rect != NULL)
+        {
+                frame -> img_rect = img_rect;
+        }
+
+        if (img_anchor != NULL)
+        {
+                frame -> img_anchor = img_anchor;
+        }
+        else
+        {
+                frame -> img_anchor = base;
+        }
+
+    free(zero);
+    free(base);
+    free(base2);
 }
 void ei_rajoute_widget_abr_widget(ei_widget_t* parent,ei_widget_t* widget)
 {
