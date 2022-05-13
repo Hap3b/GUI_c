@@ -56,9 +56,15 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_point_t droite = depart;
         droite.x = droite.x + widget->requested_size.width;
         ei_point_t bdroite = droite;
+<<<<<<< HEAD
+        bdroite.y = bdroite.y - widget->requested_size.height;
+        ei_point_t final = depart;
+        final.y = final.y - widget->requested_size.height;
+=======
         bdroite.y = bdroite.y + widget->requested_size.height;
         ei_point_t final = depart;
         final.y = final.y + widget->requested_size.height;
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
         ei_linked_point_t pol1;
         ei_linked_point_t pol2;
         ei_linked_point_t pol3;
@@ -71,6 +77,34 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol3.next = &pol4;
         pol4.point = final;
         pol4.next = NULL;
+<<<<<<< HEAD
+        ei_draw_polygon(surface, &pol1,*widget->pick_color, clipper);
+        ei_draw_polygon(pick_surface, &pol1,trans, clipper);
+};
+
+void	ei_frame_setdefaultsfunc_t	(struct ei_frame_t*	frame)
+{
+        frame->color = &ei_default_background_color;
+        frame->widget.requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
+        frame->widget.requested_size.width = 960;
+        frame->relief = ei_relief_none;
+        frame->fonte = ei_default_font;
+        frame->title = NULL;
+        frame->ancre = ei_anc_center;
+        frame->img_anchor = ei_anc_center;
+        frame->img = NULL;
+        frame->img_rect = NULL;
+        frame->widget.user_data = NULL;
+        frame->widget.destructor = NULL;
+        frame->widget.parent = NULL;
+        frame->widget.children_head = NULL;
+        frame->widget.children_tail = NULL;
+        frame->widget.next_sibling = NULL;
+        frame->widget.geom_params = NULL;
+};
+
+extern ei_widgetclass_t classe_frame =
+=======
         ei_frame_t* frame = (ei_frame_t*)widget;
         ei_surface_t * racine_bis = addr_racine();
         hw_surface_lock(racine_bis);
@@ -79,6 +113,7 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_unlock(racine_bis);
 };
 static ei_widgetclass_t classe_frame =
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
         {
                 "frame",
                 &ei_frame_allocfunc_t,
@@ -89,6 +124,9 @@ static ei_widgetclass_t classe_frame =
                 NULL
         };
 
+<<<<<<< HEAD
+
+=======
 void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
 {
         ei_relief_t* base_relief = malloc(sizeof(ei_relief_t));
@@ -135,3 +173,4 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
 ei_widgetclass_t* addr_frame(){
         return &classe_frame;
 }
+>>>>>>> cbebcfa349c1d78f4212ff0bdf7bec844ff196a3
