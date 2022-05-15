@@ -1,17 +1,18 @@
 
 #include<ei_widgetclass.h>
+#include<ei_draw.h>
 #include<ei_widget.h>
 typedef struct ei_frame_t {
         ei_widget_t     widget;
         ei_relief_t*     relief;
-        char*           title;
+        char*            title;
         ei_font_t*       fonte;
         ei_color_t*      color;
         ei_anchor_t*     ancre;
         ei_surface_t*    img;
         ei_rect_t*       img_rect;
         ei_anchor_t*     img_anchor;
-
+        char*            filename_img;
 
 
 
@@ -75,6 +76,10 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol4.next = NULL;
         ei_draw_polygon(surface, &pol1,*widget->pick_color, clipper);
         ei_draw_polygon(pick_surface, &pol1,trans, clipper);
+        ei_draw_text(surface, ((ei_frame_t*)widget)->ancre, ((ei_frame_t*)widget)->title, ((ei_frame_t*)widget)->fonte, *((ei_frame_t*)widget)->color, clipper);
+        hw_surface_lock(((ei_frame_t*)widget)->img);
+        ei_surface_t* surfa_img = hw_image_load(((ei_frame_t*)widget)->filename_img, ((ei_frame_t*)widget)->img);
+        ei_copy_surface(((ei_frame_t*)widget)->img, NULL, surfa_img, NULL, EI_FALSE);
 }
 
 /**
