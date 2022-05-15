@@ -1,4 +1,4 @@
-/snap/clion/189/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/189/bin/ninja/linux/ninja -G Ninja -S /home/hugo/ensimag/C/Projet/projet-c/projet_c-7.0 -B /home/hugo/ensimag/C/Projet/projet-c/projet_c-7.0/cmake-build-debug
+/snap/clion-2022.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug VERBOSE=1 -G "CodeBlocks - Unix Makefiles" -S /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 -B /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug
 CMake Deprecation Warning at CMakeLists.txt:7 (cmake_minimum_required):
   Compatibility with CMake < 2.8.12 will be removed from a future version of
   CMake.
@@ -7,7 +7,7 @@ CMake Deprecation Warning at CMakeLists.txt:7 (cmake_minimum_required):
   CMake that the project does not need compatibility with older versions.
 
 
--- Building for Linux with eibase: /home/hugo/ensimag/C/Projet/projet-c/projet_c-7.0/_x11/libeibase64.a
+-- Building for Linux with eibase: /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/_x11/libeibase64.a
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/hugo/ensimag/C/Projet/projet-c/projet_c-7.0/cmake-build-debug
+-- Build files have been written to: /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug
