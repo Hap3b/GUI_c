@@ -1,5 +1,6 @@
 #include <ei_widgetclass.h>
 #include <ei_widget.h>
+#include <ei_fct_annexes.h>
 
 typedef struct ei_toplevel_t {
         ei_widget_t* widget;
@@ -34,7 +35,10 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
                                                  ei_surface_t		pick_surface,
                                                  ei_rect_t*		clipper)
 {
-
+        ei_color_t trans = {0xff, 0xff, 0xff, 0x00};
+        ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
+        ei_surface_t * racine_bis = addr_racine();
+        hw_surface_lock(racine_bis);
 }
 
 
