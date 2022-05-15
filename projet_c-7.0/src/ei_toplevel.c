@@ -1,6 +1,5 @@
 #include <ei_widgetclass.h>
 #include <ei_widget.h>
-#include <ei_types.h>
 
 typedef struct ei_toplevel_t {
         ei_widget_t* widget;
