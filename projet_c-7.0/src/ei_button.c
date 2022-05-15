@@ -154,6 +154,7 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
 
     ei_color_t col_sombre = {min(255, button->color->red + 30), min(255, button->color->green + 30), min(255, button->color->blue + 30), button->color->alpha};
     ei_color_t col_claire = {max(0, button->color->red - 30), max(0, button->color->green - 30), max(0, button->color->blue - 30), button->color->alpha};
+
     if (*button->relief == ei_relief_raised) {
         ei_draw_polygon(surface, rounded_frame(button->screen_location, button->corner_radius, 0), col_claire,clipper);
         ei_draw_polygon(surface, rounded_frame(button->screen_location, button->corner_radius, 1), col_sombre,clipper);
