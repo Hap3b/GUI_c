@@ -10,6 +10,8 @@
 #include <ei_widgetclass.h>
 #include <ei_widget.h>
 
+void    draw_children          (ei_widget_t* children);
+
 typedef struct ei_toplevel_t {
         ei_widget_t* widget;
         ei_size_t* requested_size;

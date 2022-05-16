@@ -1,5 +1,6 @@
 #include <math.h>
 #include <ei_types.h>
+#include <ei_widget.h>
 
 int     min     (int a,
                  int b)

@@ -318,6 +318,30 @@ src/ei_event.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_event.c.s
 .PHONY : src/ei_event.c.s
 
+src/ei_frame_t.o: src/ei_frame_t.c.o
+.PHONY : src/ei_frame_t.o
+
+# target to build an object file
+src/ei_frame_t.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_frame_t.c.o
+.PHONY : src/ei_frame_t.c.o
+
+src/ei_frame_t.i: src/ei_frame_t.c.i
+.PHONY : src/ei_frame_t.i
+
+# target to preprocess a source file
+src/ei_frame_t.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_frame_t.c.i
+.PHONY : src/ei_frame_t.c.i
+
+src/ei_frame_t.s: src/ei_frame_t.c.s
+.PHONY : src/ei_frame_t.s
+
+# target to generate assembly for a file
+src/ei_frame_t.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_frame_t.c.s
+.PHONY : src/ei_frame_t.c.s
+
 src/ei_geometrymanager.o: src/ei_geometrymanager.c.o
 .PHONY : src/ei_geometrymanager.o
 
@@ -705,6 +729,9 @@ help:
 	@echo "... src/ei_event.o"
 	@echo "... src/ei_event.i"
 	@echo "... src/ei_event.s"
+	@echo "... src/ei_frame_t.o"
+	@echo "... src/ei_frame_t.i"
+	@echo "... src/ei_frame_t.s"
 	@echo "... src/ei_geometrymanager.o"
 	@echo "... src/ei_geometrymanager.i"
 	@echo "... src/ei_geometrymanager.s"

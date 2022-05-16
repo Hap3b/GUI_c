@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ei.dir/src/ei_draw.c.o.d"
   "CMakeFiles/ei.dir/src/ei_event.c.o"
   "CMakeFiles/ei.dir/src/ei_event.c.o.d"
+  "CMakeFiles/ei.dir/src/ei_frame_t.c.o"
+  "CMakeFiles/ei.dir/src/ei_frame_t.c.o.d"
   "CMakeFiles/ei.dir/src/ei_geometrymanager.c.o"
   "CMakeFiles/ei.dir/src/ei_geometrymanager.c.o.d"
   "CMakeFiles/ei.dir/src/ei_interface.c.o"

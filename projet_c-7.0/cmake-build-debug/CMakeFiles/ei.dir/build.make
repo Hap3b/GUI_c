@@ -209,6 +209,20 @@ CMakeFiles/ei.dir/src/ei_interface.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_interface.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_interface.c -o CMakeFiles/ei.dir/src/ei_interface.c.s
 
+CMakeFiles/ei.dir/src/ei_frame_t.c.o: CMakeFiles/ei.dir/flags.make
+CMakeFiles/ei.dir/src/ei_frame_t.c.o: ../src/ei_frame_t.c
+CMakeFiles/ei.dir/src/ei_frame_t.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ei.dir/src/ei_frame_t.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_frame_t.c.o -MF CMakeFiles/ei.dir/src/ei_frame_t.c.o.d -o CMakeFiles/ei.dir/src/ei_frame_t.c.o -c /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_frame_t.c
+
+CMakeFiles/ei.dir/src/ei_frame_t.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_frame_t.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_frame_t.c > CMakeFiles/ei.dir/src/ei_frame_t.c.i
+
+CMakeFiles/ei.dir/src/ei_frame_t.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_frame_t.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_frame_t.c -o CMakeFiles/ei.dir/src/ei_frame_t.c.s
+
 # Object files for target ei
 ei_OBJECTS = \
 "CMakeFiles/ei.dir/src/ei_application.c.o" \
@@ -220,7 +234,8 @@ ei_OBJECTS = \
 "CMakeFiles/ei.dir/src/ei_types.cpp.o" \
 "CMakeFiles/ei.dir/src/ei_utils.c.o" \
 "CMakeFiles/ei.dir/src/ei_widgetclass.c.o" \
-"CMakeFiles/ei.dir/src/ei_interface.c.o"
+"CMakeFiles/ei.dir/src/ei_interface.c.o" \
+"CMakeFiles/ei.dir/src/ei_frame_t.c.o"
 
 # External object files for target ei
 ei_EXTERNAL_OBJECTS =
@@ -235,9 +250,10 @@ libei.a: CMakeFiles/ei.dir/src/ei_types.cpp.o
 libei.a: CMakeFiles/ei.dir/src/ei_utils.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_widgetclass.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_interface.c.o
+libei.a: CMakeFiles/ei.dir/src/ei_frame_t.c.o
 libei.a: CMakeFiles/ei.dir/build.make
 libei.a: CMakeFiles/ei.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libei.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libei.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ei.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ei.dir/link.txt --verbose=$(VERBOSE)
 
