@@ -79,10 +79,8 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_unlock(pick_surface);
         ei_draw_polygon(surface, linked_lower_left, dark_grey, clipper);
         free(centre_r);
-        free(lower_right);
         free(lower_left);
-        free(linked_lower_left);
-        free(linked_lower_right);
+        free(lower_right);
         // Il faudrait pouvoir free les points des arcs créés -> à faire
 
         // Dessin du texte de l'en-tête -> à faire
@@ -118,15 +116,44 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         free(lower_right_int);
         free(middle_left);
         free(middle_right);
-        free(linked_lower_left_int);
-        free(linked_lower_right_int);
-        free(linked_middle_left);
-        free(linked_middle_right);
-        
+
+        // Dessin d'un petit carré gris en bas à droite si la fenêtre peut être redimensionnéee
+        if (toplevel->resizable != ei_axis_none) {
+                ei_point_t *pt_square1 = malloc(sizeof(ei_point_t));
+                ei_point_t *pt_square2 = malloc(sizeof(ei_point_t));
+                ei_point_t *pt_square3 = malloc(sizeof(ei_point_t));
+                ei_point_t *pt_square4 = malloc(sizeof(ei_point_t));
+                pt_square1->x = widget->screen_location.top_left.x + widget->screen_location.size.width - 15;
+                pt_square2->x = widget->screen_location.top_left.x + widget->screen_location.size.width - 15;
+                pt_square3->x = widget->screen_location.top_left.x + widget->screen_location.size.width;
+                pt_square4->x = widget->screen_location.top_left.x + widget->screen_location.size.width;
+                pt_square1->y = widget->screen_location.top_left.y + widget->screen_location.size.height;
+                pt_square2->y = widget->screen_location.top_left.y + widget->screen_location.size.height - 15;
+                pt_square3->y = widget->screen_location.top_left.y + widget->screen_location.size.height - 15;
+                pt_square4->y = widget->screen_location.top_left.y + widget->screen_location.size.height;
+                ei_linked_point_t *linked_pt_square1;
+                ei_linked_point_t *linked_pt_square2;
+                ei_linked_point_t *linked_pt_square3;
+                ei_linked_point_t *linked_pt_square4;
+                linked_pt_square1->point = *pt_square1;
+                linked_pt_square2->point = *pt_square2;
+                linked_pt_square3->point = *pt_square3;
+                linked_pt_square4->point = *pt_square4;
+                linked_pt_square1->next = linked_pt_square2;
+                linked_pt_square2->next = linked_pt_square3;
+                linked_pt_square3->next = linked_pt_square4;
+                linked_pt_square4->next = NULL;
+                ei_draw_polygon(surface, linked_pt_square1, dark_grey, clipper);
+                free(pt_square1);
+                free(pt_square2);
+                free(pt_square3);
+                free(pt_square4);
+        }
+
         hw_surface_unlock(surface);
 
         //On dessine tous les widgets qui sont dans le toplevel
-        draw_children(widget, surface, pick_surface, clipper);
+        draw_children(widget, surface, pick_surface, widget->content_rect);
 }
 
 
