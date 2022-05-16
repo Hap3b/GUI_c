@@ -1,4 +1,4 @@
-# Install script for directory: /user/9/.base/fauchonj/home/TP/Projet_c/projet-c/projet_c-7.0
+# Install script for directory: /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/user/9/.base/fauchonj/home/TP/Projet_c/projet-c/projet_c-7.0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

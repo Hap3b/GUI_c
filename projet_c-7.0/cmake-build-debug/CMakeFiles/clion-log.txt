@@ -1,4 +1,4 @@
-/opt/clion-2021.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /user/9/.base/fauchonj/home/TP/Projet_c/projet-c/projet_c-7.0
+/snap/clion-2022.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug VERBOSE=1 -G "CodeBlocks - Unix Makefiles" -S /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 -B /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug
 CMake Deprecation Warning at CMakeLists.txt:7 (cmake_minimum_required):
   Compatibility with CMake < 2.8.12 will be removed from a future version of
   CMake.
@@ -7,7 +7,19 @@ CMake Deprecation Warning at CMakeLists.txt:7 (cmake_minimum_required):
   CMake that the project does not need compatibility with older versions.
 
 
--- Building for Linux with eibase: /user/9/.base/fauchonj/home/TP/Projet_c/projet-c/projet_c-7.0/_x11/libeibase64.a
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building for Linux with eibase: /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/_x11/libeibase64.a
 -- Configuring done
 -- Generating done
--- Build files have been written to: /user/9/.base/fauchonj/home/TP/Projet_c/projet-c/projet_c-7.0/cmake-build-debug
+-- Build files have been written to: /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug

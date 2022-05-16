@@ -1,1 +1,1 @@
-/usr/bin/cc -g -rdynamic CMakeFiles/minimal.dir/tests/minimal.c.o -o minimal  ../_x11/libeibase64.a -L/user/9/.base/fauchonj/home/TP/Projet_c/projet-c/projet_c-7.0/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 
+/usr/bin/cc -g -rdynamic CMakeFiles/minimal.dir/tests/minimal.c.o -o minimal  ../_x11/libeibase64.a -L/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 
