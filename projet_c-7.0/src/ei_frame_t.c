@@ -4,7 +4,7 @@
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
 #include "ei_variable_globale.h"
-#include <ei_fct_annexes.h>
+#include "ei_fct_annexes.h"
 void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame);
 typedef struct ei_frame_t {
         ei_widget_t     widget;
@@ -31,7 +31,7 @@ struct ei_frame_t*      ei_frame_allocfunc_t        (void)
 {
         struct ei_frame_t *frame = calloc(1, sizeof(ei_frame_t));
         return frame;
-};
+}
 
 void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame)
 {
@@ -46,7 +46,7 @@ void        ei_frame_releasefunc_t      (struct ei_frame_t*	frame)
         free(frame-> img);
         free(frame-> img_rect);
         free(frame -> img_anchor);
-};
+}
 
 void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
                                                 ei_surface_t		surface,
@@ -85,7 +85,7 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_surface_t* surfa_img = hw_image_load(((ei_frame_t*)widget)->filename_img, ((ei_frame_t*)widget)->img);
         ei_copy_surface(((ei_frame_t*)widget)->img, NULL, surfa_img, NULL, EI_FALSE);
         hw_surface_unlock(((ei_frame_t*)widget)->img);
-};
+}
 static ei_widgetclass_t classe_frame =
         {
                 "frame",
@@ -119,10 +119,10 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
         ((ei_frame_t *)frame)->relief = base_relief;
         ((ei_frame_t *)frame)->border_width = zero;
         ((ei_frame_t *)frame)->title = NULL;
-        ((ei_frame_t *)frame)->title_fonte = &ei_font_default_color;
+        ((ei_frame_t *)frame)->title_fonte = (ei_font_t *) &ei_font_default_color;
         ((ei_frame_t *)frame)->title_anchor = base_anchor;
-        ((ei_frame_t *)frame)->color = &ei_default_background_color;
-        ((ei_frame_t *)frame)->color_title = &ei_default_background_color;
+        ((ei_frame_t *)frame)->color = (ei_color_t *) &ei_default_background_color;
+        ((ei_frame_t *)frame)->color_title = (ei_color_t *) &ei_default_background_color;
         ((ei_frame_t *)frame)->img = NULL;
         ((ei_frame_t *)frame)->img_rect = NULL;
         ((ei_frame_t*)frame)->img_anchor = base_anchor;
@@ -136,7 +136,7 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
         free(zero);
 
 
-};
+}
 
 
 

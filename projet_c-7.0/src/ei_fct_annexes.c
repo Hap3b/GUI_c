@@ -1,4 +1,3 @@
-#include <math.h>
 #include <ei_types.h>
 
 int     min     (int a,

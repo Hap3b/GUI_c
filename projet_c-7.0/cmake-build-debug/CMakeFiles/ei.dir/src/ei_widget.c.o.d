@@ -80,4 +80,6 @@ CMakeFiles/ei.dir/src/ei_widget.c.o: \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widget.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_application.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_frame_t.h \
- /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widgetclass.h
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_fct_annexes.h \
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_types.h

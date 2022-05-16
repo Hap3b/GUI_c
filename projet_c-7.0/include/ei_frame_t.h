@@ -1,6 +1,7 @@
 #include<ei_widget.h>
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
+#include "ei_fct_annexes.h"
 
 void dessine_tout_widget();
 

@@ -93,6 +93,8 @@ CMakeFiles/ei.dir/src/ei_application.c.o: ../src/ei_application.c \
   ../include/ei_widgetclass.h \
   ../include/ei_frame_t.h \
   ../include/ei_widgetclass.h \
+  ../include/ei_fct_annexes.h \
+  ../include/ei_types.h \
   ../include/ei_variable_globale.h \
   ../include/ei_geometrymanager.h \
   ../include/ei_widget.h \
@@ -280,7 +282,9 @@ CMakeFiles/ei.dir/src/ei_frame_t.c.o: ../src/ei_frame_t.c \
   ../include/ei_widgetclass.h \
   ../include/ei_variable_globale.h \
   ../include/ei_geometrymanager.h \
-  ../include/ei_widget.h
+  ../include/ei_widget.h \
+  ../include/ei_fct_annexes.h \
+  ../include/ei_types.h
 
 CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: ../src/ei_geometrymanager.c \
   /usr/include/stdc-predef.h \
@@ -480,7 +484,9 @@ CMakeFiles/ei.dir/src/ei_widget.c.o: ../src/ei_widget.c \
   ../include/ei_widget.h \
   ../include/ei_application.h \
   ../include/ei_frame_t.h \
-  ../include/ei_widgetclass.h
+  ../include/ei_widgetclass.h \
+  ../include/ei_fct_annexes.h \
+  ../include/ei_types.h
 
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: ../src/ei_widgetclass.c \
   /usr/include/stdc-predef.h \
@@ -584,6 +590,8 @@ CMakeFiles/ei.dir/src/ei_widgetclass.c.o: ../src/ei_widgetclass.c \
 
 ../src/ei_interface.c:
 
+../src/ei_geometrymanager.c:
+
 ../src/ei_widget.c:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -615,6 +623,8 @@ CMakeFiles/ei.dir/src/ei_widgetclass.c.o: ../src/ei_widgetclass.c \
 /usr/include/SDL2/SDL_config.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+../include/ei_fct_annexes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -777,5 +787,3 @@ CMakeFiles/ei.dir/src/ei_widgetclass.c.o: ../src/ei_widgetclass.c \
 ../include/ei_widgetclass.h:
 
 ../src/ei_event.c:
-
-../src/ei_geometrymanager.c:

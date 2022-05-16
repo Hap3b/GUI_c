@@ -7,7 +7,6 @@
 
 #endif //PROJETC_IG_EI_FCT_ANNEXES_H
 
-#include <math.h>
 #include <ei_types.h>
 
 int     min     (int a,
