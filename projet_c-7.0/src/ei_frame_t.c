@@ -4,6 +4,7 @@
 #include<ei_widgetclass.h>
 #include<ei_widget.h>
 #include "ei_variable_globale.h"
+#include <ei_fct_annexes.h>
 void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame);
 typedef struct ei_frame_t {
         ei_widget_t     widget;
@@ -78,7 +79,8 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_draw_polygon(surface, &pol1,*(frame->color), clipper);
         ei_draw_polygon(pick_surface, &pol1,trans, clipper);
         hw_surface_unlock(racine_bis);
-        ei_draw_text(surface, ((ei_frame_t*)widget)->ancre, ((ei_frame_t*)widget)->title, ((ei_frame_t*)widget)->title_fonte, *((ei_frame_t*)widget)->color, clipper);
+        ei_point_t where_text = anchor_to_point(frame->title_anchor, surface);
+        ei_draw_text(surface, &where_text, ((ei_frame_t*)widget)->title, ((ei_frame_t*)widget)->title_fonte, *((ei_frame_t*)widget)->color, clipper);
         hw_surface_lock(((ei_frame_t*)widget)->img);
         ei_surface_t* surfa_img = hw_image_load(((ei_frame_t*)widget)->filename_img, ((ei_frame_t*)widget)->img);
         ei_copy_surface(((ei_frame_t*)widget)->img, NULL, surfa_img, NULL, EI_FALSE);

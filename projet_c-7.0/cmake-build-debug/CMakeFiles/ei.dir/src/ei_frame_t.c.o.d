@@ -78,4 +78,6 @@ CMakeFiles/ei.dir/src/ei_frame_t.c.o: \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_variable_globale.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
- /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widget.h
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_fct_annexes.h \
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_types.h
