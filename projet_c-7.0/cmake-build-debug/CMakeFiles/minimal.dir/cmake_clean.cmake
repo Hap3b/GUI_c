@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/minimal.dir/tests/minimal.c.o"
+  "CMakeFiles/minimal.dir/tests/minimal.c.o.d"
   "minimal"
   "minimal.pdb"
 )

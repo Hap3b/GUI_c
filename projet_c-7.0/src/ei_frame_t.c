@@ -18,6 +18,7 @@ typedef struct ei_frame_t {
         ei_surface_t*    img;
         ei_rect_t*       img_rect;
         ei_anchor_t*     img_anchor;
+        char*            filename_img;
 
 
 }ei_frame_t;
@@ -77,6 +78,11 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_draw_polygon(surface, &pol1,*(frame->color), clipper);
         ei_draw_polygon(pick_surface, &pol1,trans, clipper);
         hw_surface_unlock(racine_bis);
+        ei_draw_text(surface, ((ei_frame_t*)widget)->ancre, ((ei_frame_t*)widget)->title, ((ei_frame_t*)widget)->fonte, *((ei_frame_t*)widget)->color, clipper);
+        hw_surface_lock(((ei_frame_t*)widget)->img);
+        ei_surface_t* surfa_img = hw_image_load(((ei_frame_t*)widget)->filename_img, ((ei_frame_t*)widget)->img);
+        ei_copy_surface(((ei_frame_t*)widget)->img, NULL, surfa_img, NULL, EI_FALSE);
+        hw_surface_unlock(((ei_frame_t*)widget)->img);
 };
 static ei_widgetclass_t classe_frame =
         {

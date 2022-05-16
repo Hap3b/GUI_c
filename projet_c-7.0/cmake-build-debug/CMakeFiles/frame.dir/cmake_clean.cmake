@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/frame.dir/tests/frame.c.o"
+  "CMakeFiles/frame.dir/tests/frame.c.o.d"
   "frame"
   "frame.pdb"
 )

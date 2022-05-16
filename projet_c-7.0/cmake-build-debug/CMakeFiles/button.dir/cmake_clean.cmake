@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/button.dir/tests/button.c.o"
+  "CMakeFiles/button.dir/tests/button.c.o.d"
   "button"
   "button.pdb"
 )
