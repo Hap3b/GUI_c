@@ -95,7 +95,10 @@ set(LIB_EI_SOURCES
 	${SRC}/ei_utils.c
 	${SRC}/ei_widgetclass.c
 	${SRC}/ei_interface.c
-	${SRC}/ei_frame_t.c)
+	${SRC}/ei_frame_t.c
+	${SRC}/ei_toplevel.c
+	${SRC}/ei_fct_annexes.c
+	${SRC}/ei_event_2.c)
 
 add_library(ei STATIC			${LIB_EI_SOURCES})
 

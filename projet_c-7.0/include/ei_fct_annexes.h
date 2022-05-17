@@ -16,7 +16,9 @@ int     min     (int a,
 int     max     (int a,
                  int b);
 
-ei_linked_point_t*       arc[2]            (ei_point_t     centre,
-                                            int          rayon,
-                                            float          pre_angle,
-                                            float          deu_angle);
+ei_linked_point_t**    arc           (ei_point_t*     centre,
+                                      double          rayon,
+                                      double          pre_angle,
+                                      double          deu_angle);
+
+void    free_arc        (struct ei_linked_point_t** arc);

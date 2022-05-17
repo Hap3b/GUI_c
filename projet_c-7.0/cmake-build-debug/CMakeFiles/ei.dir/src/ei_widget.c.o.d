@@ -79,4 +79,5 @@ CMakeFiles/ei.dir/src/ei_widget.c.o: \
  /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widget.h \
  /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_application.h \
  /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_frame_t.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widgetclass.h
+ /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
+ /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_toplevel.h
