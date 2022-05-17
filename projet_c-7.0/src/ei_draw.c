@@ -2,21 +2,21 @@
 
 uint32_t*		ei_map_rgba		(ei_surface_t surface, ei_color_t color)
 {
-    int ia;
-    int ib;
-    int ir;
-    int ig;
-    hw_surface_get_channel_indices(surface, &ir, &ig, &ib, &ia);
-    uint32_t* tot = 0;
-    uint32_t init = color.red << (8 * (ir));
-    tot = &init;
-    *tot += color.blue << (8 * (ib));
-    *tot += color.green << (8 * (ig));
-    if (ia == -1) {
+        int ia;
+        int ib;
+        int ir;
+        int ig;
+        hw_surface_get_channel_indices(surface, &ir, &ig, &ib, &ia);
+        uint32_t* tot = 0;
+        uint32_t init = color.red << (8 * (ir));
+        tot = &init;
+        *tot += color.blue << (8 * (ib));
+        *tot += color.green << (8 * (ig));
+        if (ia == -1) {
+                return tot;
+        };
+        *tot += color.alpha << (8* (ia));
         return tot;
-    };
-    *tot += color.alpha << (8* (ia));
-    return tot;
 }
 
 int ei_copy_surface (ei_surface_t		destination,
@@ -140,11 +140,11 @@ int ei_copy_surface (ei_surface_t		destination,
                                 pixel_src += difference_source;
                         }
                 }
-        hw_surface_unlock(destination);
-        hw_surface_unlock(source);
-        hw_surface_update_rects(destination, NULL);
-        hw_surface_update_rects(source, NULL);
-        return 0;
+                hw_surface_unlock(destination);
+                hw_surface_unlock(source);
+                hw_surface_update_rects(destination, NULL);
+                hw_surface_update_rects(source, NULL);
+                return 0;
         }
 }
 
@@ -184,7 +184,7 @@ void			ei_fill			(ei_surface_t		surface,
 }
 
 void			ei_draw_text		(ei_surface_t		surface,
-                                                         ei_rect_t **where,
+                                                         const ei_point_t* where,
                                                          const char*		text,
                                                          ei_font_t		font,
                                                          ei_color_t		color,
@@ -192,15 +192,19 @@ void			ei_draw_text		(ei_surface_t		surface,
 {
 
         hw_surface_lock(surface);
+        if (font == NULL){
+                font = ei_default_font;
+        }
         ei_surface_t surfa_text = hw_text_create_surface(text, font, color);
         hw_surface_lock(surfa_text);
-        int* width;
-        int* height;
-        hw_text_compute_size(text, font, width, height);
+        int width;
+        int height;
+        hw_text_compute_size(text, font, &width, &height);
         ei_size_t* size = malloc(sizeof(ei_size_t));
-        size->height = *height;
-        size->width  = *width;
-        ei_rect_t* src_rect = {*where, *size};
+        size->height = height;
+        size->width  = width;
+        ei_rect_t* src_rect = malloc(sizeof(ei_rect_t));
+        src_rect->top_left = *where;
         ei_rect_t dst_rect = hw_surface_get_rect(surfa_text);
         if (clipper == NULL)
         {
@@ -222,4 +226,5 @@ void			ei_draw_text		(ei_surface_t		surface,
         hw_surface_update_rects(surfa_text, NULL);
         hw_surface_free(surfa_text);
         free(size);
+        free(src_rect);
 }

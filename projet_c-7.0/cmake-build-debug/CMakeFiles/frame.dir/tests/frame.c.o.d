@@ -77,9 +77,7 @@ CMakeFiles/frame.dir/tests/frame.c.o: \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_draw.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/hw_interface.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
- /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_event.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/hw_interface.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widget.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
- /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_variable_globale.h \
- /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_geometrymanager.h
+ /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_button.h

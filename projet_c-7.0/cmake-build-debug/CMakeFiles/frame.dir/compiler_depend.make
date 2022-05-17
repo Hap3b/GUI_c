@@ -91,13 +91,13 @@ CMakeFiles/frame.dir/tests/frame.c.o: ../tests/frame.c \
   ../include/ei_draw.h \
   ../include/hw_interface.h \
   ../include/ei_widgetclass.h \
-  ../include/ei_event.h \
   ../include/hw_interface.h \
   ../include/ei_widget.h \
   ../include/ei_geometrymanager.h \
-  ../include/ei_variable_globale.h \
-  ../include/ei_geometrymanager.h
+  ../include/ei_button.h
 
+
+../include/ei_button.h:
 
 ../include/ei_widgetclass.h:
 
@@ -138,8 +138,6 @@ CMakeFiles/frame.dir/tests/frame.c.o: ../tests/frame.c \
 /usr/include/ctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-../include/ei_variable_globale.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
@@ -214,8 +212,6 @@ CMakeFiles/frame.dir/tests/frame.c.o: ../tests/frame.c \
 /usr/include/features.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-../include/ei_event.h:
 
 /usr/include/stdio.h:
 

@@ -159,7 +159,7 @@ typedef void*		ei_font_t;
 extern ei_font_t	ei_default_font;
 
 static const int	ei_font_default_size		= 22;
-static ei_color_t *const ei_font_default_color		= {0x00, 0x00, 0x00, 0xff };
+static const ei_color_t	ei_font_default_color		= { 0x00, 0x00, 0x00, 0xff };
 static const char	ei_default_font_filename[]	= "misc/font.ttf";
 
 

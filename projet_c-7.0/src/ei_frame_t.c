@@ -40,7 +40,8 @@ void        ei_frame_releasefunc_t      (struct ei_widget_t*	frame)
 void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
                                                 ei_surface_t		surface,
                                                 ei_surface_t		pick_surface,
-                                                ei_rect_t*		clipper) {
+                                                ei_rect_t*		clipper)
+{
         ei_point_t depart = widget->screen_location.top_left;
         ei_point_t droite = depart;
         droite.x = droite.x + widget->screen_location.size.width;
@@ -60,34 +61,23 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol3.next = &pol4;
         pol4.point = final;
         pol4.next = NULL;
-        ei_frame_t *frame = (ei_frame_t *) widget;
-        hw_surface_lock(surface);
+        ei_frame_t* frame = (ei_frame_t*)widget;
         hw_surface_lock(pick_surface);
-        ei_draw_polygon(surface, &pol1, (frame->color), clipper);
-        ei_draw_polygon(pick_surface, &pol1, *(widget->pick_color), clipper);
-        if (*(frame->title) != "\t") {
-                ei_point_t where_text = anchor_to_point((ei_anchor_t *) frame->title_anchor, surface);
+        ei_draw_polygon(pick_surface, &pol1,*(widget->pick_color), clipper);
+        hw_surface_unlock(pick_surface);
+        hw_surface_lock(surface);
+        ei_draw_polygon(surface, &pol1,(frame->color), clipper);
+        hw_surface_unlock(surface);
+        if (frame->title != NULL) {
+                ei_point_t* where_text = anchor_to_point((ei_anchor_t *) frame->title_anchor, surface);
                 ei_draw_text(surface,
-                             (ei_rect_t **) &where_text,
+                             where_text,
                              ((ei_frame_t *) widget)->title,
                              ((ei_frame_t *) widget)->title_fonte,
                              ((ei_frame_t *) widget)->color, clipper);
         }
-        /*if (frame->img != NULL)
-        {
-                hw_surface_lock(((ei_frame_t *) widget)->img);
-                ei_surface_t *surfa_img = hw_image_load(((ei_frame_t *) widget)->filename_img,
-                                                        ((ei_frame_t *) widget)->img);
-                ei_copy_surface(((ei_frame_t*)widget)->img,
-                                NULL,
-                                surfa_img,
-                                NULL,
-                                EI_FALSE);
-                hw_surface_unlock(((ei_frame_t*)widget)->img);
-        }*/
-}
 
-
+};
 static ei_widgetclass_t classe_frame =
         {
                 "frame",
@@ -101,7 +91,7 @@ static ei_widgetclass_t classe_frame =
 
 void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
 {
-        ei_color_t trans = {0xff, 0xff, 0xff, 0x0};
+
         frame -> wclass = &classe_frame;
         frame->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
         frame->requested_size.width = 960;
@@ -121,9 +111,10 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
         ((ei_frame_t *)frame)->color_title = ei_default_background_color;
         ((ei_frame_t *)frame)->img_rect = NULL;
         ((ei_frame_t*)frame)->img_anchor = ei_anc_center;
-        frame->pick_color = &trans;
+
         ((ei_frame_t *)frame)->ancre = ei_anc_northwest;
-        ((ei_frame_t *)frame)->title_anchor = ei_anc_none;
+
+
 };
 
 

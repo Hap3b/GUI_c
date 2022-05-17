@@ -82,11 +82,11 @@ void			ei_draw_polygon		(ei_surface_t			surface,
  * @param	clipper		If not NULL, the drawing is restricted within this rectangle.
  */
 void			ei_draw_text		(ei_surface_t		surface,
-                                                         ei_rect_t **where,
-                                                         const char*		text,
-                                                         ei_font_t		font,
-                                                         ei_color_t		color,
-                                                         const ei_rect_t*	clipper);
+						 const ei_point_t*	where,
+						 const char*		text,
+						 ei_font_t		font,
+						 ei_color_t		color,
+						 const ei_rect_t*	clipper);
 
 /**
  * \brief	Fills the surface with the specified color.

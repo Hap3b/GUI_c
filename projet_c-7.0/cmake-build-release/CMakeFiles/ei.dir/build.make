@@ -125,24 +125,10 @@ CMakeFiles/ei.dir/src/ei_draw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_draw.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_draw.c -o CMakeFiles/ei.dir/src/ei_draw.c.s
 
-CMakeFiles/ei.dir/src/ei_event.c.o: CMakeFiles/ei.dir/flags.make
-CMakeFiles/ei.dir/src/ei_event.c.o: ../src/ei_event.c
-CMakeFiles/ei.dir/src/ei_event.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ei.dir/src/ei_event.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_event.c.o -MF CMakeFiles/ei.dir/src/ei_event.c.o.d -o CMakeFiles/ei.dir/src/ei_event.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c
-
-CMakeFiles/ei.dir/src/ei_event.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_event.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c > CMakeFiles/ei.dir/src/ei_event.c.i
-
-CMakeFiles/ei.dir/src/ei_event.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_event.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c -o CMakeFiles/ei.dir/src/ei_event.c.s
-
 CMakeFiles/ei.dir/src/ei_parser.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_parser.c.o: ../src/ei_parser.c
 CMakeFiles/ei.dir/src/ei_parser.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ei.dir/src/ei_parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ei.dir/src/ei_parser.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_parser.c.o -MF CMakeFiles/ei.dir/src/ei_parser.c.o.d -o CMakeFiles/ei.dir/src/ei_parser.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_parser.c
 
 CMakeFiles/ei.dir/src/ei_parser.c.i: cmake_force
@@ -156,7 +142,7 @@ CMakeFiles/ei.dir/src/ei_parser.c.s: cmake_force
 CMakeFiles/ei.dir/src/ei_types.cpp.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_types.cpp.o: ../src/ei_types.cpp
 CMakeFiles/ei.dir/src/ei_types.cpp.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ei.dir/src/ei_types.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ei.dir/src/ei_types.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_types.cpp.o -MF CMakeFiles/ei.dir/src/ei_types.cpp.o.d -o CMakeFiles/ei.dir/src/ei_types.cpp.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_types.cpp
 
 CMakeFiles/ei.dir/src/ei_types.cpp.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/ei.dir/src/ei_types.cpp.s: cmake_force
 CMakeFiles/ei.dir/src/ei_utils.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_utils.c.o: ../src/ei_utils.c
 CMakeFiles/ei.dir/src/ei_utils.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ei.dir/src/ei_utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ei.dir/src/ei_utils.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_utils.c.o -MF CMakeFiles/ei.dir/src/ei_utils.c.o.d -o CMakeFiles/ei.dir/src/ei_utils.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_utils.c
 
 CMakeFiles/ei.dir/src/ei_utils.c.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/ei.dir/src/ei_utils.c.s: cmake_force
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: ../src/ei_widgetclass.c
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ei.dir/src/ei_widgetclass.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ei.dir/src/ei_widgetclass.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_widgetclass.c.o -MF CMakeFiles/ei.dir/src/ei_widgetclass.c.o.d -o CMakeFiles/ei.dir/src/ei_widgetclass.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_widgetclass.c
 
 CMakeFiles/ei.dir/src/ei_widgetclass.c.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/ei.dir/src/ei_widgetclass.c.s: cmake_force
 CMakeFiles/ei.dir/src/ei_interface.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_interface.c.o: ../src/ei_interface.c
 CMakeFiles/ei.dir/src/ei_interface.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ei.dir/src/ei_interface.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ei.dir/src/ei_interface.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_interface.c.o -MF CMakeFiles/ei.dir/src/ei_interface.c.o.d -o CMakeFiles/ei.dir/src/ei_interface.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_interface.c
 
 CMakeFiles/ei.dir/src/ei_interface.c.i: cmake_force
@@ -212,7 +198,7 @@ CMakeFiles/ei.dir/src/ei_interface.c.s: cmake_force
 CMakeFiles/ei.dir/src/ei_frame_t.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_frame_t.c.o: ../src/ei_frame_t.c
 CMakeFiles/ei.dir/src/ei_frame_t.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ei.dir/src/ei_frame_t.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ei.dir/src/ei_frame_t.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_frame_t.c.o -MF CMakeFiles/ei.dir/src/ei_frame_t.c.o.d -o CMakeFiles/ei.dir/src/ei_frame_t.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_frame_t.c
 
 CMakeFiles/ei.dir/src/ei_frame_t.c.i: cmake_force
@@ -223,10 +209,38 @@ CMakeFiles/ei.dir/src/ei_frame_t.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_frame_t.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_frame_t.c -o CMakeFiles/ei.dir/src/ei_frame_t.c.s
 
+CMakeFiles/ei.dir/src/ei_button.c.o: CMakeFiles/ei.dir/flags.make
+CMakeFiles/ei.dir/src/ei_button.c.o: ../src/ei_button.c
+CMakeFiles/ei.dir/src/ei_button.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ei.dir/src/ei_button.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_button.c.o -MF CMakeFiles/ei.dir/src/ei_button.c.o.d -o CMakeFiles/ei.dir/src/ei_button.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_button.c
+
+CMakeFiles/ei.dir/src/ei_button.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_button.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_button.c > CMakeFiles/ei.dir/src/ei_button.c.i
+
+CMakeFiles/ei.dir/src/ei_button.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_button.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_button.c -o CMakeFiles/ei.dir/src/ei_button.c.s
+
+CMakeFiles/ei.dir/src/ei_event.c.o: CMakeFiles/ei.dir/flags.make
+CMakeFiles/ei.dir/src/ei_event.c.o: ../src/ei_event.c
+CMakeFiles/ei.dir/src/ei_event.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ei.dir/src/ei_event.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_event.c.o -MF CMakeFiles/ei.dir/src/ei_event.c.o.d -o CMakeFiles/ei.dir/src/ei_event.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c
+
+CMakeFiles/ei.dir/src/ei_event.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_event.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c > CMakeFiles/ei.dir/src/ei_event.c.i
+
+CMakeFiles/ei.dir/src/ei_event.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_event.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c -o CMakeFiles/ei.dir/src/ei_event.c.s
+
 CMakeFiles/ei.dir/src/ei_fct_annexes.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_fct_annexes.c.o: ../src/ei_fct_annexes.c
 CMakeFiles/ei.dir/src/ei_fct_annexes.c.o: CMakeFiles/ei.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ei.dir/src/ei_fct_annexes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ei.dir/src/ei_fct_annexes.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_fct_annexes.c.o -MF CMakeFiles/ei.dir/src/ei_fct_annexes.c.o.d -o CMakeFiles/ei.dir/src/ei_fct_annexes.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_fct_annexes.c
 
 CMakeFiles/ei.dir/src/ei_fct_annexes.c.i: cmake_force
@@ -243,13 +257,14 @@ ei_OBJECTS = \
 "CMakeFiles/ei.dir/src/ei_geometrymanager.c.o" \
 "CMakeFiles/ei.dir/src/ei_widget.c.o" \
 "CMakeFiles/ei.dir/src/ei_draw.c.o" \
-"CMakeFiles/ei.dir/src/ei_event.c.o" \
 "CMakeFiles/ei.dir/src/ei_parser.c.o" \
 "CMakeFiles/ei.dir/src/ei_types.cpp.o" \
 "CMakeFiles/ei.dir/src/ei_utils.c.o" \
 "CMakeFiles/ei.dir/src/ei_widgetclass.c.o" \
 "CMakeFiles/ei.dir/src/ei_interface.c.o" \
 "CMakeFiles/ei.dir/src/ei_frame_t.c.o" \
+"CMakeFiles/ei.dir/src/ei_button.c.o" \
+"CMakeFiles/ei.dir/src/ei_event.c.o" \
 "CMakeFiles/ei.dir/src/ei_fct_annexes.c.o"
 
 # External object files for target ei
@@ -259,17 +274,18 @@ libei.a: CMakeFiles/ei.dir/src/ei_application.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_geometrymanager.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_widget.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_draw.c.o
-libei.a: CMakeFiles/ei.dir/src/ei_event.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_parser.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_types.cpp.o
 libei.a: CMakeFiles/ei.dir/src/ei_utils.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_widgetclass.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_interface.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_frame_t.c.o
+libei.a: CMakeFiles/ei.dir/src/ei_button.c.o
+libei.a: CMakeFiles/ei.dir/src/ei_event.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_fct_annexes.c.o
 libei.a: CMakeFiles/ei.dir/build.make
 libei.a: CMakeFiles/ei.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libei.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libei.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ei.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ei.dir/link.txt --verbose=$(VERBOSE)
 

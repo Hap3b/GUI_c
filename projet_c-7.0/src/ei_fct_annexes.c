@@ -12,7 +12,7 @@ int     max     (int a,
         return a > b ? a : b;
 }
 
-ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
+ei_point_t* anchor_to_point(const ei_anchor_t* ancre, ei_rect_t* rect)
 {
         if (ancre != ei_anc_none)
         {
@@ -21,7 +21,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                 int height = size.height;
                 if (*ancre == ei_anc_northeast)
                 {
-                        return rect->top_left;
+                        return &(rect->top_left);
                 }
                 else if (*ancre == ei_anc_north)
                 {
@@ -29,7 +29,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = point_x;
                         point.y = 0;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_northwest)
                 {
@@ -37,7 +37,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = point_x;
                         point.y = 0;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_east)
                 {
@@ -45,7 +45,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = 0;
                         point.y = point_y;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_center)
                 {
@@ -54,7 +54,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = point_x;
                         point.y = point_y;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_west)
                 {
@@ -63,7 +63,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = point_x;
                         point.y = point_y;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_southeast)
                 {
@@ -71,7 +71,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = 0;
                         point.y = point_y;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_south)
                 {
@@ -80,7 +80,7 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = point_x;
                         point.y = point_y;
-                        return point;
+                        return &point;
                 }
                 else if (*ancre == ei_anc_southwest)
                 {
@@ -89,8 +89,8 @@ ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
                         ei_point_t point;
                         point.x = point_x;
                         point.y = point_y;
-                        return point;
+                        return &point;
                 }
         }
-        return rect->top_left; /* If it is none it will return the northeast point*/
+        return &(rect->top_left); /* If it is none it will return the northeast point*/
 }

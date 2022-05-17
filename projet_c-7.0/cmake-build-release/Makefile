@@ -270,6 +270,30 @@ src/ei_application.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_application.c.s
 .PHONY : src/ei_application.c.s
 
+src/ei_button.o: src/ei_button.c.o
+.PHONY : src/ei_button.o
+
+# target to build an object file
+src/ei_button.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.o
+.PHONY : src/ei_button.c.o
+
+src/ei_button.i: src/ei_button.c.i
+.PHONY : src/ei_button.i
+
+# target to preprocess a source file
+src/ei_button.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.i
+.PHONY : src/ei_button.c.i
+
+src/ei_button.s: src/ei_button.c.s
+.PHONY : src/ei_button.s
+
+# target to generate assembly for a file
+src/ei_button.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.s
+.PHONY : src/ei_button.c.s
+
 src/ei_draw.o: src/ei_draw.c.o
 .PHONY : src/ei_draw.o
 
@@ -747,6 +771,9 @@ help:
 	@echo "... src/ei_application.o"
 	@echo "... src/ei_application.i"
 	@echo "... src/ei_application.s"
+	@echo "... src/ei_button.o"
+	@echo "... src/ei_button.i"
+	@echo "... src/ei_button.s"
 	@echo "... src/ei_draw.o"
 	@echo "... src/ei_draw.i"
 	@echo "... src/ei_draw.s"

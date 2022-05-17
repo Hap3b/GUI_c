@@ -15,5 +15,5 @@ int     min     (int a,
 int     max     (int a,
                  int b);
 
-ei_point_t anchor_to_point(ei_anchor_t* ancre,
+ei_point_t* anchor_to_point(ei_anchor_t* ancre,
                            ei_rect_t* rect);

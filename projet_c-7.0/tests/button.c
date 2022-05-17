@@ -6,7 +6,7 @@
 #include "hw_interface.h"
 #include "ei_widget.h"
 #include "ei_geometrymanager.h"
-
+#include<ei_event_2.h>
 
 /*
  * button_press --
@@ -56,7 +56,6 @@ int main(int argc, char** argv)
 	ei_relief_t	button_relief		= ei_relief_raised;
 	int		button_border_width	= 6;
 	ei_callback_t	button_callback 	= button_press;
-
 	/* Create the application and change the color of the background. */
 	ei_app_create(screen_size, EI_FALSE);
 	ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
@@ -69,13 +68,13 @@ int main(int argc, char** argv)
 	ei_place(button, NULL, &button_x, &button_y, NULL, NULL, NULL, NULL, NULL, NULL );
 
 	/* Hook the keypress callback to the event. */
-	ei_bind(ei_ev_keydown,		NULL, "all", process_key, NULL);
+	//ei_bind(ei_ev_keydown,		NULL, "all", process_key, NULL);
 
 	/* Run the application's main loop. */
 	ei_app_run();
 
 	/* We just exited from the main loop. Terminate the application (cleanup). */
-	ei_unbind(ei_ev_keydown,	NULL, "all", process_key, NULL);
+	//ei_unbind(ei_ev_keydown,	NULL, "all", process_key, NULL);
 	ei_app_free();
 
 	return (EXIT_SUCCESS);

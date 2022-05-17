@@ -483,6 +483,9 @@
 		<Unit filename="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_application.c">
 			<Option target="ei"/>
 		</Unit>
+		<Unit filename="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_button.c">
+			<Option target="ei"/>
+		</Unit>
 		<Unit filename="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_draw.c">
 			<Option target="ei"/>
 		</Unit>

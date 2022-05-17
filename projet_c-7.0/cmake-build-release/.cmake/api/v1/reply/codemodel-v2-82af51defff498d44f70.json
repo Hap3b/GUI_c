@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ProjetC_IG",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "button::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-button-Release-3ecabc4e0baf7396595c.json",
+					"name" : "button",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc-Release-5e7b30d6110f0b041dbd.json",
+					"name" : "doc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ei::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ei-Release-488fda48d37a5a72f7eb.json",
+					"name" : "ei",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "frame::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-frame-Release-4a2618ef1e300953aff7.json",
+					"name" : "frame",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hello_world::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hello_world-Release-9853097724ea579c1b7c.json",
+					"name" : "hello_world",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "minesweeper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-minesweeper-Release-9c4ccd3f8e5e1cc116cb.json",
+					"name" : "minesweeper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "minimal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-minimal-Release-f3a7fc593bf6dc84f91c.json",
+					"name" : "minimal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "parsing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-parsing-Release-d98d29b45c559169431a.json",
+					"name" : "parsing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "puzzle::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-puzzle-Release-4a715b3e63c5bc917ff4.json",
+					"name" : "puzzle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "two048::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-two048-Release-151b6aea93658506429a.json",
+					"name" : "two048",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release",
+		"source" : "/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
