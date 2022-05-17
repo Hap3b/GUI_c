@@ -5,9 +5,28 @@
 
 #include<ei_widget.h>
 #include <ei_variable_globale.h>
-
 #include "ei_application.h"
 #include "ei_frame_t.h"
+#include<ei_button.h>
+ei_color_t couleur_off_screnn = {0,0,0,0};
+
+void incremente_couleur_off_screen()
+{
+        if (couleur_off_screnn.red <255)
+        {
+                couleur_off_screnn.red++;
+        }
+        else
+        {
+                if (couleur_off_screnn.green < 255)
+                {
+                        couleur_off_screnn.green++;
+                } else
+                {
+                        couleur_off_screnn.blue++;
+                }
+        }
+}
 
 
 void dessine_widget(ei_widget_t *widget)
@@ -172,6 +191,8 @@ ei_widget_t*		ei_widget_create		(ei_widgetclass_name_t	class_name,
         {
                 ei_widget_t *new_widget = classe_cree->allocfunc();
                 classe_cree->setdefaultsfunc(new_widget);
+                new_widget -> pick_color = &couleur_off_screnn;
+                incremente_couleur_off_screen();
                 new_widget->user_data = user_data;
                 new_widget->parent = parent;
                 ei_rajoute_widget_abr_widget(parent,new_widget);
@@ -184,6 +205,134 @@ ei_widget_t*		ei_widget_create		(ei_widgetclass_name_t	class_name,
 
 }
 
+void			ei_button_configure		(ei_widget_t*		widget,
+                                                                ei_size_t*		requested_size,
+                                                                const ei_color_t*	color,
+                                                                int*			border_width,
+                                                                int*			corner_radius,
+                                                                ei_relief_t*		relief,
+                                                                char**			text,
+                                                                ei_font_t*		text_font,
+                                                                ei_color_t*		text_color,
+                                                                ei_anchor_t*		text_anchor,
+                                                                ei_surface_t*		img,
+                                                                ei_rect_t**		img_rect,
+                                                                ei_anchor_t*		img_anchor,
+                                                                ei_callback_t*		callback,
+                                                                void**			user_param)
+{
+        int* cornder_default = malloc(sizeof(int));
 
+        *cornder_default = k_default_button_corner_radius;
+
+        ei_button_t* button = (ei_button_t*)widget;
+
+        int* zero = malloc(sizeof(int));
+        *zero = 0;
+        ei_anchor_t* base = malloc(sizeof(ei_anchor_t));
+        *base = ei_anc_center;
+        ei_relief_t* base2 = malloc(sizeof(ei_relief_t));
+        *base2 = ei_relief_raised;
+        if (requested_size != NULL)
+        {
+                widget->requested_size.width = requested_size->width;
+                widget->requested_size.height = requested_size->height;
+        }
+
+        if (color == NULL)
+        {
+                button -> color = &ei_default_background_color;
+        }
+        else
+        {
+                button -> color = color;
+        }
+
+        if(border_width != NULL)
+        {
+                button -> border_width = border_width;
+        }
+        else
+        {
+                button -> border_width = zero;
+        }
+
+        if (relief != NULL)
+        {
+                button -> relief = relief;
+        }
+        else
+        {
+                button -> relief = base2;
+        }
+
+        if (text != NULL)
+        {
+                button -> text = text;
+        }
+
+        if ( text_font != NULL)
+        {
+                button -> text_font = text_font;
+        }
+        else
+        {
+                button -> text_font = &ei_default_font;
+        }
+
+        if (text_color != NULL)
+        {
+                button -> text_color = text_color;
+        }
+        else
+        {
+                button->text_color = &ei_font_default_color;
+        }
+
+        if (text_anchor != NULL)
+        {
+                button -> text_anchor = text_anchor;
+        }
+        else
+        {
+                button -> text_anchor = base;
+        }
+
+        if (img != NULL)
+        {
+                button -> img = img;
+        }
+
+        if( img_rect != NULL)
+        {
+                 button -> img_rect = img_rect;
+        }
+
+        if (img_anchor != NULL)
+        {
+                button -> img_anchor = img_anchor;
+        }
+        else
+        {
+                button -> img_anchor = base;
+        }
+
+        if (corner_radius != NULL)
+        {
+                button -> corner_radius = corner_radius;
+        }
+        else
+        {
+                button -> corner_radius = cornder_default;
+        }
+
+        button->callback = callback;
+        button->user_param = user_param;
+
+        free(zero);
+        free(base);
+        free(base2);
+        free(cornder_default);
+}
 
 

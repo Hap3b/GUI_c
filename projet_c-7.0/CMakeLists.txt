@@ -89,13 +89,15 @@ set(LIB_EI_SOURCES
 	${SRC}/ei_geometrymanager.c
 	${SRC}/ei_widget.c
         ${SRC}/ei_draw.c
-	${SRC}/ei_event.c
 	${SRC}/ei_parser.c
 	${SRC}/ei_types.cpp
 	${SRC}/ei_utils.c
 	${SRC}/ei_widgetclass.c
 	${SRC}/ei_interface.c
-	${SRC}/ei_frame_t.c)
+	${SRC}/ei_frame_t.c
+	${SRC}/ei_button.c
+	${SRC}/ei_event.c
+	include/ei_event_2.h)
 
 add_library(ei STATIC			${LIB_EI_SOURCES})
 
@@ -111,7 +113,7 @@ target_link_libraries(frame		ei ${PLATFORM_LIB_FLAGS})
 
 # target button
 
-add_executable(button			${TESTS_SRC}/button.c )
+add_executable(button			${TESTS_SRC}/button.c)
 target_link_libraries(button		ei ${PLATFORM_LIB_FLAGS})
 
 # target hello_world

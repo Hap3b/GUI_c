@@ -6,21 +6,27 @@
 #include<ei_frame_t.h>
 #include<ei_variable_globale.h>
 #include <ei_geometrymanager.h>
+#include<ei_event_2.h>
 
 static ei_surface_t racine = NULL;
 static ei_surface_t surface_cache = NULL;
 static ei_widget_t *arbre_de_widget = NULL;
+static ei_bool_t quit = EI_FALSE;
 
-ei_surface_t *addr_racine(){
-        return racine;
+void ei_app_quit_request(void)
+{
+        quit = EI_TRUE;
 }
+
 ei_surface_t *addr_surface_cache(){
         return surface_cache;
 }
+
 void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 {
         ei_widgetclass_register(addr_frame());
-        ei_geometrymanager_register_tout();
+        ei_widgetclass_register(addr_button());
+        ei_geometrymanager_register(addr_geom_placeur_t());
         hw_init();
         racine = hw_create_window(main_window_size, fullscreen);
         surface_cache = hw_surface_create(racine, main_window_size, EI_FALSE);
@@ -32,6 +38,16 @@ void ei_app_run(void)
         dessine_tout_widget();
         hw_surface_update_rects(racine, NULL);
         getchar();
+        struct ei_event_t* event_cur = malloc(sizeof(struct ei_event_t));
+        while (!quit)
+        {
+                hw_event_wait_next(event_cur);
+                event_bind* event_traite = event_recherche(event_cur);
+                while ( event_traite != NULL && (*(event_traite ->callback))(event_traite->widget,event_cur,event_traite ->user_param) )
+                {
+                        event_traite = event_traite -> next;
+                }
+                hw_surface_update_rects(racine, NULL);
 }
 
 void ei_app_free(void)

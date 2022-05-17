@@ -54,11 +54,11 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_color_t trans = {0xff, 0xff, 0xff, 0x00};
         ei_point_t depart = widget->screen_location.top_left;
         ei_point_t droite = depart;
-        droite.x = droite.x + widget->requested_size.width;
+        droite.x = droite.x + widget->screen_location.size.width;
         ei_point_t bdroite = droite;
-        bdroite.y = bdroite.y + widget->requested_size.height;
+        bdroite.y = bdroite.y + widget->screen_location.size.height;
         ei_point_t final = depart;
-        final.y = final.y + widget->requested_size.height;
+        final.y = final.y + widget->screen_location.size.height;
         ei_linked_point_t pol1;
         ei_linked_point_t pol2;
         ei_linked_point_t pol3;
@@ -72,11 +72,12 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol4.point = final;
         pol4.next = NULL;
         ei_frame_t* frame = (ei_frame_t*)widget;
-        ei_surface_t * racine_bis = addr_racine();
-        hw_surface_lock(racine_bis);
+        hw_surface_lock(surface);
+        hw_surface_lock(pick_surface);
         ei_draw_polygon(surface, &pol1,*(frame->color), clipper);
-        ei_draw_polygon(pick_surface, &pol1,trans, clipper);
-        hw_surface_unlock(racine_bis);
+        ei_draw_polygon(pick_surface, &pol1,*(widget->pick_color), clipper);
+        hw_surface_unlock(surface);
+        hw_surface_unlock(pick_surface);
 };
 static ei_widgetclass_t classe_frame =
         {
