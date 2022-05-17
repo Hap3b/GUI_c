@@ -318,6 +318,30 @@ src/ei_event.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_event.c.s
 .PHONY : src/ei_event.c.s
 
+src/ei_fct_annexes.o: src/ei_fct_annexes.c.o
+.PHONY : src/ei_fct_annexes.o
+
+# target to build an object file
+src/ei_fct_annexes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_fct_annexes.c.o
+.PHONY : src/ei_fct_annexes.c.o
+
+src/ei_fct_annexes.i: src/ei_fct_annexes.c.i
+.PHONY : src/ei_fct_annexes.i
+
+# target to preprocess a source file
+src/ei_fct_annexes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_fct_annexes.c.i
+.PHONY : src/ei_fct_annexes.c.i
+
+src/ei_fct_annexes.s: src/ei_fct_annexes.c.s
+.PHONY : src/ei_fct_annexes.s
+
+# target to generate assembly for a file
+src/ei_fct_annexes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_fct_annexes.c.s
+.PHONY : src/ei_fct_annexes.c.s
+
 src/ei_frame_t.o: src/ei_frame_t.c.o
 .PHONY : src/ei_frame_t.o
 
@@ -729,6 +753,9 @@ help:
 	@echo "... src/ei_event.o"
 	@echo "... src/ei_event.i"
 	@echo "... src/ei_event.s"
+	@echo "... src/ei_fct_annexes.o"
+	@echo "... src/ei_fct_annexes.i"
+	@echo "... src/ei_fct_annexes.s"
 	@echo "... src/ei_frame_t.o"
 	@echo "... src/ei_frame_t.i"
 	@echo "... src/ei_frame_t.s"

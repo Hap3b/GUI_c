@@ -29,8 +29,8 @@ int main(int argc, char** argv)
 	/* Create the application and change the color of the background. */
 	ei_app_create(screen_size, EI_FALSE);
 
-
-	ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+	ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL,
+                           NULL, NULL, NULL, NULL);
 
 	/* Create, configure and place the frame on screen. */
 	frame = ei_widget_create("frame", ei_app_root_widget(), NULL, NULL);
@@ -38,7 +38,6 @@ int main(int argc, char** argv)
 		    &frame_border_width, &frame_relief, NULL, NULL, NULL, NULL,
 			    NULL, NULL, NULL);
 	ei_place(frame, NULL, &frame_x, &frame_y, NULL, NULL, NULL, NULL, NULL, NULL );
-
 	/* Run the application's main loop. */
 	ei_app_run();
 

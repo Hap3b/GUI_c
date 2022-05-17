@@ -32,7 +32,7 @@ void dessine_widget(ei_widget_t *widget)
 void dessine_tout_widget()
 {
         ei_widget_t* arbre = ei_app_root_widget();
-        arbre ->screen_location.size.height = arbre ->requested_size.height;
+        arbre ->screen_location.size.height = arbre->requested_size.height;
         arbre ->screen_location.size.width = arbre->requested_size.width;
         dessine_widget(ei_app_root_widget());
 }
