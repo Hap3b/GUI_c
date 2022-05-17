@@ -33,26 +33,32 @@ void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 }
 
 
-void ei_app_run(void)
-{
+void ei_app_run(void) {/* Create, configure and place the button on screen. */
         dessine_tout_widget();
         hw_surface_update_rects(racine, NULL);
-        getchar();
-        struct ei_event_t* event_cur = malloc(sizeof(struct ei_event_t));
-        while (!quit)
-        {
+        struct ei_event_t *event_cur = malloc(sizeof(struct ei_event_t));
+        while (!quit) {
                 hw_event_wait_next(event_cur);
-                event_bind* event_traite = event_recherche(event_cur);
-                while ( event_traite != NULL && (*(event_traite ->callback))(event_traite->widget,event_cur,event_traite ->user_param) )
+
+                if (event_cur->type == ei_ev_mouse_buttondown)
                 {
-                        event_traite = event_traite -> next;
+                        /*vent_bind *event_traite = event_recherche(event_cur);
+                        while (event_traite != NULL &&
+                               (*(event_traite->callback))(event_traite->widget, event_cur, event_traite->user_param)) {
+                                event_traite = event_traite->next;
+                        }
+                        hw_surface_update_rects(racine, NULL);*/
+                        ei_color_t pick_color = recherche_pick_color(event_cur->param.mouse.where.x,event_cur->param.mouse.where.y);
+                        printf("oui");
+                        printf("%u %u %u", pick_color.red, pick_color.green, pick_color.blue);
+                        fflush(stdout);
                 }
-                hw_surface_update_rects(racine, NULL);
+        }
 }
 
 void ei_app_free(void)
 {
-
+        return;
 }
 
 ei_widget_t* ei_app_root_widget(void)

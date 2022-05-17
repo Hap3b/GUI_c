@@ -3,9 +3,9 @@
 //
 #include<ei_event.h>
 #include<ei_application.h>
-
+#include "ei_variable_globale.h"
 typedef struct event_bind {
-        ei_eventtype_t*  eventtype;
+        ei_eventtype_t  eventtype;
         ei_widget_t*    widget;
         ei_tag_t*        tag;
         ei_callback_t*   callback;
@@ -13,7 +13,18 @@ typedef struct event_bind {
         struct event_bind*      next;
 }event_bind;
 
-event_bind* liste_event_bind = NULL;
+static event_bind* liste_event_bind = NULL;
+
+event_bind* addr_liste_event_bind()
+{
+        return liste_event_bind;
+}
+
+void register_bind(event_bind* new_bind)
+{
+        new_bind->next = liste_event_bind;
+        liste_event_bind = new_bind;
+}
 
 void		ei_bind			(ei_eventtype_t		eventtype,
                                                     ei_widget_t*		widget,
@@ -27,20 +38,12 @@ void		ei_bind			(ei_eventtype_t		eventtype,
         }
         else {
                 event_bind *new_bind = malloc(sizeof(event_bind));
-                new_bind->eventtype = &eventtype;
+                new_bind->eventtype = eventtype;
                 new_bind->widget = widget;
                 new_bind->tag = &tag;
                 new_bind->callback = &callback;
                 new_bind->user_param = user_param;
-
-                if (liste_event_bind == NULL)
-                {
-                        liste_event_bind = new_bind;
-                }
-                else
-                {
-                        liste_event_bind -> next = new_bind;
-                }
+                register_bind(new_bind);
         }
 }
 
@@ -65,13 +68,16 @@ uint8_t souris_event(ei_eventtype_t event) {
 
 ei_color_t recherche_pick_color(int x, int y)
 {
-        uint8_t* buffer = hw_surface_get_buffer(ei_app_root_surface());
-        buffer += 4*(x+y);
+        hw_surface_lock(addr_surface_cache());
+        ei_size_t surface_size = hw_surface_get_size(addr_surface_cache());
+        uint8_t* buffer = hw_surface_get_buffer(addr_surface_cache());
+        buffer = buffer + 4*(x+y*surface_size.width);
         uint8_t red = *buffer;
         uint8_t green = *(buffer+1);
         uint8_t blue = *(buffer+2);
         uint8_t alpha = *(buffer+3);
         ei_color_t pick_color_souris = {red, green, blue, alpha,};
+        hw_surface_unlock(ei_app_root_surface());
         return pick_color_souris;
 }
 
@@ -88,7 +94,7 @@ ei_bool_t comp_color(ei_color_t* color1,ei_color_t* color2)
 }
 ei_bool_t widget_concerne(event_bind* lien_event,ei_event_t* event)
 {
-        uint8_t type_event = souris_event(*(lien_event ->eventtype));
+        uint8_t type_event = souris_event((lien_event ->eventtype));
         if (type_event == 1)
         {
                 return EI_TRUE;
@@ -103,9 +109,9 @@ ei_bool_t widget_concerne(event_bind* lien_event,ei_event_t* event)
 event_bind* event_recherche(ei_event_t* event)
 {
         event_bind *liste_bis = liste_event_bind;
-        event_bind* liste_event_concerne = NULL;
+        event_bind* liste_event_concerne = malloc(sizeof (event_bind));
         while (liste_bis != NULL) {
-                if (event->type == *(liste_bis->eventtype) && widget_concerne(liste_bis, event)) {
+                if (event->type == (liste_bis->eventtype) && widget_concerne(liste_bis, event)) {
                         if (liste_event_concerne != NULL) {
                                 event_bind *event_a_traite = liste_bis;
                                 event_a_traite->next = NULL;

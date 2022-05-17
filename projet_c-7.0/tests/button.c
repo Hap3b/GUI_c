@@ -6,7 +6,7 @@
 #include "hw_interface.h"
 #include "ei_widget.h"
 #include "ei_geometrymanager.h"
-
+#include<ei_event_2.h>
 
 /*
  * button_press --
@@ -56,7 +56,6 @@ int main(int argc, char** argv)
 	ei_relief_t	button_relief		= ei_relief_raised;
 	int		button_border_width	= 6;
 	ei_callback_t	button_callback 	= button_press;
-
 	/* Create the application and change the color of the background. */
 	ei_app_create(screen_size, EI_FALSE);
 	ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);

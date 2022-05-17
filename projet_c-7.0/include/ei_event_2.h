@@ -17,4 +17,12 @@ typedef struct event_bind {
         struct event_bind*      next;
 }event_bind;
 
+ei_color_t recherche_pick_color(int x, int y);
+
+ei_callback_t* addr_boutton_origin();
+
 event_bind* event_recherche(ei_event_t* event);
+
+ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
+                                        struct ei_event_t*	event,
+                                        void*			user_param);

@@ -97,7 +97,7 @@ set(LIB_EI_SOURCES
 	${SRC}/ei_frame_t.c
 	${SRC}/ei_button.c
 	${SRC}/ei_event.c
-	include/ei_event_2.h)
+	)
 
 add_library(ei STATIC			${LIB_EI_SOURCES})
 

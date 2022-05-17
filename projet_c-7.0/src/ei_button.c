@@ -182,42 +182,30 @@ void       rounded_frame              (ei_rect_t*     rectangle,
 
 typedef struct ei_button_t {
         ei_widget_t widget;
-        ei_color_t* color;
-        int* border_width;
-        int* corner_radius;
-        ei_relief_t* relief;
-        char** text;
-        ei_font_t* text_font;
-        ei_color_t* text_color;
-        ei_anchor_t* text_anchor;
-        ei_surface_t* img;
-        ei_rect_t** img_rect;
-        ei_anchor_t* img_anchor;
-        ei_callback_t* callback;
-        void** user_param;
+        ei_color_t color;
+        int border_width;
+        int corner_radius;
+        ei_relief_t relief;
+        char* text;
+        ei_font_t text_font;
+        ei_color_t text_color;
+        ei_anchor_t text_anchor;
+        ei_surface_t img;
+        ei_rect_t* img_rect;
+        ei_anchor_t img_anchor;
+        ei_callback_t callback;
+        void* user_param;
 } ei_button_t;
 
-struct ei_button_t*      ei_button_allocfunc_t        (void)
+ei_widget_t*      ei_button_allocfunc_t        (void)
 {
-        struct ei_button_t *button = calloc(1, sizeof(ei_button_t));
-        return button;
+        ei_button_t *button = malloc(sizeof(ei_button_t));
+        return (ei_widget_t*)button;
 };
 
-void        ei_button_releasefunc_t      (struct ei_button_t*	button)
+void        ei_button_releasefunc_t      (struct ei_widget_t*	button)
 {
-        free(button -> color);
-        free(button -> border_width);
-        free(button -> corner_radius);
-        free(button -> relief);
-        free(button -> text);
-        free(button-> text_font);
-        free(button -> text_color);
-        free(button -> text_anchor);
-        free(button -> img);
-        free(button -> img_rect);
-        free(button -> img_anchor);
-        free(button -> callback);
-        free(button -> user_param);
+        free(button);
 };
 
 void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
@@ -225,10 +213,7 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
                                                  ei_surface_t		pick_surface,
                                                  ei_rect_t*		clipper)
 {
-        ei_color_t trans = {0xff, 0xff, 0xff, 0x00};
         ei_button_t* button = (ei_button_t*)widget;
-
-        hw_surface_lock(pick_surface);
         ei_linked_point_t* cadre_haut = malloc(sizeof(ei_linked_point_t));
         ei_linked_point_t* cadre_bas = malloc(sizeof(ei_linked_point_t));
         ei_linked_point_t* cadre = malloc(sizeof(ei_linked_point_t));
@@ -237,21 +222,21 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
 
         ei_color_t* sombre = malloc(sizeof(ei_color_t));
         ei_color_t* clair = malloc(sizeof(ei_color_t));
-        sombre ->blue = button->color->blue+10;
-        sombre ->green = button->color->green+10;
-        sombre ->red = button->color->red+10;
-        sombre ->alpha = button->color->alpha;
-        clair ->blue = button->color->blue-10;
-        clair ->green = button->color->green-10;
-        clair ->red = button->color->red-10;
-        clair ->alpha = button->color->alpha;
+        sombre ->blue = button->color.blue+10;
+        sombre ->green = button->color.green+10;
+        sombre ->red = button->color.red+10;
+        sombre ->alpha = button->color.alpha;
+        clair ->blue = button->color.blue-10;
+        clair ->green = button->color.green-10;
+        clair ->red = button->color.red-10;
+        clair ->alpha = button->color.alpha;
 
-        rounded_frame(&(widget->screen_location), button->corner_radius, partie, &cadre_haut);
+        rounded_frame(&(widget->screen_location), &(button->corner_radius), partie, &cadre_haut);
         *partie = 1;
-        rounded_frame(&(widget->screen_location), button->corner_radius, partie, &cadre_bas);
+        rounded_frame(&(widget->screen_location), &(button->corner_radius), partie, &cadre_bas);
         hw_surface_lock(surface);
         hw_surface_lock(pick_surface);
-        if (*button->relief == ei_relief_raised) {
+        if (button->relief == ei_relief_raised) {
                 *partie = 0;
                 ei_draw_polygon(surface, cadre_haut, *clair,clipper);
                 ei_draw_polygon(surface, cadre_bas, *sombre,clipper);
@@ -262,12 +247,12 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
         }
         *partie = 2;
         ei_rect_t* interieur = malloc(sizeof(ei_rect_t));
-        interieur->size.width = widget->screen_location.size.width-2*(*(button->border_width));
-        interieur->size.height = widget->screen_location.size.height-2*(*(button->border_width));
-        interieur->top_left.x = widget->screen_location.top_left.x + *(button->border_width);
-        interieur->top_left.y = widget->screen_location.top_left.y + *(button->border_width);
-        rounded_frame(interieur, button->corner_radius, partie, &cadre);
-        ei_draw_polygon(surface, cadre, *button->color ,clipper);
+        interieur->size.width = widget->screen_location.size.width-2*((button->border_width));
+        interieur->size.height = widget->screen_location.size.height-2*((button->border_width));
+        interieur->top_left.x = widget->screen_location.top_left.x + (button->border_width);
+        interieur->top_left.y = widget->screen_location.top_left.y + (button->border_width);
+        rounded_frame(interieur, &(button->corner_radius), partie, &cadre);
+        ei_draw_polygon(surface, cadre, button->color ,clipper);
         ei_draw_polygon(pick_surface, cadre, *(widget->pick_color),clipper);
         hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
@@ -285,29 +270,19 @@ static ei_widgetclass_t classe_button =
 
 void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
 {
-        ei_color_t* default_color = malloc(sizeof(ei_color_t));
-        *default_color =ei_default_background_color;
-        int* default_border = malloc(sizeof(int ));
-        *default_border = k_default_button_border_width;
-        ei_relief_t* default_relief = malloc(sizeof(ei_relief_t));
-        *default_relief = ei_relief_raised;
-        ei_anchor_t* default_anchor = malloc(sizeof(ei_anchor_t));
-        *default_anchor = ei_anc_center;
+        ei_relief_t default_relief = ei_relief_raised;
+        ei_anchor_t default_anchor = ei_anc_center;
         ei_button_t* button_bis = (ei_button_t*) button;
 
-        button_bis -> color = default_color;
-        button_bis -> border_width = default_border;
+        button_bis->color = ei_default_background_color;
+        button_bis -> border_width = k_default_button_border_width;
 
-        *default_border = k_default_button_corner_radius;
-
-        button_bis -> corner_radius = default_border;
+        button_bis -> corner_radius = k_default_button_corner_radius;
         button_bis -> relief = default_relief;
         button_bis -> text = NULL;
-        button_bis -> text_font = &ei_default_font;
+        button_bis -> text_font = ei_default_font;
 
-        *default_color = ei_font_default_color;
-
-        button_bis -> text_color = default_color;
+        button_bis -> text_color = ei_font_default_color;
         button_bis -> text_anchor = default_anchor;
         button_bis -> img = NULL;
         button_bis -> img_rect = NULL;
@@ -326,16 +301,33 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button->next_sibling = NULL;
         button->geom_params = NULL;
 
-        free(default_color);
-        free(default_border);
-        free(default_anchor);
-        free(default_relief);
 };
 
+ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
+                                          struct ei_event_t*	event,
+                                          void*			user_param){
 
-ei_widgetclass_t* addr_button()ei_bool_t	(*ei_callback_t)	(ei_widget_t*		widget,
-                                                                         struct ei_event_t*	event,
-                                                                         void*			user_param);
+        ei_button_t* button = (ei_button_t*) widget;
+        if ((button ->relief) == ei_relief_raised)
+        {
+                button ->relief = ei_relief_sunken;
+        }
+        else
+        {
+                ei_relief_t base = ei_relief_raised;
+                button ->relief = base;
+        }
+        ei_button_drawfunc_t(widget, ei_app_root_surface(), addr_surface_cache(), &(widget->screen_location));
+        hw_surface_update_rects(ei_app_root_surface(), NULL);
+        return EI_FALSE;
+}
+
+ei_callback_t* addr_boutton_origin()
+{
+        return &boutton_origin;
+}
+
+ei_widgetclass_t* addr_button()
 {
         return &classe_button;
 }
