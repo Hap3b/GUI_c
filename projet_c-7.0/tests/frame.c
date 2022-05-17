@@ -25,6 +25,8 @@ int main(int argc, char** argv)
 	ei_color_t	frame_color		= {0x88, 0x88, 0x88, 0xff};
 	ei_relief_t	frame_relief		= ei_relief_raised;
 	int		frame_border_width	= 6;
+        char **         title                   = malloc(sizeof(char **));
+        title
 
 	/* Create the application and change the color of the background. */
 	ei_app_create(screen_size, EI_FALSE);
@@ -35,8 +37,8 @@ int main(int argc, char** argv)
 	/* Create, configure and place the frame on screen. */
 	frame = ei_widget_create("frame", ei_app_root_widget(), NULL, NULL);
 	ei_frame_configure(frame, &frame_size, &frame_color,
-		    &frame_border_width, &frame_relief, NULL, NULL, NULL, NULL,
-			    NULL, NULL, NULL);
+                           &frame_border_width, &frame_relief, (char **) "test", ei_default_font, ei_font_default_color, ei_anc_none,
+                           NULL, NULL, NULL);
 	ei_place(frame, NULL, &frame_x, &frame_y, NULL, NULL, NULL, NULL, NULL, NULL );
 	/* Run the application's main loop. */
 	ei_app_run();

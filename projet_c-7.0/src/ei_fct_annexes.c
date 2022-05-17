@@ -14,7 +14,7 @@ int     max     (int a,
 
 ei_point_t anchor_to_point(ei_anchor_t* ancre, ei_rect_t* rect)
 {
-        if (ancre != 0)
+        if (ancre != ei_anc_none)
         {
                 ei_size_t size = rect->size;
                 int width = size.width;

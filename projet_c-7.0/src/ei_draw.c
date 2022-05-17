@@ -61,6 +61,8 @@ int ei_copy_surface (ei_surface_t		destination,
         int difference_destination = size_dst.width - width;
         if ((size_src.height != size_dst.height) || (size_src.height != size_dst.height))
         {
+                hw_surface_unlock(source);
+                hw_surface_unlock(destination);
                 return 1;
         }
         else
@@ -91,11 +93,50 @@ int ei_copy_surface (ei_surface_t		destination,
                                         int *ir;
                                         int *ib;
                                         hw_surface_get_channel_indices(destination, ir, ig, ib, ia);
-                                        *pixel_dst += 0xff << (8* (*ia)); /* Set to opaque */
-                                        pixel_dst++;
-                                        pixel_src++;
+                                        (uint8_t) *pixel_src;
+                                        (uint8_t) *pixel_dst;
+                                        uint8_t Pg;
+                                        uint8_t Pb;
+                                        uint8_t Pr;
+                                        uint8_t Pa;
+                                        uint8_t Sg;
+                                        uint8_t Sb;
+                                        uint8_t Sr;
+                                        uint8_t Sa;
+                                        for (int k = 0; k < 4; k++){
+                                                if (k == *ig){
+                                                        uint8_t Pg = (uint8_t) *pixel_src;
+                                                        uint8_t Sg = (uint8_t) *pixel_dst;
+                                                }
+                                                else if (k == *ib){
+                                                        uint8_t Pb = (uint8_t) *pixel_src;
+                                                        uint8_t Sb = (uint8_t) *pixel_dst;
+                                                }
+                                                else if (k == *ir){
+                                                        uint8_t Pr = (uint8_t) *pixel_src;
+                                                        uint8_t Sr = (uint8_t) *pixel_dst;
+                                                }
+                                                else if (k == *ia){
+                                                        uint8_t Pa = (uint8_t) *pixel_src;
+                                                        uint8_t Sa = (uint8_t) *pixel_src;
+                                                }
+                                                pixel_src++;
+                                                pixel_dst++;
+                                        }
+                                        Sr = (Pa * Pr + (255 - Pa)*Sr)/255;
+                                        Sg = (Pa * Pg + (255 - Pa)*Sg)/255;
+                                        Sb = (Pa * Pb + (255 - Pa)*Sb)/255;
+                                        uint32_t* tot = 0;
+                                        uint32_t init = Sr << (8 * (*ir));
+                                        tot = &init;
+                                        *tot += Sb << (8 * (*ib));
+                                        *tot += Sg << (8 * (*ig));
+                                        *tot += 0xff << (8* (*ia)); /* Set to opaque */
+                                        (uint32_t)* pixel_dst;
+                                        pixel_dst = tot;
                                 }
-                                pixel_dst += difference_destination; /* case if one of the rectangle is not NULL, place the pointer to right address */
+                                (uint32_t)* pixel_src;
+                                pixel_dst += difference_destination; /* Place the pointer to the right address */
                                 pixel_src += difference_source;
                         }
                 }
@@ -103,7 +144,7 @@ int ei_copy_surface (ei_surface_t		destination,
         hw_surface_unlock(source);
         hw_surface_update_rects(destination, NULL);
         hw_surface_update_rects(source, NULL);
-                return 0;
+        return 0;
         }
 }
 
@@ -143,35 +184,42 @@ void			ei_fill			(ei_surface_t		surface,
 }
 
 void			ei_draw_text		(ei_surface_t		surface,
-                                                         const ei_point_t*	where,
+                                                         ei_rect_t **where,
                                                          const char*		text,
                                                          ei_font_t		font,
                                                          ei_color_t		color,
                                                          const ei_rect_t*	clipper)
 {
+
         hw_surface_lock(surface);
         ei_surface_t surfa_text = hw_text_create_surface(text, font, color);
         hw_surface_lock(surfa_text);
         int* width;
         int* height;
         hw_text_compute_size(text, font, width, height);
-        ei_size_t* size;
+        ei_size_t* size = malloc(sizeof(ei_size_t));
         size->height = *height;
         size->width  = *width;
-        ei_rect_t* src_rect;
-        src_rect->top_left = *where;
-        src_rect->size = *size;
+        ei_rect_t* src_rect = {*where, *size};
+        ei_rect_t dst_rect = hw_surface_get_rect(surfa_text);
         if (clipper == NULL)
         {
-                ei_copy_surface(surface, src_rect, surfa_text, src_rect, EI_FALSE);
+                ei_copy_surface(surface, src_rect, surfa_text, &dst_rect, EI_TRUE);
         }
         else
         {
-                ei_copy_surface(surface, clipper, surfa_text, clipper, EI_FALSE);
+                if (dst_rect.size.width > clipper->size.width){
+                        dst_rect.size.width = clipper->size.width;
+                }
+                else if (dst_rect.size.width > clipper->size.width){
+                        dst_rect.size.width = clipper->size.width;
+                }
+                ei_copy_surface(surface, src_rect, surfa_text, &dst_rect, EI_TRUE);
         }
         hw_surface_unlock(surface);
         hw_surface_unlock(surfa_text);
         hw_surface_update_rects(surface, NULL);
         hw_surface_update_rects(surfa_text, NULL);
         hw_surface_free(surfa_text);
+        free(size);
 }
