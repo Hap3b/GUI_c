@@ -1,14 +1,8 @@
 #include <ei_widgetclass.h>
 #include <ei_widget.h>
-#include <ei_fct_annexes.h>
+#include <ei_button.h>
 
-void    draw_children          (ei_widget_t* children, ei_surface_t  surface, ei_surface_t pick_surface, ei_rect_t* clipper)
-{
-        if (children != NULL) {
-                children->wclass->drawfunc(children, surface, pick_surface, clipper);
-                draw_children(children->next_sibling, surface, pick_surface, clipper);
-        }
-}
+void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel);
 
 typedef struct ei_toplevel_t {
         ei_widget_t* widget;
@@ -21,14 +15,15 @@ typedef struct ei_toplevel_t {
         ei_size_t** min_size;
 } ei_toplevel_t;
 
-struct ei_toplevel_t*      ei_toplevel_allocfunc_t        (void)
+struct ei_widget_t*      ei_toplevel_allocfunc_t        (void)
 {
-        struct ei_toplevel_t *toplevel = calloc(1, sizeof(ei_toplevel_t));
-        return toplevel;
+        struct ei_toplevel_t *toplevel = malloc(sizeof(ei_toplevel_t));
+        return (ei_widget_t*) toplevel;
 }
 
-void        ei_toplevel_releasefunc_t      (struct ei_toplevel_t*	toplevel)
+void        ei_toplevel_releasefunc_t      (struct ei_widget_t*	widget)
 {
+        ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
         free(toplevel -> requested_size);
         free(toplevel-> color);
         free(toplevel-> border_width);
@@ -36,6 +31,14 @@ void        ei_toplevel_releasefunc_t      (struct ei_toplevel_t*	toplevel)
         free(toplevel-> closable);
         free(toplevel-> resizable);
         free(toplevel-> min_size);
+}
+
+void    draw_children          (ei_widget_t* children, ei_surface_t  surface, ei_surface_t pick_surface, ei_rect_t* clipper)
+{
+        if (children != NULL) {
+                children->wclass->drawfunc(children, surface, pick_surface, clipper);
+                draw_children(children->next_sibling, surface, pick_surface, clipper);
+        }
 }
 
 void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
@@ -50,12 +53,24 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_lock(pick_surface);
 
         // Création des arcs de l'en tête.
+        double *angle0 = malloc(sizeof(double));
+        *angle0 = -M_PI;
+        double *angle1 = malloc(sizeof(double));
+        *angle1 = -M_PI/2;
+        double *angle2 = malloc(sizeof(double));
+        *angle2 = 0;
+        int *rayon = malloc(sizeof(int));
+        *rayon = k_default_button_corner_radius;
         ei_point_t* centre_r = malloc(sizeof(ei_point_t));
-        centre_r->x = k_default_button_corner_radius;
-        centre_r->y = k_default_button_corner_radius;
-        ei_linked_point_t** couple0 = arc(centre_r, k_default_button_corner_radius, -M_PI, -M_PI/2);
-        centre_r->x = widget->screen_location.size.width - k_default_button_corner_radius;
-        ei_linked_point_t** couple1 = arc(centre_r, k_default_button_corner_radius, -M_PI/2, 0);
+        ei_linked_point_t* arc0 = malloc(sizeof(ei_linked_point_t));
+        ei_linked_point_t* arc1 = malloc(sizeof(ei_linked_point_t));
+        ei_linked_point_t* arc2 = malloc(sizeof(ei_linked_point_t));
+        ei_linked_point_t* arc3 = malloc(sizeof (ei_linked_point_t));
+        centre_r->x = widget->screen_location.top_left.x + k_default_button_corner_radius;
+        centre_r->y = widget->screen_location.top_left.y + k_default_button_corner_radius;
+        arc(centre_r, rayon, angle0, angle1, &arc0, &arc1);
+        centre_r->x = widget->screen_location.size.width + widget->screen_location.top_left.x - k_default_button_corner_radius;
+        arc(centre_r, rayon, angle1, angle2, &arc2, &arc3);
 
         // Création des points en bas de l'en-tête
         ei_point_t* lower_left = malloc(sizeof(ei_point_t));
@@ -64,16 +79,16 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         ei_point_t* lower_right = malloc(sizeof(ei_point_t));
         lower_right->x = widget->screen_location.top_left.x + widget->screen_location.size.width;
         lower_right->y = widget->screen_location.top_left.y + widget->screen_location.size.height;
-        ei_linked_point_t* linked_lower_left;
-        ei_linked_point_t* linked_lower_right;
+        ei_linked_point_t* linked_lower_left = malloc(sizeof(ei_linked_point_t));
+        ei_linked_point_t* linked_lower_right = malloc(sizeof(ei_linked_point_t));
         linked_lower_left->point = *lower_left;
         linked_lower_right->point = *lower_right;
 
 
         // Dessin de la forme de l'en-tête + frame avec la bordure
-        linked_lower_left->next = couple0[0];
-        couple0[1]->next = couple1[0];
-        couple1[1]->next = linked_lower_right;
+        linked_lower_left->next = arc0;
+        arc1->next = arc2;
+        arc3->next = linked_lower_right;
         linked_lower_right->next = NULL;
         ei_draw_polygon(pick_surface, linked_lower_left, trans, clipper);
         hw_surface_unlock(pick_surface);
@@ -81,7 +96,8 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         free(centre_r);
         free(lower_left);
         free(lower_right);
-        // Il faudrait pouvoir free les points des arcs créés -> à faire
+        free(linked_lower_left);
+        free(linked_lower_right);
 
         // Dessin du texte de l'en-tête -> à faire
 
@@ -93,9 +109,9 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         ei_point_t* middle_right = malloc(sizeof(ei_point_t));
         middle_right->x = widget->screen_location.top_left.x + widget->screen_location.size.width - *toplevel->border_width;
         middle_right->y = widget->screen_location.top_left.y + 30 + *toplevel->border_width;
-        ei_linked_point_t* linked_middle_left;
+        ei_linked_point_t* linked_middle_left = malloc(sizeof(ei_linked_point_t));
         linked_middle_left->point = *middle_left;
-        ei_linked_point_t* linked_middle_right;
+        ei_linked_point_t* linked_middle_right = malloc(sizeof(ei_linked_point_t));
         linked_middle_right->point = *middle_right;
         ei_point_t* lower_left_int = malloc(sizeof(ei_point_t));
         lower_left_int->x = widget->screen_location.top_left.x + *toplevel->border_width;
@@ -103,8 +119,8 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         ei_point_t* lower_right_int = malloc(sizeof(ei_point_t));
         lower_right_int->x = widget->screen_location.top_left.x + widget->screen_location.size.width - *toplevel->border_width;
         lower_right_int->y = widget->screen_location.top_left.y + widget->screen_location.size.height - *toplevel->border_width;
-        ei_linked_point_t* linked_lower_left_int;
-        ei_linked_point_t* linked_lower_right_int;
+        ei_linked_point_t* linked_lower_left_int = malloc(sizeof(ei_linked_point_t));
+        ei_linked_point_t* linked_lower_right_int = malloc(sizeof(ei_linked_point_t));
         linked_lower_left_int->point = *lower_left_int;
         linked_lower_right_int->point = *lower_right_int;
         linked_middle_left->next = linked_middle_right;
@@ -116,6 +132,10 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         free(lower_right_int);
         free(middle_left);
         free(middle_right);
+        free(linked_lower_left_int);
+        free(linked_lower_right_int);
+        free(linked_middle_left);
+        free(linked_middle_right);
 
         // Dessin d'un petit carré gris en bas à droite si la fenêtre peut être redimensionnéee
         if (toplevel->resizable != ei_axis_none) {
@@ -131,10 +151,10 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
                 pt_square2->y = widget->screen_location.top_left.y + widget->screen_location.size.height - 15;
                 pt_square3->y = widget->screen_location.top_left.y + widget->screen_location.size.height - 15;
                 pt_square4->y = widget->screen_location.top_left.y + widget->screen_location.size.height;
-                ei_linked_point_t *linked_pt_square1;
-                ei_linked_point_t *linked_pt_square2;
-                ei_linked_point_t *linked_pt_square3;
-                ei_linked_point_t *linked_pt_square4;
+                ei_linked_point_t *linked_pt_square1 = malloc(sizeof(ei_linked_point_t));
+                ei_linked_point_t *linked_pt_square2 = malloc(sizeof(ei_linked_point_t));
+                ei_linked_point_t *linked_pt_square3 = malloc(sizeof(ei_linked_point_t));
+                ei_linked_point_t *linked_pt_square4 = malloc(sizeof(ei_linked_point_t));
                 linked_pt_square1->point = *pt_square1;
                 linked_pt_square2->point = *pt_square2;
                 linked_pt_square3->point = *pt_square3;
@@ -148,6 +168,10 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
                 free(pt_square2);
                 free(pt_square3);
                 free(pt_square4);
+                free(linked_pt_square1);
+                free(linked_pt_square2);
+                free(linked_pt_square3);
+                free(linked_pt_square4);
         }
 
         hw_surface_unlock(surface);
@@ -155,6 +179,18 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         //On dessine tous les widgets qui sont dans le toplevel
         draw_children(widget, surface, pick_surface, widget->content_rect);
 }
+
+static ei_widgetclass_t classe_toplevel =
+        {
+                "toplevel",
+                &ei_toplevel_allocfunc_t,
+                &ei_toplevel_releasefunc_t,
+                &ei_toplevel_drawfunc_t,
+                &ei_toplevel_setdefaultsfunc_t,
+                NULL,
+                NULL
+        };
+
 
 
 void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
@@ -183,4 +219,20 @@ void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
         ((ei_toplevel_t *)toplevel) -> resizable = rsb;
         ((ei_toplevel_t *)toplevel) -> min_size = &m_size;
 
+        toplevel-> wclass = &classe_toplevel;
+        toplevel->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
+        toplevel->requested_size.width = 960;
+        toplevel->user_data = NULL;
+        toplevel-> destructor = NULL;
+        toplevel->parent = NULL;
+        toplevel->children_head = NULL;
+        toplevel->children_tail = NULL;
+        toplevel->next_sibling = NULL;
+        toplevel->geom_params = NULL;
+
+}
+
+ei_widgetclass_t* addr_toplevel()
+{
+        return &classe_toplevel;
 }

@@ -9,6 +9,7 @@
 #include "ei_frame_t.h"
 #include "ei_event_2.h"
 #include<ei_button.h>
+#include<ei_toplevel.h>
 ei_color_t couleur_off_screnn = {0,0,0,255};
 
 void incremente_couleur_off_screen()
@@ -259,4 +260,43 @@ void			ei_button_configure		(ei_widget_t*		widget,
         //button->user_param = *user_param;
 }
 
-
+void			ei_toplevel_configure		(ei_widget_t*		widget,
+                                                                  ei_size_t*		requested_size,
+                                                                  ei_color_t*		color,
+                                                                  int*			border_width,
+                                                                  char**			title,
+                                                                  ei_bool_t*		closable,
+                                                                  ei_axis_set_t*		resizable,
+                                                                  ei_size_t**		min_size)
+{
+        ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
+        if (requested_size != NULL)
+        {
+                widget->requested_size.width = requested_size->width;
+                widget->requested_size.height = requested_size->height;
+        }
+        if (color != NULL)
+        {
+                toplevel->color = color;
+        }
+        if (border_width != NULL)
+        {
+                toplevel-> border_width = border_width;
+        }
+        if (title != NULL)
+        {
+                toplevel->title = title;
+        }
+        if (closable != NULL)
+        {
+                toplevel->closable = closable;
+        }
+        if (resizable != NULL)
+        {
+                toplevel->resizable = resizable;
+        }
+        if (min_size != NULL)
+        {
+                toplevel->min_size = min_size;
+        }
+}

@@ -23,13 +23,4 @@ typedef struct ei_toplevel_t {
         ei_size_t** min_size;
 } ei_toplevel_t;
 
-struct ei_toplevel_t*      ei_toplevel_allocfunc_t        (void);
-
-void        ei_toplevel_releasefunc_t      (struct ei_toplevel_t*	toplevel);
-
-void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
-                                                   ei_surface_t		surface,
-                                                   ei_surface_t		pick_surface,
-                                                   ei_rect_t*		clipper);
-
-void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel);
+ei_widgetclass_t* addr_toplevel();
