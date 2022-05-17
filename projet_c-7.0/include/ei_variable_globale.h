@@ -10,11 +10,9 @@
 
 #endif //PROJETC_IG_EI_VARIABLE_GLOBALE_H
 
-ei_surface_t* addr_surface_cache();
-
 ei_widgetclass_t* addr_class_cree();
 
-ei_surface_t *addr_surface_cache();
+ei_surface_t addr_surface_cache();
 
 
 ei_widgetclass_t * addr_button();

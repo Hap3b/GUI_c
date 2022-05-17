@@ -12,14 +12,14 @@ typedef struct event_bind {
         ei_eventtype_t*  eventtype;
         ei_widget_t*    widget;
         ei_tag_t*        tag;
-        ei_callback_t*   callback;
+        ei_callback_t   callback;
         void*           user_param;
         struct event_bind*      next;
 }event_bind;
 
 ei_color_t recherche_pick_color(int x, int y);
 
-ei_callback_t* addr_boutton_origin();
+ei_callback_t addr_boutton_origin();
 
 event_bind* event_recherche(ei_event_t* event);
 

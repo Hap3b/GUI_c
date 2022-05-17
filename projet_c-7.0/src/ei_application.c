@@ -18,7 +18,7 @@ void ei_app_quit_request(void)
         quit = EI_TRUE;
 }
 
-ei_surface_t *addr_surface_cache(){
+ei_surface_t addr_surface_cache(){
         return surface_cache;
 }
 
@@ -42,16 +42,13 @@ void ei_app_run(void) {/* Create, configure and place the button on screen. */
 
                 if (event_cur->type == ei_ev_mouse_buttondown)
                 {
-                        /*vent_bind *event_traite = event_recherche(event_cur);
-                        while (event_traite != NULL &&
-                               (*(event_traite->callback))(event_traite->widget, event_cur, event_traite->user_param)) {
+                        event_bind *event_traite = event_recherche(event_cur);
+                        printf("%p\n", event_traite->callback);
+                        while (event_traite != NULL) {
+                                ei_bool_t should_continue = event_traite->callback(event_traite->widget, event_cur, event_traite->user_param);
                                 event_traite = event_traite->next;
                         }
-                        hw_surface_update_rects(racine, NULL);*/
-                        ei_color_t pick_color = recherche_pick_color(event_cur->param.mouse.where.x,event_cur->param.mouse.where.y);
-                        printf("oui");
-                        printf("%u %u %u", pick_color.red, pick_color.green, pick_color.blue);
-                        fflush(stdout);
+                        hw_surface_update_rects(racine, NULL);
                 }
         }
 }

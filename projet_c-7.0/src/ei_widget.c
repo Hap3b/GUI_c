@@ -9,7 +9,7 @@
 #include "ei_frame_t.h"
 #include "ei_event_2.h"
 #include<ei_button.h>
-ei_color_t couleur_off_screnn = {0,0,0,0};
+ei_color_t couleur_off_screnn = {0,0,0,255};
 
 void incremente_couleur_off_screen()
 {
@@ -40,7 +40,7 @@ void dessine_widget(ei_widget_t *widget)
         ei_widget_t *widget_frere = widget->next_sibling;
         while( widget_frere !=NULL)
         {
-                (*(widget_frere->wclass->drawfunc))(widget_frere,ei_app_root_surface(),*addr_surface_cache(),NULL);
+                (*(widget_frere->wclass->drawfunc))(widget_frere,ei_app_root_surface(),addr_surface_cache(),NULL);
                 widget_frere = widget_frere -> next_sibling;
         }
         while(widget != NULL)
@@ -163,8 +163,8 @@ ei_widget_t*		ei_widget_create		(ei_widgetclass_name_t	class_name,
                 ei_rajoute_widget_abr_widget(parent,new_widget);
                 if (strcmp(classe_cree->name,"button") ==0 )
                 {
-                        ei_callback_t* button_clique = addr_boutton_origin();
-                        ei_bind(ei_ev_mouse_buttondown,new_widget,NULL,*button_clique,NULL);
+                        ei_callback_t button_clique = addr_boutton_origin();
+                        ei_bind(ei_ev_mouse_buttondown,new_widget,NULL,button_clique,NULL);
                 }
                 return new_widget;
         }

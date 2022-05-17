@@ -61,12 +61,13 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         pol4.point = final;
         pol4.next = NULL;
         ei_frame_t* frame = (ei_frame_t*)widget;
-        hw_surface_lock(surface);
         hw_surface_lock(pick_surface);
-        ei_draw_polygon(surface, &pol1,(frame->color), clipper);
         ei_draw_polygon(pick_surface, &pol1,*(widget->pick_color), clipper);
-        hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
+        hw_surface_lock(surface);
+        ei_draw_polygon(surface, &pol1,(frame->color), clipper);
+        hw_surface_unlock(surface);
+
 };
 static ei_widgetclass_t classe_frame =
         {

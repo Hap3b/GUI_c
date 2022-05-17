@@ -8,7 +8,7 @@ typedef struct event_bind {
         ei_eventtype_t  eventtype;
         ei_widget_t*    widget;
         ei_tag_t*        tag;
-        ei_callback_t*   callback;
+        ei_callback_t   callback;
         void*           user_param;
         struct event_bind*      next;
 }event_bind;
@@ -41,7 +41,7 @@ void		ei_bind			(ei_eventtype_t		eventtype,
                 new_bind->eventtype = eventtype;
                 new_bind->widget = widget;
                 new_bind->tag = &tag;
-                new_bind->callback = &callback;
+                new_bind->callback = callback;
                 new_bind->user_param = user_param;
                 register_bind(new_bind);
         }
@@ -70,12 +70,17 @@ ei_color_t recherche_pick_color(int x, int y)
 {
         hw_surface_lock(addr_surface_cache());
         ei_size_t surface_size = hw_surface_get_size(addr_surface_cache());
+        int ir;
+        int ig;
+        int ib;
+        int ia;
+        hw_surface_get_channel_indices(addr_surface_cache(),&ir, &ig, &ib, &ia);
         uint8_t* buffer = hw_surface_get_buffer(addr_surface_cache());
-        buffer = buffer + 4*(x+y*surface_size.width);
-        uint8_t red = *buffer;
-        uint8_t green = *(buffer+1);
-        uint8_t blue = *(buffer+2);
-        uint8_t alpha = *(buffer+3);
+        buffer = buffer + 4*(x + y * surface_size.width);
+        uint8_t red = buffer[ir];
+        uint8_t green = buffer[ig];
+        uint8_t blue = buffer[ib];
+        uint8_t alpha = buffer[ia];
         ei_color_t pick_color_souris = {red, green, blue, alpha,};
         hw_surface_unlock(ei_app_root_surface());
         return pick_color_souris;
@@ -109,17 +114,12 @@ ei_bool_t widget_concerne(event_bind* lien_event,ei_event_t* event)
 event_bind* event_recherche(ei_event_t* event)
 {
         event_bind *liste_bis = liste_event_bind;
-        event_bind* liste_event_concerne = malloc(sizeof (event_bind));
+        event_bind* liste_event_concerne = NULL;
         while (liste_bis != NULL) {
                 if (event->type == (liste_bis->eventtype) && widget_concerne(liste_bis, event)) {
-                        if (liste_event_concerne != NULL) {
                                 event_bind *event_a_traite = liste_bis;
-                                event_a_traite->next = NULL;
-                                liste_event_concerne->next = event_a_traite;
-                        } else {
-                                liste_event_concerne = liste_bis;
-                                liste_event_concerne->next = NULL;
-                        }
+                                event_a_traite->next = liste_event_concerne;
+                                liste_event_concerne = event_a_traite;
                 }
                 liste_bis = liste_bis->next;
         }

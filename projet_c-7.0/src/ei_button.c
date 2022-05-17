@@ -217,8 +217,17 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
         ei_linked_point_t* cadre_haut = malloc(sizeof(ei_linked_point_t));
         ei_linked_point_t* cadre_bas = malloc(sizeof(ei_linked_point_t));
         ei_linked_point_t* cadre = malloc(sizeof(ei_linked_point_t));
-
-        int* partie = malloc(sizeof(int));
+        int partie = 0;
+        rounded_frame(&(widget->screen_location), &(button->corner_radius), &partie, &cadre_haut);
+        partie = 1;
+        rounded_frame(&(widget->screen_location), &(button->corner_radius), &partie, &cadre_bas);
+        partie = 2;
+        ei_rect_t* interieur = malloc(sizeof(ei_rect_t));
+        interieur->size.width = widget->screen_location.size.width-2*((button->border_width));
+        interieur->size.height = widget->screen_location.size.height-2*((button->border_width));
+        interieur->top_left.x = widget->screen_location.top_left.x + (button->border_width);
+        interieur->top_left.y = widget->screen_location.top_left.y + (button->border_width);
+        rounded_frame(interieur, &(button->corner_radius), &partie, &cadre);
 
         ei_color_t* sombre = malloc(sizeof(ei_color_t));
         ei_color_t* clair = malloc(sizeof(ei_color_t));
@@ -231,13 +240,11 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
         clair ->red = button->color.red-10;
         clair ->alpha = button->color.alpha;
 
-        rounded_frame(&(widget->screen_location), &(button->corner_radius), partie, &cadre_haut);
-        *partie = 1;
-        rounded_frame(&(widget->screen_location), &(button->corner_radius), partie, &cadre_bas);
         hw_surface_lock(surface);
         hw_surface_lock(pick_surface);
+
         if (button->relief == ei_relief_raised) {
-                *partie = 0;
+                partie = 0;
                 ei_draw_polygon(surface, cadre_haut, *clair,clipper);
                 ei_draw_polygon(surface, cadre_bas, *sombre,clipper);
         } else
@@ -245,15 +252,10 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
                 ei_draw_polygon(surface, cadre_haut, *sombre,clipper);
                 ei_draw_polygon(surface, cadre_bas, *clair,clipper);
         }
-        *partie = 2;
-        ei_rect_t* interieur = malloc(sizeof(ei_rect_t));
-        interieur->size.width = widget->screen_location.size.width-2*((button->border_width));
-        interieur->size.height = widget->screen_location.size.height-2*((button->border_width));
-        interieur->top_left.x = widget->screen_location.top_left.x + (button->border_width);
-        interieur->top_left.y = widget->screen_location.top_left.y + (button->border_width);
-        rounded_frame(interieur, &(button->corner_radius), partie, &cadre);
-        ei_draw_polygon(surface, cadre, button->color ,clipper);
+
         ei_draw_polygon(pick_surface, cadre, *(widget->pick_color),clipper);
+        ei_draw_polygon(surface, cadre, button->color ,clipper);
+
         hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
 };
@@ -322,7 +324,7 @@ ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
         return EI_FALSE;
 }
 
-ei_callback_t* addr_boutton_origin()
+ei_callback_t addr_boutton_origin()
 {
         return &boutton_origin;
 }
