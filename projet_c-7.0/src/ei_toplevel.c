@@ -2,6 +2,9 @@
 #include <ei_widget.h>
 #include <ei_button.h>
 #include <ei_geometrymanager.h>
+#include "ei_event.h"
+#include "ei_types.h"
+#include "ei_variable_globale.h"
 
 void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel);
 
@@ -220,6 +223,13 @@ ei_widgetclass_t* addr_toplevel()
         return &classe_toplevel;
 }
 
+ei_bool_t	button_press_exit	(ei_widget_t*		widget,
+                                  struct ei_event_t*	event,
+                                  void*			user_param) {
+    free(widget);
+    des
+    return EI_FALSE;
+}
 
 void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
         ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
@@ -227,15 +237,13 @@ void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
                 ei_color_t	button_color	= {0xE6, 0x1E, 0x3C, 0xff};
                 ei_relief_t     relief          = ei_relief_raised;
                 int             button_border_width    = 4;
-                ei_bool_t button_press(ei_widget_t* widget, struct ei_event_t* event, void* user_param);
-                ei_callback_t button_callback = button_press;
                 ei_size_t size = {25, 25};
 
                 ei_widget_t* button;
                 button = ei_widget_create("button", widget, NULL, NULL);
-
-                ei_button_configure(button, &size, &button_color,
+            ei_bind(ei_ev_mouse_buttondown,button,NULL,button_press_exit,NULL);
+            ei_button_configure(button, &size, &button_color,
                                     &button_border_width, NULL, &relief, NULL, NULL, NULL, NULL,
-                                    NULL, NULL, NULL, &button_callback, NULL);
+                                    NULL, NULL, NULL, NULL, NULL);
         }
 }
