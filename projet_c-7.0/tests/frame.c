@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 	int		frame_y			= 200;
 	ei_color_t	frame_color		= {0x88, 0x88, 0x88, 0xff};
 	ei_relief_t	frame_relief		= ei_relief_raised;
-	int		frame_border_width	= 120;
+	int		frame_border_width	= 6;
         ei_color_t      constante               = ei_font_default_color;
         ei_anchor_t anchor = ei_anc_none;
         char *title = "test";

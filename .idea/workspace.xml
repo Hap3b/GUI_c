@@ -30,10 +30,12 @@
     <list default="true" id="d9fc4179-ea8b-4ef0-9583-19c243a8c495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_frame_t.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_frame_t.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/frame.dir/tests/frame.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/frame.dir/tests/frame.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/frame" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/frame" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/libei.a" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/libei.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_frame_t.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_frame_t.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_c-7.0/tests/frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/tests/frame.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +167,7 @@
       <workItem from="1652711642002" duration="663000" />
       <workItem from="1652767550943" duration="16739000" />
       <workItem from="1652789733057" duration="27031000" />
-      <workItem from="1652820103586" duration="20216000" />
+      <workItem from="1652820103586" duration="21717000" />
     </task>
     <servers />
   </component>
@@ -190,6 +192,11 @@
           <url>file://$PROJECT_DIR$/projet_c-7.0/src/ei_draw.c</url>
           <line>201</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/projet_c-7.0/tests/frame.c</url>
+          <line>44</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
