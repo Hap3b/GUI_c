@@ -4,6 +4,7 @@
 
 #include<ei_widget.h>
 #include<ei_geometrymanager.h>
+#include <ei_toplevel.h>
 static ei_geometrymanager_t* geometrymanager_cree = NULL;
 
 typedef struct ei_geometry_placeur_t {
@@ -41,40 +42,40 @@ void	ei_runfunc_placeur_t    (struct ei_widget_t*	widget)
                         widget -> screen_location.top_left.y = (widget->parent->screen_location.top_left.y) + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) widget->parent->screen_location.size.height);
                         break;
                 case ei_anc_north:
-                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + *(placeur -> rel_x)*(widget -> parent -> screen_location .size .height) - *(placeur ->width)/2;
-                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + *(placeur -> rel_y)*(widget -> parent -> screen_location .size .width);
+                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float)(widget -> parent -> screen_location.size.width)) - *(placeur ->width)/2;
+                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y);
                         break;
                 case ei_anc_northeast:
                         widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) widget->parent->screen_location.size.width) -  *(placeur ->width);
                         widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) widget->parent->screen_location.size.height);
                         break;
                 case ei_anc_east:
-                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + *(placeur -> rel_x)*(widget -> parent -> screen_location .size .height)- *(placeur ->width);
-                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + *(placeur -> rel_y)*(widget -> parent -> screen_location .size .width)- *(placeur ->height);
+                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) (widget->parent ->screen_location.size.width))- *(placeur ->width);
+                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) (widget->parent->screen_location.size.height)) - *(placeur->height)/2;
                         break;
                 case ei_anc_southeast:
                         widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) widget->parent->screen_location.size.width) -  *(placeur ->width);
                         widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) widget->parent->screen_location.size.height) - *(placeur->height);
                         break;
                 case ei_anc_south:
-                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + *(placeur -> rel_x)*(widget -> parent -> screen_location .size .height) - *(placeur ->width)/2;
-                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + *(placeur -> rel_y)*(widget -> parent -> screen_location .size .width) - *(placeur -> height);
+                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) (widget -> parent -> screen_location .size .width)) - *(placeur ->width)/2;
+                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) (widget -> parent -> screen_location .size .height)) - *(placeur -> height);
                         break;
                 case ei_anc_southwest:
                         widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) widget->parent->screen_location.size.width);
                         widget -> screen_location.top_left.y = (widget->parent->screen_location.top_left.y) + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) widget->parent->screen_location.size.height) - *(placeur->height);
                         break;
                 case ei_anc_west:
-                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + *(placeur -> rel_x)*(widget -> parent -> screen_location .size .height);
-                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + *(placeur -> rel_y)*(widget -> parent -> screen_location .size .width)- *(placeur ->height)/2;
+                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x);
+                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) (widget -> parent -> screen_location .size .height)) - *(placeur ->height)/2;
                         break;
                 case ei_anc_center:
-                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + *(placeur -> rel_x)*(widget -> parent -> screen_location .size .height) - *(placeur -> width)/2;
-                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + *(placeur -> rel_y)*(widget -> parent -> screen_location .size .width)- *(placeur ->height)/2;
+                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) (widget -> parent -> screen_location .size .width)) - *(placeur -> width)/2;
+                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float)(widget -> parent -> screen_location .size .height))- *(placeur ->height)/2;
                         break;
                 case ei_anc_none:
-                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + *(placeur -> rel_x)*(widget -> parent -> screen_location .size .height);
-                        widget -> screen_location.top_left.y = widget->parent->screen_location.top_left.y + *(placeur -> y) + *(placeur -> rel_y)*(widget -> parent -> screen_location .size .width);
+                        widget -> screen_location.top_left.x = widget->parent->screen_location.top_left.x + *(placeur -> x) + (int) (*(placeur -> rel_x)* (float) widget->parent->screen_location.size.width);
+                        widget -> screen_location.top_left.y = (widget->parent->screen_location.top_left.y) + *(placeur -> y) + (int) (*(placeur -> rel_y)* (float) widget->parent->screen_location.size.height);
                         break;
         }
 };
@@ -227,6 +228,12 @@ void			ei_place			(ei_widget_t*		widget,
         placeur_widget -> manager = &geom_placeur_t;
         widget -> geom_params = (ei_geometry_param_t *)placeur_widget;
         ei_runfunc_placeur_t(widget);
+        if (strcmp(widget->wclass->name, "toplevel") == 0 && ((ei_toplevel_t*) widget)->closable == EI_TRUE) {
+                ei_anchor_t	button_anchor	= ei_anc_northwest;
+                int           button_x    = 10;
+                int           button_y    = 20;
+                ei_place((widget->children_head), &button_anchor, &button_x, &button_y, NULL, NULL, NULL, NULL, NULL, NULL);
+        }
 
 }
 
