@@ -29,51 +29,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9fc4179-ea8b-4ef0-9583-19c243a8c495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a491cd0267807d1be5ae.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2a6e4be9e51434fafc07.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/index-2022-05-17T23-03-28-0168.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-button-Debug-347858b22ecf5367f28a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-doc-Debug-ef0be05e3ebb20f1723a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-ei-Debug-fea852a0a0ddf29ea2aa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-frame-Debug-42368251e029676bd839.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-hello_world-Debug-0a6128552fe6721995d9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-minesweeper-Debug-5eadd5f29d7f65115c13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-minimal-Debug-066c9ad3d1c821976193.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-parsing-Debug-0d068c1a2cb1975c8f9e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-puzzle-Debug-1e154aa52cc7476f8662.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/.cmake/api/v1/reply/target-two048-Debug-d24a62c3c7ba201517de.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/button.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/button.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_application.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_application.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_draw.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_draw.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_frame_t.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/src/ei_frame_t.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/frame.dir/tests/frame.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/CMakeFiles/frame.dir/tests/frame.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/frame" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/frame" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/libei.a" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-debug/libei.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-800aedb022047a32d1b6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-82af51defff498d44f70.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/index-2022-05-17T23-03-28-0263.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-button-Release-3ecabc4e0baf7396595c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-doc-Release-5e7b30d6110f0b041dbd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-ei-Release-488fda48d37a5a72f7eb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-frame-Release-4a2618ef1e300953aff7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-hello_world-Release-9853097724ea579c1b7c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-minesweeper-Release-9c4ccd3f8e5e1cc116cb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-minimal-Release-f3a7fc593bf6dc84f91c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-parsing-Release-d98d29b45c559169431a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-puzzle-Release-4a715b3e63c5bc917ff4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/.cmake/api/v1/reply/target-two048-Release-151b6aea93658506429a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/ei.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/ei.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/frame.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/cmake-build-release/CMakeFiles/frame.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_application.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_application.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_draw.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_frame_t.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_frame_t.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/tests/frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/tests/frame.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +164,7 @@
       <workItem from="1652820103586" duration="25293000" />
       <workItem from="1652861693696" duration="755000" />
       <workItem from="1652863403998" duration="10000" />
-      <workItem from="1652863434129" duration="419000" />
+      <workItem from="1652863434129" duration="1339000" />
     </task>
     <servers />
   </component>
@@ -233,6 +189,11 @@
           <url>file://$PROJECT_DIR$/projet_c-7.0/tests/frame.c</url>
           <line>44</line>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/projet_c-7.0/src/ei_frame_t.c</url>
+          <line>82</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
