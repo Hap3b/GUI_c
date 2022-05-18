@@ -23,12 +23,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d9fc4179-ea8b-4ef0-9583-19c243a8c495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/include/ei_toplevel.h" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/include/ei_toplevel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_application.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_application.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_button.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_toplevel.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_toplevel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_widget.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_widget.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_c-7.0/tests/hello_world.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/tests/hello_world.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,7 @@
     "settings.editor.selected.configurable": "CMakeSettings"
   }
 }]]></component>
-  <component name="RunManager" selected="CMake Application.hello_world">
+  <component name="RunManager" selected="CMake Application.frame">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -162,7 +158,7 @@
       <workItem from="1652381848467" duration="4480000" />
       <workItem from="1652457252402" duration="598000" />
       <workItem from="1652542729752" duration="259000" />
-      <workItem from="1652821944366" duration="6413000" />
+      <workItem from="1652821944366" duration="11316000" />
     </task>
     <servers />
   </component>
@@ -181,6 +177,20 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/projet_c-7.0/tests/hello_world.c</url>
+          <line>74</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/projet_c-7.0/tests/frame.c</url>
+          <line>35</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="clipper-&gt;size" language="ObjectiveC" />

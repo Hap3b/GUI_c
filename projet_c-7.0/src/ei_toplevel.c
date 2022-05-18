@@ -33,14 +33,6 @@ void        ei_toplevel_releasefunc_t      (struct ei_widget_t*	widget)
         free(toplevel-> min_size);
 }
 
-void    draw_children          (ei_widget_t* children, ei_surface_t  surface, ei_surface_t pick_surface, ei_rect_t* clipper)
-{
-        if (children != NULL) {
-                children->wclass->drawfunc(children, surface, pick_surface, clipper);
-                draw_children(children->next_sibling, surface, pick_surface, clipper);
-        }
-}
-
 void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
                                                  ei_surface_t		surface,
                                                  ei_surface_t		pick_surface,
@@ -175,9 +167,6 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         }
 
         hw_surface_unlock(surface);
-
-        //On dessine tous les widgets qui sont dans le toplevel
-        draw_children(widget, surface, pick_surface, widget->content_rect);
 }
 
 static ei_widgetclass_t classe_toplevel =

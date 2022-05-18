@@ -58,7 +58,7 @@ int main(int argc, char** argv)
         ei_point_t	window_position	 = {30, 10};        
 
         
-        ei_widget_t*    button;
+        //ei_widget_t*    button;
         ei_widget_t*    toplevel;
 
 	ei_app_create(screen_size, EI_FALSE); 

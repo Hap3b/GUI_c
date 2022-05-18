@@ -10,7 +10,16 @@
 #include <ei_widgetclass.h>
 #include <ei_widget.h>
 
-void    draw_children          (ei_widget_t* children);
+struct ei_frame_t*      ei_toplevel_allocfunc_t        (void);
+
+void        ei_toplevel_releasefunc_t      (struct ei_frame_t*	frame);
+
+void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	frame);
+
+void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
+                                                ei_surface_t		surface,
+                                                ei_surface_t		pick_surface,
+                                                ei_rect_t*		clipper);
 
 typedef struct ei_toplevel_t {
         ei_widget_t* widget;
