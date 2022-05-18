@@ -1,5 +1,5 @@
 CMakeFiles/frame.dir/tests/frame.c.o: \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/frame.c \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/tests/frame.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -47,8 +47,8 @@ CMakeFiles/frame.dir/tests/frame.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_application.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_types.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_application.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_types.h \
  /usr/include/SDL2/SDL_keycode.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -72,13 +72,11 @@ CMakeFiles/frame.dir/tests/frame.c.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
  /usr/include/SDL2/SDL_scancode.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widget.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_draw.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/hw_interface.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_event.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/hw_interface.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widget.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_variable_globale.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_geometrymanager.h
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_draw.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/hw_interface.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/hw_interface.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_button.h

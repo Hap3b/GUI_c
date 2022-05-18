@@ -68,7 +68,7 @@ int main(int argc, char** argv)
         button = ei_widget_create("button", toplevel, NULL, NULL);
         
         ei_toplevel_configure(toplevel, &window_size, &window_color, &window_border_width, &window_title, &closable, &window_resizable, NULL);
-        ei_button_configure(button, NULL, &button_color, 
+        ei_button_configure(button, NULL, &button_color,
                             &button_border_width, NULL, &relief, &button_title, NULL, &text_color, NULL,
                             NULL, NULL, NULL, &button_callback, NULL);
 
@@ -79,7 +79,7 @@ int main(int argc, char** argv)
 
         ei_app_run();
 
-	ei_unbind(ei_ev_keydown, NULL, "all", process_key, NULL);
+	//ei_unbind(ei_ev_keydown, NULL, "all", process_key, NULL);
 
 	ei_app_free();
 

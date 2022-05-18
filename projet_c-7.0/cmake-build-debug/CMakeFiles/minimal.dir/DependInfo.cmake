@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/minimal.c" "CMakeFiles/minimal.dir/tests/minimal.c.o" "gcc" "CMakeFiles/minimal.dir/tests/minimal.c.o.d"
+  "/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/tests/minimal.c" "CMakeFiles/minimal.dir/tests/minimal.c.o" "gcc" "CMakeFiles/minimal.dir/tests/minimal.c.o.d"
   )
 
 # Targets to which this target links.

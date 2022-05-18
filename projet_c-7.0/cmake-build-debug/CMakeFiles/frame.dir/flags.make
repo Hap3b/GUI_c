@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include -I/usr/include/SDL2
+C_INCLUDES = -I/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include -I/usr/include/SDL2
 
 C_FLAGS = -g
 

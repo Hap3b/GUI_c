@@ -1,7 +1,7 @@
 CMakeFiles/ei.dir/src/ei_draw.c.o: \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_draw.c \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_draw.c \
  /usr/include/stdc-predef.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/hw_interface.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/hw_interface.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -16,7 +16,7 @@ CMakeFiles/ei.dir/src/ei_draw.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_types.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_types.h \
  /usr/include/SDL2/SDL_keycode.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \

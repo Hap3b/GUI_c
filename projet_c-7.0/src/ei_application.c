@@ -7,6 +7,7 @@
 #include<ei_variable_globale.h>
 #include <ei_geometrymanager.h>
 #include<ei_event_2.h>
+#include <ei_toplevel.h>
 
 static ei_surface_t racine = NULL;
 static ei_surface_t surface_cache = NULL;
@@ -26,6 +27,7 @@ void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 {
         ei_widgetclass_register(addr_frame());
         ei_widgetclass_register(addr_button());
+        ei_widgetclass_register(addr_toplevel());
         ei_geometrymanager_register(addr_geom_placeur_t());
         hw_init();
         racine = hw_create_window(main_window_size, fullscreen);

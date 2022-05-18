@@ -201,12 +201,12 @@ ei_widget_t*      ei_button_allocfunc_t        (void)
 {
         ei_button_t *button = malloc(sizeof(ei_button_t));
         return (ei_widget_t*)button;
-};
+}
 
 void        ei_button_releasefunc_t      (struct ei_widget_t*	button)
 {
         free(button);
-};
+}
 
 void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
                                                  ei_surface_t		surface,
@@ -258,7 +258,7 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
 
         hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
-};
+}
 static ei_widgetclass_t classe_button =
         {
                 "button",
@@ -293,8 +293,8 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button_bis -> user_param = NULL;
 
         button -> wclass = &classe_button;
-        button->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
-        button->requested_size.width = 960;
+        button->requested_size.height = 0; /* Half screen on a 1920x1080 screen*/
+        button->requested_size.width = 0;
         button ->user_data = NULL;
         button-> destructor = NULL;
         button->parent = NULL;
@@ -303,7 +303,7 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button->next_sibling = NULL;
         button->geom_params = NULL;
 
-};
+}
 
 ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
                                           struct ei_event_t*	event,
