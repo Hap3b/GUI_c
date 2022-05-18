@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-/usr/bin/c++ -g -rdynamic CMakeFiles/parsing.dir/tests/parsing.c.o -o parsing  libei.a ../_x11/libeibase64.a -L/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 
-=======
-/usr/bin/c++ -g -rdynamic CMakeFiles/parsing.dir/tests/parsing.c.o -o parsing  libei.a ../_x11/libeibase64.a -L/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 
->>>>>>> refs/remotes/origin/master

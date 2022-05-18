@@ -1,6 +1,0 @@
-# Hashes of file build rules.
-<<<<<<< HEAD
-fcedd1d109894e694836bc1cea98c818 CMakeFiles/doc
-=======
-9a94e3554645e9e8e1e911b8dd438e87 CMakeFiles/doc
->>>>>>> refs/remotes/origin/master
