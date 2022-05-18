@@ -9,12 +9,25 @@
 #define PROJETC_IG_EI_VARIABLE_GLOBALE_H
 
 #endif //PROJETC_IG_EI_VARIABLE_GLOBALE_H
-
+/**
+ * \brief	Return an address to all the widgetclass created
+ *
+ * @return      A pointer to all the widgetclass.
+ */
 ei_widgetclass_t* addr_class_cree();
 
+/**
+ * \brief	Return an address to the offscreen
+ *
+ * @return      A pointer to the offscreen.
+ */
 ei_surface_t addr_surface_cache();
 
-
+/**
+ * \brief	Return an address to the widgetclass of the button
+ *
+ * @return      A pointer to the widgetclass of the button.
+ */
 ei_widgetclass_t * addr_button();
 
 typedef struct ei_geometry_placeur_t {

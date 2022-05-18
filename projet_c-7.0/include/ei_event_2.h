@@ -17,10 +17,25 @@ typedef struct event_bind {
         struct event_bind*      next;
 }event_bind;
 
+/**
+ *@brief It searches the color of the offscreen in this point
+ *
+ *@param        x
+ *@param        Y       Coordinates of a point
+ *
+ *@return               The color of the offscreen in this point*/
 ei_color_t recherche_pick_color(int x, int y);
-
+/**
+ * Return a apointer the button_origin
+ *
+ * @return the address of thr button_origin (Can be raised or not)*/
 ei_callback_t addr_boutton_origin();
-
+/**
+ *@brief It searches the event in a linked list and send this linked events, Next events are those to be done
+ *
+ * @param       event       The event searched
+ *
+ * @return                  Linked_events to do*/
 event_bind* event_recherche(ei_event_t* event);
 
 ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
