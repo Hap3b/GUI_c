@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "minesweeper"
+			"path" : "puzzle"
 		}
 	],
 	"backtrace" : 1,
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 137,
+				"line" : 128,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 138,
+				"line" : 129,
 				"parent" : 0
 			},
 			{
@@ -77,7 +77,7 @@
 			"id" : "ei::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "minesweeper::@6890427a1f51a3e7e1df",
+	"id" : "puzzle::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -133,8 +133,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "minesweeper",
-	"nameOnDisk" : "minesweeper",
+	"name" : "puzzle",
+	"nameOnDisk" : "puzzle",
 	"paths" : 
 	{
 		"build" : ".",
@@ -155,7 +155,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/minesweeper.c",
+			"path" : "tests/puzzle.c",
 			"sourceGroupIndex" : 0
 		}
 	],

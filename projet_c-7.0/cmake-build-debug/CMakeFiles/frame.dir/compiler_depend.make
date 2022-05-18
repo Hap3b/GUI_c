@@ -93,6 +93,8 @@ CMakeFiles/frame.dir/tests/frame.c.o: ../tests/frame.c \
   ../include/hw_interface.h \
   ../include/ei_widget.h \
   ../include/ei_geometrymanager.h \
+  ../include/ei_frame_t.h \
+  ../include/ei_widgetclass.h \
   ../include/ei_button.h
 
 
@@ -157,6 +159,8 @@ CMakeFiles/frame.dir/tests/frame.c.o: ../tests/frame.c \
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+../include/ei_frame_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 

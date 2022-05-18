@@ -16,7 +16,4 @@ int     min     (int a,
 int     max     (int a,
                  int b);
 
-ei_linked_point_t*       arc[2]            (ei_point_t     centre,
-                                            int          rayon,
-                                            float          pre_angle,
-                                            float          deu_angle);
+ei_point_t* anchor_to_point(const ei_anchor_t* ancre, ei_rect_t* rect);

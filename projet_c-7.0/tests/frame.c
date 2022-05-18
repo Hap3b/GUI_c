@@ -5,6 +5,7 @@
 #include "hw_interface.h"
 #include "ei_widget.h"
 #include "ei_geometrymanager.h"
+#include "ei_frame_t.h"
 #define pi 3.14159
 /*
  * main --
@@ -22,8 +23,10 @@ int main(int argc, char** argv)
 	int		frame_x			= 150;
 	int		frame_y			= 200;
 	ei_color_t	frame_color		= {0x88, 0x88, 0x88, 0xff};
+        ei_color_t	text_color		= {0x7A, 0x8, 0x88, 0xff};
 	ei_relief_t	frame_relief		= ei_relief_raised;
 	int		frame_border_width	= 6;
+        char*                  titre = "title";
 
 	/* Create the application and change the color of the background. */
 	ei_app_create(screen_size, EI_FALSE);
@@ -34,8 +37,9 @@ int main(int argc, char** argv)
 	/* Create, configure and place the frame on screen. */
 	frame = ei_widget_create("frame", ei_app_root_widget(), NULL, NULL);
 	ei_frame_configure(frame, &frame_size, &frame_color,
-		    &frame_border_width, &frame_relief, NULL, NULL, NULL, NULL,
+		    &frame_border_width, &frame_relief, &titre, NULL, &text_color, NULL,
 			    NULL, NULL, NULL);
+        ei_frame_t* frammememem = (ei_frame_t*) frame;
 	ei_place(frame, NULL, &frame_x, &frame_y, NULL, NULL, NULL, NULL, NULL, NULL );
 
 	/* Run the application's main loop. */

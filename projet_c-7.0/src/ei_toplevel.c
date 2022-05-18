@@ -227,8 +227,6 @@ void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
                 ei_color_t	button_color	= {0xE6, 0x1E, 0x3C, 0xff};
                 ei_relief_t     relief          = ei_relief_raised;
                 int             button_border_width    = 4;
-                ei_bool_t button_press(ei_widget_t* widget, struct ei_event_t* event, void* user_param);
-                ei_callback_t button_callback = button_press;
                 ei_size_t size = {25, 25};
 
                 ei_widget_t* button;
@@ -236,6 +234,6 @@ void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
 
                 ei_button_configure(button, &size, &button_color,
                                     &button_border_width, NULL, &relief, NULL, NULL, NULL, NULL,
-                                    NULL, NULL, NULL, &button_callback, NULL);
+                                    NULL, NULL, NULL, NULL, NULL);
         }
 }

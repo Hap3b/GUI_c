@@ -492,6 +492,9 @@
 		<Unit filename="/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_event.c">
 			<Option target="ei"/>
 		</Unit>
+		<Unit filename="/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_fct_annexes.c">
+			<Option target="ei"/>
+		</Unit>
 		<Unit filename="/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_frame_t.c">
 			<Option target="ei"/>
 		</Unit>
