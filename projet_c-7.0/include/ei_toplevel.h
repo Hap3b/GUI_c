@@ -32,6 +32,6 @@ typedef struct ei_toplevel_t {
         ei_size_t* min_size;
 } ei_toplevel_t;
 
-void    ajoute_boutton_haut_droite      (ei_widget_t  *widget);
+void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget);
 
 ei_widgetclass_t* addr_toplevel();
