@@ -1,0 +1,1 @@
+Pour tester nos fonctions, nous avons principalement utilisé les tests fournis que l'on modifiait légèrement. Ainsi avec frame on a pu tester notamment ei_fill, ei_copy_surface, et ei_draw_text ainsi que toutes les fonctions pour réaliser la classe de frame
