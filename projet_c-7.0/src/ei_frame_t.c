@@ -66,22 +66,18 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         ei_draw_polygon(pick_surface, &pol1,*(widget->pick_color), clipper);
         hw_surface_unlock(pick_surface);
         hw_surface_lock(surface);
+        widget->requested_size.height -= frame->border_width;
+        widget->requested_size.width -= frame->border_width;
+        frame->color.blue = frame->color.blue + 30;
+        frame->color.green = frame->color.green + 30;
+        frame->color.red = frame->color.red + 30;
+        ei_frame_configure((ei_widget_t *) frame, &widget->requested_size, &frame->color, NULL, ei_relief_none, &frame->title, frame->title_fonte, &frame->color_title, &frame->title_anchor, frame->img , &frame->img_rect, &frame->img_anchor);
+        depart.x += frame->border_width;
+        depart.y += frame->border_width;
+        ei_linked_point_t pol5 = {depart, &pol2};
+        ei_rect_t clip = {depart, {widget->requested_size.width, widget->requested_size.height }};
         ei_draw_polygon(surface, &pol1,(frame->color), clipper);
-        if (frame->border_width > 0){
-                ei_frame_t* frame_interieur = malloc(sizeof(ei_frame_t));
-                ei_widget_t widget_interieur = *widget;
-                widget_interieur.requested_size.height -= frame->border_width;
-                widget_interieur.requested_size.width -= frame->border_width;
-                frame_interieur->color.blue = frame->color.blue + 10;
-                frame_interieur->color.green = frame->color.green + 10;
-                frame_interieur->color.red = frame->color.red + 10;
-                ei_frame_configure((ei_widget_t *) frame_interieur, &widget_interieur.requested_size, &frame->color, NULL, ei_relief_none, &frame->title, frame->title_fonte, &frame->color_title, &frame->title_anchor, frame->img , &frame->img_rect, &frame->img_anchor);
-                depart.x += frame->border_width;
-                depart.y += frame->border_width;
-                ei_linked_point_t pol5 = {depart, &pol2};
-                ei_rect_t clip = {depart, {widget_interieur.requested_size.width, widget_interieur.requested_size.height }};
-                ei_draw_polygon(surface, &pol5,(frame_interieur->color), &clip);
-        }
+        ei_draw_polygon(surface, &pol5,(frame->color), &clip);
         hw_surface_unlock(surface);
         if (frame->title != NULL) {
                 ei_point_t* where_text = anchor_to_point((ei_anchor_t *) frame->title_anchor, surface);
