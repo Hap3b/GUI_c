@@ -102,7 +102,6 @@ int ei_copy_surface (ei_surface_t		destination,
                                         uint8_t Sg;
                                         uint8_t Sb;
                                         uint8_t Sr;
-                                        uint8_t Sa;
                                         for (int k = 0; k < 4; k++){
                                                 if (k == *ig){
                                                         uint8_t Pg = (uint8_t) *pixel_src;
@@ -116,7 +115,7 @@ int ei_copy_surface (ei_surface_t		destination,
                                                         uint8_t Pr = (uint8_t) *pixel_src;
                                                         uint8_t Sr = (uint8_t) *pixel_dst;
                                                 }
-                                                else if (k == *ia){
+                                                else {
                                                         uint8_t Pa = (uint8_t) *pixel_src;
                                                         uint8_t Sa = (uint8_t) *pixel_src;
                                                 }
@@ -131,7 +130,9 @@ int ei_copy_surface (ei_surface_t		destination,
                                         tot = &init;
                                         *tot += Sb << (8 * (*ib));
                                         *tot += Sg << (8 * (*ig));
-                                        *tot += 0xff << (8* (*ia)); /* Set to opaque */
+                                        if (*ia != -1){
+                                                *tot += 0xff << (8* (*ia)); /* Set to opaque */
+                                        }
                                         (uint32_t)* pixel_dst;
                                         pixel_dst = tot;
                                 }
@@ -195,6 +196,9 @@ void			ei_draw_text		(ei_surface_t		surface,
         if (font == NULL){
                 font = ei_default_font;
         }
+        ei_color_t* color_init = &color;
+        char** text_init = (char **) &text;
+        ei_font_t* font_init = &font;
         ei_surface_t surfa_text = hw_text_create_surface(text, font, color);
         hw_surface_lock(surfa_text);
         int width;
