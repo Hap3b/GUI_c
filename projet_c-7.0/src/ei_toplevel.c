@@ -5,6 +5,11 @@
 #include "ei_event.h"
 #include "ei_types.h"
 #include "ei_variable_globale.h"
+#include "ei_application.h"
+
+ei_bool_t	redimensionnement_toplevel  	(ei_widget_t*		widget,
+                                            struct ei_event_t*	event,
+                                            void*			user_param);
 
 void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel);
 
@@ -127,43 +132,71 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         free(linked_middle_right);
 
         // Dessin d'un petit carré gris en bas à droite si la fenêtre peut être redimensionnéee
-        if (toplevel->resizable != ei_axis_none) {
-                ei_point_t *pt_square1 = malloc(sizeof(ei_point_t));
-                ei_point_t *pt_square2 = malloc(sizeof(ei_point_t));
-                ei_point_t *pt_square3 = malloc(sizeof(ei_point_t));
-                ei_point_t *pt_square4 = malloc(sizeof(ei_point_t));
-                pt_square1->x = widget->screen_location.top_left.x + widget->screen_location.size.width - 15;
-                pt_square2->x = widget->screen_location.top_left.x + widget->screen_location.size.width - 15;
-                pt_square3->x = widget->screen_location.top_left.x + widget->screen_location.size.width;
-                pt_square4->x = widget->screen_location.top_left.x + widget->screen_location.size.width;
-                pt_square1->y = widget->screen_location.top_left.y + widget->screen_location.size.height;
-                pt_square2->y = widget->screen_location.top_left.y + widget->screen_location.size.height - 15;
-                pt_square3->y = widget->screen_location.top_left.y + widget->screen_location.size.height - 15;
-                pt_square4->y = widget->screen_location.top_left.y + widget->screen_location.size.height;
-                ei_linked_point_t *linked_pt_square1 = malloc(sizeof(ei_linked_point_t));
-                ei_linked_point_t *linked_pt_square2 = malloc(sizeof(ei_linked_point_t));
-                ei_linked_point_t *linked_pt_square3 = malloc(sizeof(ei_linked_point_t));
-                ei_linked_point_t *linked_pt_square4 = malloc(sizeof(ei_linked_point_t));
-                linked_pt_square1->point = *pt_square1;
-                linked_pt_square2->point = *pt_square2;
-                linked_pt_square3->point = *pt_square3;
-                linked_pt_square4->point = *pt_square4;
-                linked_pt_square1->next = linked_pt_square2;
-                linked_pt_square2->next = linked_pt_square3;
-                linked_pt_square3->next = linked_pt_square4;
-                linked_pt_square4->next = NULL;
-                ei_draw_polygon(surface, linked_pt_square1, dark_grey, clipper);
-                free(pt_square1);
-                free(pt_square2);
-                free(pt_square3);
-                free(pt_square4);
-                free(linked_pt_square1);
-                free(linked_pt_square2);
-                free(linked_pt_square3);
-                free(linked_pt_square4);
-        }
 
         hw_surface_unlock(surface);
+}
+ei_bool_t	button_press_exit	(ei_widget_t*		widget,
+                                   struct ei_event_t*	event,
+                                   void*			user_param) {
+    if(widget != NULL)
+    {
+        supprime_widget_bis(widget -> parent);
+        dessine_tout_widget(ei_app_root_widget());
+        free(widget);
+        return EI_FALSE;
+    }
+
+}
+
+
+void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
+    ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
+    if (toplevel->closable == EI_TRUE) {
+        ei_color_t	button_color	= {0xE6, 0x1E, 0x3C, 0xff};
+        ei_relief_t     relief          = ei_relief_raised;
+        int             button_border_width    = 4;
+        ei_size_t size = {25, 25};
+
+        ei_widget_t* button;
+        button = ei_widget_create("button", widget, NULL, NULL);
+        ei_bind(ei_ev_mouse_buttondown,button,NULL,button_press_exit,NULL);
+        ei_button_configure(button, &size, &button_color,
+                            &button_border_width, NULL, &relief, NULL, NULL, NULL, NULL,
+                            NULL, NULL, NULL, NULL, NULL);
+        ei_anchor_t	button_anchor	= ei_anc_northwest;
+        int           button_x    = 10;
+        int           button_y    = 20;
+        ei_place(button, &button_anchor, &button_x, &button_y, NULL, NULL, NULL, NULL, NULL, NULL);
+
+    }
+}
+ei_bool_t debut_redimensionnement  	(ei_widget_t*		widget,
+                                struct ei_event_t*	event,
+                                void*			user_param){
+    ei_bind(ei_ev_mouse_move,widget,NULL,redimensionnement_toplevel,NULL);
+}
+
+ei_bool_t fin_redimensionnement  	(ei_widget_t*		widget,
+                                      struct ei_event_t*	event,
+                                      void*			user_param)
+{
+    ei_unbind(event->type,widget,NULL,debut_redimensionnement,NULL);
+}
+void	ei_toplevel_geomnotifyfunc_t	(struct ei_widget_t*	widget)
+{
+    ei_toplevel_t* toplevel = (ei_toplevel_t*) widget;
+    if (toplevel->resizable != ei_axis_none)
+    {
+        ei_widget_t* frame = ei_widget_create("frame",widget,NULL,NULL);
+        float reel_size = (float)0.05;
+        ei_color_t dark_grey = {0x69, 0x69, 0x69, 0xff};
+        ei_frame_configure(frame,NULL, &dark_grey,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+        float reel_x = (float)0.95;
+        ei_place(frame,NULL,NULL,NULL,NULL,NULL,&reel_x,&reel_x,&reel_size,&reel_size);
+        ei_bind(ei_ev_mouse_buttondown,frame,NULL,debut_redimensionnement,NULL);
+        ei_bind(ei_ev_mouse_buttonup,frame,NULL,fin_redimensionnement,NULL);
+    }
+    ajoute_boutton_haut_gauche(widget);
 }
 
 static ei_widgetclass_t classe_toplevel =
@@ -173,7 +206,7 @@ static ei_widgetclass_t classe_toplevel =
                 &ei_toplevel_releasefunc_t,
                 &ei_toplevel_drawfunc_t,
                 &ei_toplevel_setdefaultsfunc_t,
-                NULL,
+                &ei_toplevel_geomnotifyfunc_t,
                 NULL
         };
 
@@ -186,7 +219,7 @@ void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
         *cl = ei_default_background_color;
         int *b_width = malloc(sizeof(int));
         *b_width = 4;
-        char **ttl = malloc(sizeof(char));
+        char **ttl = malloc(sizeof(char*));
         *ttl = "Toplevel";
         ei_bool_t* clb = malloc(sizeof(ei_bool_t));
         *clb = EI_TRUE;
@@ -213,7 +246,11 @@ void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
         toplevel->children_tail = NULL;
         toplevel->next_sibling = NULL;
         toplevel->geom_params = NULL;
-
+        free(cl);
+        free(b_width);
+        free(ttl);
+        free(clb);
+        free(rsb);
 }
 
 
@@ -223,27 +260,15 @@ ei_widgetclass_t* addr_toplevel()
         return &classe_toplevel;
 }
 
-ei_bool_t	button_press_exit	(ei_widget_t*		widget,
-                                  struct ei_event_t*	event,
-                                  void*			user_param) {
-    free(widget);
-    des
-    return EI_FALSE;
-}
+static ei_bool_t stop;
 
-void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
-        ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
-        if (toplevel->closable == EI_TRUE) {
-                ei_color_t	button_color	= {0xE6, 0x1E, 0x3C, 0xff};
-                ei_relief_t     relief          = ei_relief_raised;
-                int             button_border_width    = 4;
-                ei_size_t size = {25, 25};
+ei_bool_t	redimensionnement_toplevel  	(ei_widget_t*		widget,
+                                struct ei_event_t*	event,
+                                void*			user_param){
 
-                ei_widget_t* button;
-                button = ei_widget_create("button", widget, NULL, NULL);
-            ei_bind(ei_ev_mouse_buttondown,button,NULL,button_press_exit,NULL);
-            ei_button_configure(button, &size, &button_color,
-                                    &button_border_width, NULL, &relief, NULL, NULL, NULL, NULL,
-                                    NULL, NULL, NULL, NULL, NULL);
-        }
+    int width =  event->param.mouse.where.x - widget->parent->screen_location.top_left.y;
+    int height =  2*(widget ->parent->screen_location.size.height) + widget->parent->screen_location.top_left.x - event->param.mouse.where.y;
+    ei_place(widget->parent,NULL,&(widget->parent->screen_location.top_left.x),&(widget->screen_location.top_left.y),&width,&height,NULL,NULL,NULL,NULL);
+    (*(widget->parent->wclass->drawfunc))(widget->parent,ei_app_root_surface(),addr_surface_cache(),NULL);
+    hw_surface_update_rects(ei_app_root_surface(),NULL);
 }

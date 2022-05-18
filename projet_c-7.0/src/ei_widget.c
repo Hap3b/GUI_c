@@ -41,7 +41,7 @@ void dessine_widget(ei_widget_t *widget)
         ei_widget_t *widget_frere = widget->next_sibling;
         while( widget_frere !=NULL)
         {
-                (*(widget_frere->wclass->drawfunc))(widget_frere,ei_app_root_surface(),addr_surface_cache(),NULL);
+            (*(widget_frere->wclass->drawfunc))(widget_frere,ei_app_root_surface(),addr_surface_cache(),NULL);
                 widget_frere = widget_frere -> next_sibling;
         }
         while(widget != NULL)
@@ -50,6 +50,33 @@ void dessine_widget(ei_widget_t *widget)
                 widget = widget ->next_sibling;
         }
 }
+void supprime_widget(ei_widget_t* widget,ei_widget_t* widget_a_suppr){
+    if (widget != NULL)
+    {
+        if(widget -> children_head == widget_a_suppr){
+            widget ->children_head = NULL;
+            return;
+        }
+        ei_widget_t *widget_frere = widget->next_sibling;
+        while (widget_frere != NULL) {
+            if(widget -> children_head == widget_a_suppr) {
+                widget->children_head = NULL;
+                return;
+            }
+            widget_frere = widget_frere->next_sibling;
+        }
+        while (widget != NULL) {
+            supprime_widget(widget->children_head, widget_a_suppr);
+            widget = widget->next_sibling;
+        }
+    }
+}
+
+void supprime_widget_bis(ei_widget_t* widget_a_suppr)
+{
+    supprime_widget(ei_app_root_widget(), widget_a_suppr);
+}
+
 void dessine_tout_widget()
 {
         ei_widget_t* arbre = ei_app_root_widget();
@@ -298,6 +325,8 @@ void			ei_toplevel_configure		(ei_widget_t*		widget,
         if (min_size != NULL)
         {
                 toplevel->min_size = *min_size;
-        } ajoute_boutton_haut_gauche (widget);
+        }
+
+        ajoute_boutton_haut_gauche (widget);
 
 }

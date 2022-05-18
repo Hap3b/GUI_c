@@ -25,6 +25,27 @@ void register_bind(event_bind* new_bind)
         new_bind->next = liste_event_bind;
         liste_event_bind = new_bind;
 }
+void		ei_unbind		(ei_eventtype_t		eventtype,
+                              ei_widget_t*		widget,
+                              ei_tag_t		tag,
+                              ei_callback_t		callback,
+                              void*			user_param)
+{
+    event_bind ** liste_bis = &liste_event_bind;
+    if (*liste_bis !=NULL && (*liste_bis)->eventtype != eventtype && (*liste_bis)->widget == widget&& (*liste_bis)->tag != tag && callback == (*liste_bis)->callback )
+    {
+        liste_bis = &((*liste_bis)->next);
+    }
+    else
+    {
+        liste_event_bind = liste_event_bind ->next;
+    }
+    while((*liste_bis)->next !=NULL && (*liste_bis)->next->eventtype != eventtype && (*liste_bis)->next->widget && (*liste_bis)->tag != tag)
+    {
+        liste_bis = &((*liste_bis) ->next);
+    }
+    *liste_bis = (*liste_bis)->next;
+}
 
 void		ei_bind			(ei_eventtype_t		eventtype,
                                                     ei_widget_t*		widget,
@@ -108,6 +129,7 @@ ei_widget_t* recherche_widget_bis(ei_widget_t* widget, ei_color_t pick_color, ei
         ei_widget_t *widget_frere = widget->next_sibling;
         while (widget_frere != NULL) {
             recherche_widget_bis(widget_frere, pick_color, widget_voulu);
+            widget_frere = widget_frere ->next_sibling;
         }
         while (widget != NULL) {
             recherche_widget_bis(widget->children_head, pick_color, widget_voulu);

@@ -17,6 +17,12 @@ ei_surface_t addr_surface_cache();
 
 ei_widgetclass_t * addr_button();
 
+void dessine_tout_widget();
+
+void supprime_widget();
+
+void supprime_widget_bis();
+
 typedef struct ei_geometry_placeur_t {
         ei_geometrymanager_t* manager;
         ei_anchor_t* anchor;

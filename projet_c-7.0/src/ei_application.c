@@ -40,15 +40,30 @@ void ei_app_run(void) {/* Create, configure and place the button on screen. */
         hw_surface_update_rects(racine, NULL);
         struct ei_event_t *event_cur = malloc(sizeof(struct ei_event_t));
         while (!quit) {
-                    hw_event_wait_next(event_cur);
-                    ei_widget_t* widget = NULL;
-                    event_bind *event_traite = event_recherche(event_cur, &widget);
-                    while (event_traite != NULL) {
+            hw_event_wait_next(event_cur);
+            event_cur ->type++; /*contournement problème*/
+            ei_widget_t *widget = NULL;
+            printf("%u\n", event_cur->type);
+            fflush(stdout);
+
+            /*if(event_cur->type == ei_ev_mouse_buttondown)
+            {*/
+                event_bind *event_traite = event_recherche(event_cur, &widget);
+                while (event_traite != NULL)
+                {
+                    if(event_traite->tag != NULL) {
                         ei_bool_t should_continue = event_traite->callback(widget, event_cur,
                                                                            event_traite->user_param);
-                        event_traite = event_traite->next;
                     }
-                    hw_surface_update_rects(racine, NULL);
+                    else
+                    {
+                        ei_bool_t should_continue = event_traite->callback(event_traite->widget, event_cur,
+                                                                           event_traite->user_param);
+                    }
+                    event_traite = event_traite->next;
+                //}
+                hw_surface_update_rects(racine, NULL);
+            }
         }
 }
 

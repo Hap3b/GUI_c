@@ -17,8 +17,8 @@ void    arc           (ei_point_t*     centre,
                                                 ei_linked_point_t** fin)
 {
         if(*pre_angle > *deu_angle) {
-                for (int i = 0; i <= 10; i++) {
-                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 10;
+                for (int i = 0; i <= 3; i++) {
+                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 3;
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
                         long oui = lround((float) *rayon * cos(pas));
                         nv_point2->x = centre->x + (int) oui;
@@ -34,8 +34,8 @@ void    arc           (ei_point_t*     centre,
         }
         else
         {
-                for (int i = 0; i <= 10; i++) {
-                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 10;
+                for (int i = 0; i <= 3; i++) {
+                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 3;
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
                         long oui = lround((float) *rayon * cos(pas));
                         nv_point2->x = centre->x + (int) oui;
@@ -51,6 +51,29 @@ void    arc           (ei_point_t*     centre,
         }
         return;
 
+}
+int miin(int a, int b)
+{
+    if(a < b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+
+int maax(int a, int b)
+{
+    if(a > b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
 }
 
 void       rounded_frame              (ei_rect_t*     rectangle,
@@ -234,14 +257,14 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
 
         ei_color_t* sombre = malloc(sizeof(ei_color_t));
         ei_color_t* clair = malloc(sizeof(ei_color_t));
-        sombre ->blue = button->color.blue+10;
-        sombre ->green = button->color.green+10;
-        sombre ->red = button->color.red+10;
-        sombre ->alpha = button->color.alpha;
-        clair ->blue = button->color.blue-10;
-        clair ->green = button->color.green-10;
-        clair ->red = button->color.red-10;
-        clair ->alpha = button->color.alpha;
+        sombre ->blue = (uint8_t) miin(button->color.blue+10,255);
+        sombre ->green = (uint8_t)miin(button->color.green+10,255);
+        sombre ->red = (uint8_t)miin(button->color.red+10,255);
+        sombre ->alpha = (uint8_t)button->color.alpha;
+        clair ->blue = (uint8_t)maax(button->color.blue-10,0);
+        clair ->green = (uint8_t)maax(button->color.green-10,0);
+        clair ->red = (uint8_t)maax(button->color.red-10,0);
+        clair ->alpha = (uint8_t)button->color.alpha;
 
         hw_surface_lock(surface);
         hw_surface_lock(pick_surface);
