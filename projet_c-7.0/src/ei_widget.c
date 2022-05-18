@@ -165,7 +165,7 @@ ei_widget_t*		ei_widget_create		(ei_widgetclass_name_t	class_name,
                 if (strcmp(classe_cree->name,"button") ==0 )
                 {
                         ei_callback_t button_clique = addr_boutton_origin();
-                        ei_bind(ei_ev_mouse_buttondown,new_widget,NULL,button_clique,NULL);
+                        ei_bind(ei_ev_mouse_buttondown,NULL,"button",button_clique,NULL);
                 }
                 return new_widget;
         }
