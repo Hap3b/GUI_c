@@ -298,5 +298,6 @@ void			ei_toplevel_configure		(ei_widget_t*		widget,
         if (min_size != NULL)
         {
                 toplevel->min_size = *min_size;
-        }
+        } ajoute_boutton_haut_gauche (widget);
+
 }
