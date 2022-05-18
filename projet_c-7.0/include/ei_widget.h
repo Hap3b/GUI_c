@@ -22,7 +22,7 @@ struct ei_event_t;
  * 		(the "widget" parameter and its fields are still valid).
  * 		Functions of this type are passed as a parameter to \ref ei_widget_create.
  *
- * @param	widget		The widget that is going to be destroyed.
+ * @param       widget		The widget that is going to be destroyed.
  */
 typedef void		(*ei_widget_destructor_t)(struct ei_widget_t* widget);
 

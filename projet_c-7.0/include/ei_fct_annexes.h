@@ -8,12 +8,34 @@
 #endif //PROJETC_IG_EI_FCT_ANNEXES_H
 
 #include <ei_types.h>
-
+/**
+ * @brief 	Return the lower value between the 2 given.
+ *
+ * @param 	a 		First int to compare.
+ * @param 	b		Second int to compare.
+ *
+ * @return 			The lower value between the 2.
+ */
 int     min     (int a,
                  int b);
-
+/**
+ * @brief 	Return the higher value between the 2 given.
+ *
+ * @param 	a 		First int to compare.
+ * @param 	b		Second int to compare.
+ *
+ * @return 			The higher value between the 2.
+ */
 int     max     (int a,
                  int b);
 
+/**
+ * @brief 	It returns the point of the rectangle pointed by the anchor.
+ *
+ * @param 	ancre 		Which point is pointed.
+ * @param 	b		The rectangle pointed by the anchor.
+ *
+ * @return 			the point of the rectangle pointed by the anchor.
+ */
 ei_point_t* anchor_to_point(ei_anchor_t* ancre,
                            ei_rect_t* rect);
