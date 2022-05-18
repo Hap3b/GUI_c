@@ -89,3 +89,13 @@ ei_point_t* anchor_to_point(const ei_anchor_t ancre, ei_rect_t* rect)
         }
         return &(rect->top_left); /* If it is none it will return the northeast point*/
 }
+
+void free_link(ei_linked_point_t *deb) {
+        ei_linked_point_t* sauvegarde = deb;
+        while (deb->next != NULL) {
+                deb = deb->next;
+                free(sauvegarde);
+                sauvegarde = deb;
+        }
+        free(deb);
+}

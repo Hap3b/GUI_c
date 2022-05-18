@@ -752,7 +752,9 @@ CMakeFiles/ei.dir/src/ei_toplevel.c.o: ../src/ei_toplevel.c \
   ../include/ei_widgetclass.h \
   ../include/ei_button.h \
   ../include/ei_geometrymanager.h \
-  ../include/ei_widget.h
+  ../include/ei_widget.h \
+  ../include/ei_fct_annexes.h \
+  ../include/ei_types.h
 
 CMakeFiles/ei.dir/src/ei_types.cpp.o: ../src/ei_types.cpp \
   /usr/include/stdc-predef.h

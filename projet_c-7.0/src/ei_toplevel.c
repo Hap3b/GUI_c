@@ -2,6 +2,7 @@
 #include <ei_widget.h>
 #include <ei_button.h>
 #include <ei_geometrymanager.h>
+#include <ei_fct_annexes.h>
 
 void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel);
 
@@ -57,6 +58,10 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         arc(centre_r, rayon, angle1, angle0, &arc0, &arc1);
         centre_r->x = widget->screen_location.size.width + widget->screen_location.top_left.x - k_default_button_corner_radius;
         arc(centre_r, rayon, angle2, angle1, &arc2, &arc3);
+        free(angle0);
+        free(angle1);
+        free(angle2);
+        free(rayon);
 
         // Création des points en bas de l'en-tête
         ei_point_t* lower_left = malloc(sizeof(ei_point_t));
@@ -79,11 +84,7 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         ei_draw_polygon(pick_surface, linked_lower_right, trans, clipper);
         hw_surface_unlock(pick_surface);
         ei_draw_polygon(surface, linked_lower_right, dark_grey, clipper);
-        free(centre_r);
-        free(lower_left);
-        free(lower_right);
-        free(linked_lower_left);
-        free(linked_lower_right);
+        free_link(linked_lower_right);
 
         // Dessin du texte de l'en-tête -> à faire
 
@@ -210,6 +211,13 @@ void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
         toplevel->children_tail = NULL;
         toplevel->next_sibling = NULL;
         toplevel->geom_params = NULL;
+        free(r_size);
+        free(cl);
+        free(b_width);
+        free(ttl);
+        free(clb);
+        free(rsb);
+        free(m_size);
 
 }
 

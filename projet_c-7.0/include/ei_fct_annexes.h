@@ -17,3 +17,5 @@ int     max     (int a,
                  int b);
 
 ei_point_t* anchor_to_point(const ei_anchor_t* ancre, ei_rect_t* rect);
+
+void free_link(ei_linked_point_t *deb);
