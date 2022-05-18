@@ -4,34 +4,34 @@
 #include <ei_geometrymanager.h>
 #include <ei_fct_annexes.h>
 
-void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel);
+void	                ei_toplevel_setdefaultsfunc_t	                (struct ei_widget_t*	        toplevel);
 
 typedef struct ei_toplevel_t {
-        ei_widget_t widget;
-        ei_size_t requested_size;
-        ei_color_t color;
-        int border_width;
-        char* title;
-        ei_bool_t closable;
-        ei_axis_set_t resizable;
-        ei_size_t* min_size;
+                        ei_widget_t widget;
+                        ei_size_t requested_size;
+                        ei_color_t color;
+                        int border_width;
+                        char* title;
+                        ei_bool_t closable;
+                        ei_axis_set_t resizable;
+                        ei_size_t* min_size;
 } ei_toplevel_t;
 
-struct ei_widget_t*      ei_toplevel_allocfunc_t        (void)
+struct ei_widget_t*      ei_toplevel_allocfunc_t                (void)
 {
         struct ei_toplevel_t *toplevel = malloc(sizeof(ei_toplevel_t));
         return (ei_widget_t*) toplevel;
 }
 
-void        ei_toplevel_releasefunc_t      (struct ei_widget_t*	widget)
+void            ei_toplevel_releasefunc_t               (struct ei_widget_t*	widget)
 {
         free(widget);
 }
 
-void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
-                                                 ei_surface_t		surface,
-                                                 ei_surface_t		pick_surface,
-                                                 ei_rect_t*		clipper)
+void	        ei_toplevel_drawfunc_t		        (struct ei_widget_t*	        widget,
+                                                        ei_surface_t		        surface,
+                                                        ei_surface_t		        pick_surface,
+                                                        ei_rect_t*		        clipper)
 {
         ei_color_t trans = {0xff, 0xff, 0xff, 0x00};
         ei_color_t dark_grey = {0x69, 0x69, 0x69, 0xff};
@@ -85,7 +85,6 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_unlock(pick_surface);
         ei_draw_polygon(surface, linked_lower_right, dark_grey, clipper);
         free_link(linked_lower_right);
-
         // Dessin du texte de l'en-tête -> à faire
 
 
@@ -115,14 +114,7 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         linked_lower_right_int->next = linked_lower_left_int;
         linked_lower_left_int->next = NULL;
         ei_draw_polygon(surface, linked_middle_left, toplevel->color, clipper);
-        free(lower_left_int);
-        free(lower_right_int);
-        free(middle_left);
-        free(middle_right);
-        free(linked_lower_left_int);
-        free(linked_lower_right_int);
-        free(linked_middle_left);
-        free(linked_middle_right);
+        free_link(linked_middle_left);
 
         // Dessin d'un petit carré gris en bas à droite si la fenêtre peut être redimensionnéee
         if (toplevel->resizable != ei_axis_none) {
@@ -164,18 +156,18 @@ void	ei_toplevel_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_unlock(surface);
 }
 
-static ei_widgetclass_t classe_toplevel =
+static ei_widgetclass_t         classe_toplevel =
         {
-                "toplevel",
-                &ei_toplevel_allocfunc_t,
-                &ei_toplevel_releasefunc_t,
-                &ei_toplevel_drawfunc_t,
-                &ei_toplevel_setdefaultsfunc_t,
-                NULL,
-                NULL
+                                "toplevel",
+                                 &ei_toplevel_allocfunc_t,
+                                 &ei_toplevel_releasefunc_t,
+                                &ei_toplevel_drawfunc_t,
+                               &ei_toplevel_setdefaultsfunc_t,
+                                 NULL,
+                                NULL
         };
 
-void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
+void	        ei_toplevel_setdefaultsfunc_t	        (struct ei_widget_t*	        toplevel)
 {
         ei_size_t *r_size = malloc(sizeof(ei_size_t));
         r_size->width = 320;
@@ -211,25 +203,25 @@ void	ei_toplevel_setdefaultsfunc_t	(struct ei_widget_t*	toplevel)
         toplevel->children_tail = NULL;
         toplevel->next_sibling = NULL;
         toplevel->geom_params = NULL;
-        free(r_size);
         free(cl);
-        free(b_width);
         free(ttl);
-        free(clb);
+        free(b_width);
+        free(r_size);
         free(rsb);
+        free(clb);
         free(m_size);
-
 }
 
 
 
-ei_widgetclass_t* addr_toplevel()
+ei_widgetclass_t*       addr_toplevel()
 {
         return &classe_toplevel;
 }
 
 
-void    ajoute_boutton_haut_gauche      (ei_widget_t  *widget){
+void                    ajoute_boutton_haut_gauche                      (ei_widget_t  *widget)
+{
         ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
         if (toplevel->closable == EI_TRUE) {
                 ei_color_t	button_color	= {0xE6, 0x1E, 0x3C, 0xff};

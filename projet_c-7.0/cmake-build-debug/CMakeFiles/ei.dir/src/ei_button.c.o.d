@@ -78,4 +78,5 @@ CMakeFiles/ei.dir/src/ei_button.c.o: \
  /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_variable_globale.h \
  /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
  /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_event.h \
- /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_fct_annexes.h

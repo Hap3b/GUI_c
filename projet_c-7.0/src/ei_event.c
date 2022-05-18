@@ -5,22 +5,22 @@
 #include<ei_application.h>
 #include "ei_variable_globale.h"
 typedef struct event_bind {
-        ei_eventtype_t  eventtype;
-        ei_widget_t*    widget;
-        ei_tag_t*        tag;
-        ei_callback_t   callback;
-        void*           user_param;
-        struct event_bind*      next;
+                        ei_eventtype_t  eventtype;
+                        ei_widget_t*    widget;
+                        ei_tag_t*        tag;
+                        ei_callback_t   callback;
+                        void*           user_param;
+                        struct event_bind*      next;
 }event_bind;
 
 static event_bind* liste_event_bind = NULL;
 
-event_bind* addr_liste_event_bind()
+event_bind*             addr_liste_event_bind()
 {
         return liste_event_bind;
 }
 
-void register_bind(event_bind* new_bind)
+void            register_bind(event_bind*               new_bind)
 {
         new_bind->next = liste_event_bind;
         liste_event_bind = new_bind;
@@ -47,7 +47,8 @@ void		ei_bind			(ei_eventtype_t		eventtype,
         }
 }
 
-uint8_t souris_event(ei_eventtype_t event) {
+uint8_t                 souris_event(ei_eventtype_t             event)
+{
         switch (event)
         {
                 case (ei_ev_mouse_buttondown):
@@ -66,7 +67,8 @@ uint8_t souris_event(ei_eventtype_t event) {
         }
 }
 
-ei_color_t recherche_pick_color(int x, int y)
+ei_color_t              recherche_pick_color(int x,
+                                             int y)
 {
         hw_surface_lock(addr_surface_cache());
         ei_size_t surface_size = hw_surface_get_size(addr_surface_cache());
@@ -86,7 +88,8 @@ ei_color_t recherche_pick_color(int x, int y)
         return pick_color_souris;
 }
 
-ei_bool_t comp_color(ei_color_t* color1,ei_color_t* color2)
+ei_bool_t               comp_color(ei_color_t*          color1,
+                                   ei_color_t*          color2)
 {
         if (color1 ->red == color2 -> red && color1 ->green == color2 -> green && color1 -> blue == color2 ->blue)
         {
@@ -97,7 +100,8 @@ ei_bool_t comp_color(ei_color_t* color1,ei_color_t* color2)
                 return EI_FALSE;
         }
 }
-ei_bool_t widget_concerne(event_bind* lien_event,ei_event_t* event)
+ei_bool_t               widget_concerne(event_bind*             lien_event,
+                                        ei_event_t*             event)
 {
         uint8_t type_event = souris_event((lien_event ->eventtype));
         if (type_event == 1)
@@ -111,7 +115,7 @@ ei_bool_t widget_concerne(event_bind* lien_event,ei_event_t* event)
         }
 }
 
-event_bind* event_recherche(ei_event_t* event)
+event_bind*             event_recherche(ei_event_t*             event)
 {
         event_bind *liste_bis = liste_event_bind;
         event_bind* liste_event_concerne = NULL;

@@ -3,20 +3,21 @@
 #include<ei_application.h>
 #include<ei_variable_globale.h>
 #include<ei_widget.h>
+#include <ei_fct_annexes.h>
 #define min(a, b) = a < b ? a : b;
 #define max(a, b) = a > b ? a : b;
-#define pi 3.14159
 
-void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button);
+void	        ei_button_setdefaultsfunc_t	        (struct ei_widget_t*	button);
 
-void    arc           (ei_point_t*     centre,
-                                            int *          rayon,
-                                            double *          pre_angle,
-                                            double*          deu_angle,
-                                                ei_linked_point_t** deb,
-                                                ei_linked_point_t** fin)
+void            arc                                     (ei_point_t*     centre,
+                                                         const int *          rayon,
+                                                         const double *          pre_angle,
+                                                         const double*          deu_angle,
+                                                         ei_linked_point_t** deb,
+                                                         ei_linked_point_t** fin)
 {
         if(*pre_angle > *deu_angle) {
+                // On discrétise les angles compris entre le premier angle désiré et le deuxième puis on chaîne les points.
                 for (int i = 0; i <= 100; i++) {
                         double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 100;
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
@@ -34,6 +35,7 @@ void    arc           (ei_point_t*     centre,
         }
         else
         {
+                // Même chose que pour le if
                 for (int i = 0; i <= 100; i++) {
                         double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 100;
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
@@ -48,23 +50,23 @@ void    arc           (ei_point_t*     centre,
                         (*fin)->next->point.y = (*fin)->point.y;
                         *fin = (*fin)->next;
                 }
+
         }
-        return;
 
 }
 
-void       rounded_frame              (ei_rect_t*     rectangle,
-                                       int *          rayon,
-                                       int*            partie,
-                                       ei_linked_point_t** cadre) {
+void             rounded_frame                          (ei_rect_t*     rectangle,
+                                                        int *          rayon,
+                                                        const int*            partie,
+                                                         ei_linked_point_t** cadre) {
         int h = rectangle->size.height/2;
         ei_point_t* centre_r = malloc(sizeof(ei_point_t));
-        centre_r->x = rectangle->top_left.x + (int)lround(sqrt((*rayon) * (*rayon) / 2));
-        centre_r->y = rectangle->top_left.y - (int)lround(sqrt((*rayon) * (*rayon) / 2));
+        centre_r->x = rectangle->top_left.x + (int)lround(sqrt((double) (*rayon) * (double) (*rayon) / 2));
+        centre_r->y = rectangle->top_left.y - (int)lround(sqrt((double) (*rayon) * (double) (*rayon) / 2));
         double *pii = malloc(sizeof(double));
-        *pii = pi/4;
+        *pii = M_PI/4;
         double *pii2 = malloc(sizeof(double));
-        *pii2 = pi / 2;
+        *pii2 = M_PI / 2;
         double* zero = malloc(sizeof(double));
         *zero = 0;
         ei_linked_point_t* fin1 = malloc(sizeof(ei_linked_point_t));
@@ -74,6 +76,7 @@ void       rounded_frame              (ei_rect_t*     rectangle,
         ei_linked_point_t* fin5 = malloc(sizeof(ei_linked_point_t));
         ei_linked_point_t* deb = malloc(sizeof (ei_linked_point_t));
         ei_linked_point_t* fin = deb;
+
         // Si partie = 0, on dessine la partie haute; si partie = 1, on dessine la partie basse; si partie = 2, on dessine tout le button
         switch (*partie) {
                 case 0:
@@ -83,9 +86,9 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin->point.x = fin->point.x - rectangle->size.width + 2* (int) lround(*rayon);
                         fin-> next = malloc(sizeof (ei_linked_point_t));
                         fin = fin ->next;
-                        fin1 = fin;
+                                fin1 = fin;
                         centre_r->x = centre_r->x - rectangle->size.width + 2 * (int) lround(*rayon);
-                        *pii = pi;
+                        *pii = M_PI;
                         arc(centre_r, rayon, pii2, pii,&fin,&fin1);
 
                         fin1->point.y = fin->point.y + rectangle->size.height - 2 * (int) lround(*rayon);
@@ -93,7 +96,7 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin1 = fin1 -> next;
                         centre_r -> y = centre_r->y + rectangle ->size.height -2*(int)lround(*rayon);
                         fin2 = fin1;
-                        *pii2 = 1.25*pi;
+                        *pii2 = 1.25*M_PI;
                         arc(centre_r,rayon,pii,pii2,&fin1,&fin2);
                         fin2 -> point.x += h;
                         fin2->point.y -= h;
@@ -104,8 +107,8 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         break;
                 case 1:
                         centre_r -> y = centre_r -> y + rectangle->size.height - 2* (int) lround(*rayon);
-                        *pii2 = 1.25*pi;
-                        *pii = 1.5*pi;
+                        *pii2 = 1.25*M_PI;
+                        *pii = 1.5*M_PI;
                         arc(centre_r,rayon,pii2, pii,&deb,&fin);
 
                         fin->point.x = fin->point.x + rectangle->size.width - 2 * (int) lround(*rayon);
@@ -113,11 +116,11 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin -> next = malloc(sizeof(ei_linked_point_t));
                         fin = fin -> next;
                         fin1 = fin;
-                        *pii2 = 2*pi;
+                        *pii2 = 2*M_PI;
                         arc(centre_r, rayon, pii, pii2,&fin,&fin1);
 
                         centre_r->y = centre_r ->y - rectangle->size.height + 2* (int) lround(*rayon);
-                        *pii = pi/4;
+                        *pii = M_PI/4;
                         fin1 ->point.y = fin1->point.y + rectangle->size.height - 2 *(int) lround(*rayon);
                         fin1 -> next = malloc(sizeof (ei_linked_point_t));
                         fin1 = fin1 -> next;
@@ -129,8 +132,6 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin2 -> next -> point.x = fin2 ->point .x - rectangle->size.width +2*h ;
                         fin2->next->point.y = fin2->point.y;
                         *cadre = deb;
-
-
                         break;
                 case 2:
                         centre_r -> x =centre_r->x + rectangle->size.width - 2*(int)lround(*rayon);
@@ -141,7 +142,7 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin = fin ->next;
                         fin1 = fin;
                         centre_r->x = centre_r->x - rectangle->size.width + 2 * (int) lround(*rayon);
-                        *pii = pi;
+                        *pii = M_PI;
                         arc(centre_r, rayon, pii2, pii,&fin,&fin1);
 
                         fin1->point.y = fin->point.y + rectangle->size.height - 2 * (int) lround(*rayon);
@@ -149,10 +150,10 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin1 = fin1 -> next;
                         centre_r -> y = centre_r->y + rectangle ->size.height -2*(int)lround(*rayon);
                         fin2 = fin1;
-                        *pii2 = (5/4)*pi;
+                        *pii2 = (5./4)*M_PI;
                         arc(centre_r,rayon,pii,pii2,&fin1,&fin2);
 
-                        *pii = 1.5*pi;
+                        *pii = 1.5*M_PI;
                         fin3 = fin2;
                         arc(centre_r,rayon,pii2, pii,&fin2,&fin3);
 
@@ -161,11 +162,11 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin3 -> next = malloc(sizeof(ei_linked_point_t));
                         fin3 = fin3 -> next;
                         fin4 = fin3;
-                        *pii2 = 2*pi;
+                        *pii2 = 2*M_PI;
                         arc(centre_r, rayon, pii, pii2,&fin3,&fin4);
 
                         centre_r->y = centre_r ->y - rectangle->size.height + 2* (int) lround(*rayon);
-                        *pii = pi/4;
+                        *pii = M_PI/4;
                         fin4 ->point.y = fin4->point.y + rectangle->size.height - 2 *(int) lround(*rayon);
                         fin4 -> next = malloc(sizeof (ei_linked_point_t));
                         fin4 = fin4 -> next;
@@ -177,41 +178,41 @@ void       rounded_frame              (ei_rect_t*     rectangle,
 }
 
 
-
-
-
 typedef struct ei_button_t {
-        ei_widget_t widget;
-        ei_color_t color;
-        int border_width;
-        int corner_radius;
-        ei_relief_t relief;
-        char* text;
-        ei_font_t text_font;
-        ei_color_t text_color;
-        ei_anchor_t text_anchor;
-        ei_surface_t img;
-        ei_rect_t* img_rect;
-        ei_anchor_t img_anchor;
-        ei_callback_t callback;
-        void* user_param;
+                        ei_widget_t widget;
+                        ei_color_t color;
+                        int border_width;
+                        int corner_radius;
+                        ei_relief_t relief;
+                        char* text;
+                        ei_font_t text_font;
+                        ei_color_t text_color;
+                        ei_anchor_t text_anchor;
+                        ei_surface_t img;
+                        ei_rect_t* img_rect;
+                        ei_anchor_t img_anchor;
+                        ei_callback_t callback;
+                        void* user_param;
 } ei_button_t;
 
-ei_widget_t*      ei_button_allocfunc_t        (void)
+
+ei_widget_t*            ei_button_allocfunc_t                   (void)
 {
         ei_button_t *button = malloc(sizeof(ei_button_t));
         return (ei_widget_t*)button;
 }
 
-void        ei_button_releasefunc_t      (struct ei_widget_t*	button)
+
+void                    ei_button_releasefunc_t                 (struct ei_widget_t*	        button)
 {
         free(button);
 }
 
-void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
-                                                 ei_surface_t		surface,
-                                                 ei_surface_t		pick_surface,
-                                                 ei_rect_t*		clipper)
+
+void	                ei_button_drawfunc_t		        (struct ei_widget_t*	        widget,
+                                                                ei_surface_t		        surface,
+                                                                ei_surface_t		        pick_surface,
+                                                                ei_rect_t*		        clipper)
 {
         ei_button_t* button = (ei_button_t*)widget;
         ei_linked_point_t* cadre_haut = malloc(sizeof(ei_linked_point_t));
@@ -247,8 +248,7 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
                 partie = 0;
                 ei_draw_polygon(surface, cadre_haut, *clair,clipper);
                 ei_draw_polygon(surface, cadre_bas, *sombre,clipper);
-        } else
-        {
+        } else {
                 ei_draw_polygon(surface, cadre_haut, *sombre,clipper);
                 ei_draw_polygon(surface, cadre_bas, *clair,clipper);
         }
@@ -258,8 +258,14 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
 
         hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
+        free_link(cadre_bas);
+        free_link(cadre);
+        free_link(cadre_haut);
+        free(clair);
+        free(sombre);
+
 }
-static ei_widgetclass_t classe_button =
+static          ei_widgetclass_t                        classe_button =
         {
                 "button",
                 &ei_button_allocfunc_t,
@@ -270,7 +276,7 @@ static ei_widgetclass_t classe_button =
                 NULL
         };
 
-void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
+void	        ei_button_setdefaultsfunc_t	        (struct ei_widget_t*	        button)
 {
         ei_relief_t default_relief = ei_relief_raised;
         ei_anchor_t default_anchor = ei_anc_center;
@@ -293,7 +299,7 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button_bis -> user_param = NULL;
 
         button -> wclass = &classe_button;
-        button->requested_size.height = 0; /* Half screen on a 1920x1080 screen*/
+        button->requested_size.height = 0;
         button->requested_size.width = 0;
         button ->user_data = NULL;
         button-> destructor = NULL;
@@ -305,17 +311,15 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
 
 }
 
-ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
-                                          struct ei_event_t*	event,
-                                          void*			user_param){
+ei_bool_t	        boutton_origin  	        (ei_widget_t*		        widget,
+                                                        struct ei_event_t*	        event,
+                                                        void*			        user_param){
 
         ei_button_t* button = (ei_button_t*) widget;
-        if ((button ->relief) == ei_relief_raised)
-        {
+        if ((button ->relief) == ei_relief_raised) {
                 button ->relief = ei_relief_sunken;
         }
-        else
-        {
+        else {
                 ei_relief_t base = ei_relief_raised;
                 button ->relief = base;
         }
@@ -324,14 +328,12 @@ ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
         return EI_FALSE;
 }
 
-ei_callback_t addr_boutton_origin()
+ei_callback_t           addr_boutton_origin()
 {
         return &boutton_origin;
 }
 
-ei_widgetclass_t* addr_button()
+ei_widgetclass_t*       addr_button()
 {
         return &classe_button;
 }
-
-

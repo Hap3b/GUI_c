@@ -14,16 +14,18 @@ static ei_surface_t surface_cache = NULL;
 static ei_widget_t *arbre_de_widget = NULL;
 static ei_bool_t quit = EI_FALSE;
 
-void ei_app_quit_request(void)
+void            ei_app_quit_request             (void)
 {
         quit = EI_TRUE;
 }
 
-ei_surface_t addr_surface_cache(){
+ei_surface_t    addr_surface_cache()
+{
         return surface_cache;
 }
 
-void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
+void            ei_app_create                   (ei_size_t              main_window_size,
+                                                 ei_bool_t              fullscreen)
 {
         ei_widgetclass_register(addr_frame());
         ei_widgetclass_register(addr_button());
@@ -35,15 +37,15 @@ void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 }
 
 
-void ei_app_run(void) {/* Create, configure and place the button on screen. */
+void ei_app_run(void)
+{/* Create, configure and place the button on screen. */
         dessine_tout_widget();
         hw_surface_update_rects(racine, NULL);
         struct ei_event_t *event_cur = malloc(sizeof(struct ei_event_t));
         while (!quit) {
                 hw_event_wait_next(event_cur);
 
-                if (event_cur->type == ei_ev_mouse_buttondown)
-                {
+                if (event_cur->type == ei_ev_mouse_buttondown) {
                         event_bind *event_traite = event_recherche(event_cur);
                         printf("%p\n", event_traite->callback);
                         while (event_traite != NULL) {
@@ -53,14 +55,15 @@ void ei_app_run(void) {/* Create, configure and place the button on screen. */
                         hw_surface_update_rects(racine, NULL);
                 }
         }
+        free(event_cur);
 }
 
-void ei_app_free(void)
+void            ei_app_free(void)
 {
         return;
 }
 
-ei_widget_t* ei_app_root_widget(void)
+ei_widget_t*            ei_app_root_widget(void)
 {
         if (arbre_de_widget == NULL){
                 ei_widget_t* racine_bis = ei_widget_create("frame", NULL, NULL,NULL);
@@ -71,7 +74,7 @@ ei_widget_t* ei_app_root_widget(void)
         return arbre_de_widget;
 }
 
-ei_surface_t ei_app_root_surface(void)
+ei_surface_t            ei_app_root_surface(void)
 {
         return racine;
 }

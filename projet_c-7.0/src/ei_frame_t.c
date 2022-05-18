@@ -6,20 +6,23 @@
 #include "ei_variable_globale.h"
 #include "ei_fct_annexes.h"*
 #include "hw_interface.h"
-void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame);
+
+
+void	        ei_frame_setdefaultsfunc_t	        (struct ei_widget_t*	        frame);
+
 typedef struct ei_frame_t {
-        ei_widget_t     widget;
-        ei_relief_t     relief;
-        int            border_width;
-        char*           title;
-        ei_font_t       title_fonte;
-        ei_anchor_t     title_anchor;
-        ei_color_t      color;
-        ei_color_t     color_title;
-        ei_anchor_t     ancre;
-        ei_surface_t    img;
-        ei_rect_t*       img_rect;
-        ei_anchor_t     img_anchor;
+                        ei_widget_t     widget;
+                        ei_relief_t     relief;
+                        int            border_width;
+                        char*           title;
+                        ei_font_t       title_fonte;
+                        ei_anchor_t     title_anchor;
+                        ei_color_t      color;
+                        ei_color_t     color_title;
+                        ei_anchor_t     ancre;
+                        ei_surface_t    img;
+                        ei_rect_t*       img_rect;
+                        ei_anchor_t     img_anchor;
 
 
 }ei_frame_t;
@@ -27,21 +30,21 @@ typedef struct ei_frame_t {
 
 
 
-struct ei_widget_t*      ei_frame_allocfunc_t        (void)
+struct ei_widget_t*             ei_frame_allocfunc_t            (void)
 {
         struct ei_frame_t *frame = calloc(1, sizeof(ei_frame_t));
         return (ei_widget_t*)frame;
 };
 
-void        ei_frame_releasefunc_t      (struct ei_widget_t*	frame)
+void                            ei_frame_releasefunc_t          (struct ei_widget_t*	        frame)
 {
         free(frame);
 };
 
-void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
-                                                ei_surface_t		surface,
-                                                ei_surface_t		pick_surface,
-                                                ei_rect_t*		clipper)
+void	                        ei_frame_drawfunc_t		(struct ei_widget_t*	        widget,
+                                                                ei_surface_t		        surface,
+                                                                ei_surface_t		        pick_surface,
+                                                                ei_rect_t*		        clipper)
 {
         ei_frame_t* frame = (ei_frame_t*)widget;
         ei_point_t depart = widget->screen_location.top_left;
@@ -112,21 +115,22 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
                              frame->color_title,
                              clipper);
         }
+        free(rectangle);
 
 };
 
 static ei_widgetclass_t classe_frame =
         {
-                "frame",
-                &ei_frame_allocfunc_t,
-                &ei_frame_releasefunc_t,
-                &ei_frame_drawfunc_t,
-                &ei_frame_setdefaultsfunc_t,
-                NULL,
-                NULL
+                                "frame",
+                                &ei_frame_allocfunc_t,
+                                &ei_frame_releasefunc_t,
+                                &ei_frame_drawfunc_t,
+                                &ei_frame_setdefaultsfunc_t,
+                                NULL,
+                                NULL
         };
 
-void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
+void	        ei_frame_setdefaultsfunc_t	        (struct ei_widget_t*	        frame)
 {
 
         frame -> wclass = &classe_frame;
@@ -156,6 +160,6 @@ void	ei_frame_setdefaultsfunc_t	(struct ei_widget_t*	frame)
 
 
 
-ei_widgetclass_t* addr_frame(){
+ei_widgetclass_t*       addr_frame(){
         return &classe_frame;
 }

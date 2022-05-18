@@ -194,7 +194,8 @@ CMakeFiles/ei.dir/src/ei_button.c.o: ../src/ei_button.c \
   ../include/ei_variable_globale.h \
   ../include/ei_geometrymanager.h \
   ../include/ei_event.h \
-  ../include/ei_widget.h
+  ../include/ei_widget.h \
+  ../include/ei_fct_annexes.h
 
 CMakeFiles/ei.dir/src/ei_draw.c.o: ../src/ei_draw.c \
   /usr/include/stdc-predef.h \
