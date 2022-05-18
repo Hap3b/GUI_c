@@ -2,7 +2,9 @@
 #include <ei_widget.h>
 #include <ei_button.h>
 #include <ei_geometrymanager.h>
-#include <ei_fct_annexes.h>
+#include "ei_event.h"
+#include "ei_types.h"
+#include "ei_variable_globale.h"
 
 void	                ei_toplevel_setdefaultsfunc_t	                (struct ei_widget_t*	        toplevel);
 
@@ -219,6 +221,13 @@ ei_widgetclass_t*       addr_toplevel()
         return &classe_toplevel;
 }
 
+ei_bool_t	button_press_exit	(ei_widget_t*		widget,
+                                  struct ei_event_t*	event,
+                                  void*			user_param) {
+    free(widget);
+    des
+    return EI_FALSE;
+}
 
 void                    ajoute_boutton_haut_gauche                      (ei_widget_t  *widget)
 {
@@ -231,8 +240,8 @@ void                    ajoute_boutton_haut_gauche                      (ei_widg
 
                 ei_widget_t* button;
                 button = ei_widget_create("button", widget, NULL, NULL);
-
-                ei_button_configure(button, &size, &button_color,
+            ei_bind(ei_ev_mouse_buttondown,button,NULL,button_press_exit,NULL);
+            ei_button_configure(button, &size, &button_color,
                                     &button_border_width, NULL, &relief, NULL, NULL, NULL, NULL,
                                     NULL, NULL, NULL, NULL, NULL);
         }
