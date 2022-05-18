@@ -10,6 +10,7 @@
 
 #endif //PROJETC_IG_EI_VARIABLE_GLOBALE_H
 
+<<<<<<< HEAD
 /**
  * It is the address of all the widget class created
  */
@@ -18,6 +19,14 @@ ei_widgetclass_t* addr_class_cree();
  * It is the address of the offscreen
  */
 ei_surface_t addr_surface_cache();
+=======
+ei_widgetclass_t* addr_class_cree();
+
+ei_surface_t addr_surface_cache();
+
+
+ei_widgetclass_t * addr_button();
+>>>>>>> refs/remotes/origin/master
 
 /**
  * It is the address of the widget class button

@@ -9,6 +9,10 @@
 #include "ei_frame_t.h"
 #include "ei_event_2.h"
 #include<ei_button.h>
+<<<<<<< HEAD
+=======
+#include<ei_toplevel.h>
+>>>>>>> refs/remotes/origin/master
 ei_color_t couleur_off_screnn = {0,0,0,255};
 
 void incremente_couleur_off_screen()
@@ -164,7 +168,11 @@ ei_widget_t*		ei_widget_create		(ei_widgetclass_name_t	class_name,
                 if (strcmp(classe_cree->name,"button") ==0 )
                 {
                         ei_callback_t button_clique = addr_boutton_origin();
+<<<<<<< HEAD
                         ei_bind(ei_ev_mouse_buttondown,new_widget,NULL,button_clique,NULL);
+=======
+                        ei_bind(ei_ev_mouse_buttondown,NULL,"button",button_clique,NULL);
+>>>>>>> refs/remotes/origin/master
                 }
                 return new_widget;
         }
@@ -229,6 +237,7 @@ void			ei_button_configure		(ei_widget_t*		widget,
         {
                 button -> text_color = *text_color;
         }
+<<<<<<< HEAD
 
         if (text_anchor != NULL)
         {
@@ -259,4 +268,76 @@ void			ei_button_configure		(ei_widget_t*		widget,
         //button->user_param = *user_param;
 }
 
+=======
+>>>>>>> refs/remotes/origin/master
 
+        if (text_anchor != NULL)
+        {
+                button -> text_anchor = *text_anchor;
+        }
+
+        if (img != NULL)
+        {
+                button -> img = *img;
+        }
+
+        if( img_rect != NULL)
+        {
+                 button -> img_rect = *img_rect;
+        }
+
+        if (img_anchor != NULL)
+        {
+                button -> img_anchor = *img_anchor;
+        }
+
+        if (corner_radius != NULL)
+        {
+                button -> corner_radius = *corner_radius;
+        }
+
+        //button->callback = callback;
+        //button->user_param = *user_param;
+}
+
+void			ei_toplevel_configure		(ei_widget_t*		widget,
+                                                                  ei_size_t*		requested_size,
+                                                                  ei_color_t*		color,
+                                                                  int*			border_width,
+                                                                  char**			title,
+                                                                  ei_bool_t*		closable,
+                                                                  ei_axis_set_t*		resizable,
+                                                                  ei_size_t**		min_size)
+{
+        ei_toplevel_t* toplevel = (ei_toplevel_t*)widget;
+        if (requested_size != NULL)
+        {
+                widget->requested_size.width = requested_size->width;
+                widget->requested_size.height = requested_size->height;
+        }
+        if (color != NULL)
+        {
+                toplevel->color = *color;
+        }
+        if (border_width != NULL)
+        {
+                toplevel-> border_width = *border_width;
+        }
+        if (title != NULL)
+        {
+                toplevel->title = *title;
+        }
+        if (closable != NULL)
+        {
+                toplevel->closable = *closable;
+        }
+        if (resizable != NULL)
+        {
+                toplevel->resizable = *resizable;
+        }
+        if (min_size != NULL)
+        {
+                toplevel->min_size = *min_size;
+        } ajoute_boutton_haut_gauche (widget);
+
+}

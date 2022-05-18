@@ -48,19 +48,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /snap/clion/190/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
 RM = /snap/clion/190/bin/cmake/linux/bin/cmake -E rm -f
+=======
+CMAKE_COMMAND = /snap/clion-2022.1/bin/cmake/linux/bin/cmake
+
+# The command to remove a file.
+RM = /snap/clion-2022.1/bin/cmake/linux/bin/cmake -E rm -f
+>>>>>>> refs/remotes/origin/master
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug
+>>>>>>> refs/remotes/origin/master
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +82,11 @@ CMAKE_BINARY_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	/snap/clion/190/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+	/snap/clion-2022.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+>>>>>>> refs/remotes/origin/master
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +96,11 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	/snap/clion/190/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	/snap/clion-2022.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> refs/remotes/origin/master
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +109,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles 0
+>>>>>>> refs/remotes/origin/master
 .PHONY : all
 
 # The main clean target
@@ -342,6 +370,7 @@ src/ei_event.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_event.c.s
 .PHONY : src/ei_event.c.s
 
+<<<<<<< HEAD
 src/ei_fct_annexes.o: src/ei_fct_annexes.c.o
 .PHONY : src/ei_fct_annexes.o
 
@@ -366,6 +395,8 @@ src/ei_fct_annexes.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_fct_annexes.c.s
 .PHONY : src/ei_fct_annexes.c.s
 
+=======
+>>>>>>> refs/remotes/origin/master
 src/ei_frame_t.o: src/ei_frame_t.c.o
 .PHONY : src/ei_frame_t.o
 
@@ -462,6 +493,33 @@ src/ei_parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_parser.c.s
 .PHONY : src/ei_parser.c.s
 
+<<<<<<< HEAD
+=======
+src/ei_toplevel.o: src/ei_toplevel.c.o
+.PHONY : src/ei_toplevel.o
+
+# target to build an object file
+src/ei_toplevel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_toplevel.c.o
+.PHONY : src/ei_toplevel.c.o
+
+src/ei_toplevel.i: src/ei_toplevel.c.i
+.PHONY : src/ei_toplevel.i
+
+# target to preprocess a source file
+src/ei_toplevel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_toplevel.c.i
+.PHONY : src/ei_toplevel.c.i
+
+src/ei_toplevel.s: src/ei_toplevel.c.s
+.PHONY : src/ei_toplevel.s
+
+# target to generate assembly for a file
+src/ei_toplevel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_toplevel.c.s
+.PHONY : src/ei_toplevel.c.s
+
+>>>>>>> refs/remotes/origin/master
 src/ei_types.o: src/ei_types.cpp.o
 .PHONY : src/ei_types.o
 
@@ -795,6 +853,9 @@ help:
 	@echo "... src/ei_parser.o"
 	@echo "... src/ei_parser.i"
 	@echo "... src/ei_parser.s"
+	@echo "... src/ei_toplevel.o"
+	@echo "... src/ei_toplevel.i"
+	@echo "... src/ei_toplevel.s"
 	@echo "... src/ei_types.o"
 	@echo "... src/ei_types.i"
 	@echo "... src/ei_types.s"

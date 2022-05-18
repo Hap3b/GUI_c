@@ -17,8 +17,13 @@ void    arc           (ei_point_t*     centre,
                                                 ei_linked_point_t** fin)
 {
         if(*pre_angle > *deu_angle) {
+<<<<<<< HEAD
                 for (int i = 0; i <= 100; i++) {
                         double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 100;
+=======
+                for (int i = 0; i <= 10; i++) {
+                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 10;
+>>>>>>> refs/remotes/origin/master
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
                         long oui = lround((float) *rayon * cos(pas));
                         nv_point2->x = centre->x + (int) oui;
@@ -34,8 +39,13 @@ void    arc           (ei_point_t*     centre,
         }
         else
         {
+<<<<<<< HEAD
                 for (int i = 0; i <= 100; i++) {
                         double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 100;
+=======
+                for (int i = 0; i <= 10; i++) {
+                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 10;
+>>>>>>> refs/remotes/origin/master
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
                         long oui = lround((float) *rayon * cos(pas));
                         nv_point2->x = centre->x + (int) oui;
@@ -100,6 +110,10 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin2-> next = malloc(sizeof (ei_linked_point_t));
                         fin2 -> next -> point.x = rectangle->size.width -2*h + fin2 ->point .x;
                         fin2->next->point.y = fin2->point.y;
+<<<<<<< HEAD
+=======
+                        fin2->next->next = NULL;
+>>>>>>> refs/remotes/origin/master
                         *cadre = deb;
                         break;
                 case 1:
@@ -128,6 +142,10 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin2-> next = malloc(sizeof (ei_linked_point_t));
                         fin2 -> next -> point.x = fin2 ->point .x - rectangle->size.width +2*h ;
                         fin2->next->point.y = fin2->point.y;
+<<<<<<< HEAD
+=======
+                        fin2 -> next->next =NULL;
+>>>>>>> refs/remotes/origin/master
                         *cadre = deb;
 
 
@@ -171,6 +189,10 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin4 = fin4 -> next;
                         fin5 = fin4;
                         arc(centre_r,rayon,zero,pii,&fin4,&fin5 );
+<<<<<<< HEAD
+=======
+                        fin5->next = NULL;
+>>>>>>> refs/remotes/origin/master
 
                         *cadre = deb;
         }
@@ -201,12 +223,20 @@ ei_widget_t*      ei_button_allocfunc_t        (void)
 {
         ei_button_t *button = malloc(sizeof(ei_button_t));
         return (ei_widget_t*)button;
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> refs/remotes/origin/master
 
 void        ei_button_releasefunc_t      (struct ei_widget_t*	button)
 {
         free(button);
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> refs/remotes/origin/master
 
 void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
                                                  ei_surface_t		surface,
@@ -243,22 +273,38 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_lock(surface);
         hw_surface_lock(pick_surface);
 
+<<<<<<< HEAD
         if (button->relief == ei_relief_raised) {
                 partie = 0;
+=======
+
+        if (button->relief == ei_relief_raised) {
+>>>>>>> refs/remotes/origin/master
                 ei_draw_polygon(surface, cadre_haut, *clair,clipper);
                 ei_draw_polygon(surface, cadre_bas, *sombre,clipper);
         } else
         {
+<<<<<<< HEAD
                 ei_draw_polygon(surface, cadre_haut, *sombre,clipper);
                 ei_draw_polygon(surface, cadre_bas, *clair,clipper);
+=======
+                ei_draw_polygon(surface, cadre_bas, *clair,clipper);
+                ei_draw_polygon(surface, cadre_haut, *sombre,clipper);
+>>>>>>> refs/remotes/origin/master
         }
 
         ei_draw_polygon(pick_surface, cadre, *(widget->pick_color),clipper);
         ei_draw_polygon(surface, cadre, button->color ,clipper);
+<<<<<<< HEAD
 
         hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
 };
+=======
+        hw_surface_unlock(surface);
+        hw_surface_unlock(pick_surface);
+}
+>>>>>>> refs/remotes/origin/master
 static ei_widgetclass_t classe_button =
         {
                 "button",
@@ -293,8 +339,13 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button_bis -> user_param = NULL;
 
         button -> wclass = &classe_button;
+<<<<<<< HEAD
         button->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
         button->requested_size.width = 960;
+=======
+        button->requested_size.height = 0; /* Half screen on a 1920x1080 screen*/
+        button->requested_size.width = 0;
+>>>>>>> refs/remotes/origin/master
         button ->user_data = NULL;
         button-> destructor = NULL;
         button->parent = NULL;
@@ -303,13 +354,18 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button->next_sibling = NULL;
         button->geom_params = NULL;
 
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> refs/remotes/origin/master
 
 ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
                                           struct ei_event_t*	event,
                                           void*			user_param){
 
         ei_button_t* button = (ei_button_t*) widget;
+<<<<<<< HEAD
         if ((button ->relief) == ei_relief_raised)
         {
                 button ->relief = ei_relief_sunken;
@@ -321,6 +377,19 @@ ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
         }
         ei_button_drawfunc_t(widget, ei_app_root_surface(), addr_surface_cache(), &(widget->screen_location));
         hw_surface_update_rects(ei_app_root_surface(), NULL);
+=======
+        ei_relief_t relief_act;
+        if ((button ->relief) == ei_relief_raised)
+        {
+                relief_act = ei_relief_sunken;
+        }
+        else
+        {
+                relief_act = ei_relief_raised;
+        }
+        ei_button_configure(widget, NULL, NULL, NULL, NULL,&relief_act, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+        ei_button_drawfunc_t(widget, ei_app_root_surface(), addr_surface_cache(), NULL);
+>>>>>>> refs/remotes/origin/master
         return EI_FALSE;
 }
 

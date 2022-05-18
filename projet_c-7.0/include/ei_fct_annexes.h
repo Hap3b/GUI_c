@@ -7,6 +7,7 @@
 
 #endif //PROJETC_IG_EI_FCT_ANNEXES_H
 
+<<<<<<< HEAD
 #include <ei_types.h>
 /**
  * @brief 	Return the lower value between the 2 given.
@@ -39,3 +40,18 @@ int     max     (int a,
  */
 ei_point_t* anchor_to_point(ei_anchor_t* ancre,
                            ei_rect_t* rect);
+=======
+#include <math.h>
+#include <ei_types.h>
+
+int     min     (int a,
+                 int b);
+
+int     max     (int a,
+                 int b);
+
+ei_linked_point_t*       arc[2]            (ei_point_t     centre,
+                                            int          rayon,
+                                            float          pre_angle,
+                                            float          deu_angle);
+>>>>>>> refs/remotes/origin/master

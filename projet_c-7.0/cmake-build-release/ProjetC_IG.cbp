@@ -8,6 +8,7 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
+<<<<<<< HEAD
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
@@ -20,21 +21,45 @@
 			<Target title="ei">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/libei.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ei">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/libei.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 ei"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -44,21 +69,42 @@
 			<Target title="ei/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/libei.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 ei"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ei/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/libei.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 ei/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -68,21 +114,42 @@
 			<Target title="minimal">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/minimal" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 ei/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minimal">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/minimal" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minimal"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -92,21 +159,42 @@
 			<Target title="minimal/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/minimal" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minimal"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minimal/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/minimal" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minimal/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -116,21 +204,42 @@
 			<Target title="frame">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/frame" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minimal/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="frame">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/frame" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 frame"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -140,21 +249,42 @@
 			<Target title="frame/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/frame" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 frame"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="frame/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/frame" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 frame/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -164,21 +294,42 @@
 			<Target title="button">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/button" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 frame/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="button">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/button" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 button"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -188,21 +339,42 @@
 			<Target title="button/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/button" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 button"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="button/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/button" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 button/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -212,21 +384,42 @@
 			<Target title="hello_world">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/hello_world" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 button/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hello_world">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/hello_world" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 hello_world"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -236,21 +429,42 @@
 			<Target title="hello_world/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/hello_world" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 hello_world"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hello_world/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/hello_world" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 hello_world/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -260,21 +474,42 @@
 			<Target title="puzzle">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/puzzle" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 hello_world/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="puzzle">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/puzzle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 puzzle"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -284,21 +519,42 @@
 			<Target title="puzzle/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/puzzle" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 puzzle"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="puzzle/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/puzzle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 puzzle/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -308,21 +564,42 @@
 			<Target title="two048">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/two048" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 puzzle/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="two048">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/two048" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 two048"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -332,21 +609,42 @@
 			<Target title="two048/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/two048" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 two048"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="two048/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/two048" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 two048/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -356,21 +654,42 @@
 			<Target title="minesweeper">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/minesweeper" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 two048/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minesweeper">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/minesweeper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minesweeper"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -380,21 +699,42 @@
 			<Target title="minesweeper/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/minesweeper" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minesweeper"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minesweeper/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/minesweeper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minesweeper/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -404,21 +744,42 @@
 			<Target title="parsing">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/parsing" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 minesweeper/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parsing">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/parsing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 parsing"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -428,21 +789,42 @@
 			<Target title="parsing/fast">
 				<Option output="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/parsing" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release"/>
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 parsing"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parsing/fast">
+				<Option output="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/parsing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+>>>>>>> refs/remotes/origin/master
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
 					<Add directory="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include"/>
 					<Add directory="/usr/include/SDL2"/>
 					<Add directory="/usr/include/c++/11"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
 					<Add directory="/usr/include/c++/11/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+=======
+					<Add directory="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+>>>>>>> refs/remotes/origin/master
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 parsing/fast"/>
 					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
@@ -544,6 +926,103 @@
 			<Option target="two048"/>
 		</Unit>
 		<Unit filename="/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/CMakeLists.txt">
+=======
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 parsing/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="doc">
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 doc"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_application.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_draw.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_event.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_frame_t.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_geometrymanager.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_interface.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_parser.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_types.cpp">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_utils.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_widget.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_widgetclass.c">
+			<Option target="ei"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/button.c">
+			<Option target="button"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/frame.c">
+			<Option target="frame"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/hello_world.c">
+			<Option target="hello_world"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/minesweeper.c">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/minimal.c">
+			<Option target="minimal"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/parsing.c">
+			<Option target="parsing"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/puzzle.c">
+			<Option target="puzzle"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/two048.c">
+			<Option target="two048"/>
+		</Unit>
+		<Unit filename="/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/CMakeLists.txt">
+>>>>>>> refs/remotes/origin/master
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

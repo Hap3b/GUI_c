@@ -44,19 +44,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /snap/clion/190/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
 RM = /snap/clion/190/bin/cmake/linux/bin/cmake -E rm -f
+=======
+CMAKE_COMMAND = /snap/clion-2022.1/bin/cmake/linux/bin/cmake
+
+# The command to remove a file.
+RM = /snap/clion-2022.1/bin/cmake/linux/bin/cmake -E rm -f
+>>>>>>> refs/remotes/origin/master
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release
+=======
+CMAKE_SOURCE_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release
+>>>>>>> refs/remotes/origin/master
 
 # Utility rule file for doc.
 
@@ -67,7 +81,11 @@ include CMakeFiles/doc.dir/compiler_depend.make
 include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
+<<<<<<< HEAD
 	cd /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0 && doxygen /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/docs/doxygen.cfg
+=======
+	cd /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 && doxygen /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/docs/doxygen.cfg
+>>>>>>> refs/remotes/origin/master
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make
@@ -82,6 +100,10 @@ CMakeFiles/doc.dir/clean:
 .PHONY : CMakeFiles/doc.dir/clean
 
 CMakeFiles/doc.dir/depend:
+<<<<<<< HEAD
 	cd /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0 /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0 /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> refs/remotes/origin/master
 .PHONY : CMakeFiles/doc.dir/depend
 

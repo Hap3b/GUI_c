@@ -1,14 +1,20 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ei.dir/src/ei_application.c.o"
   "CMakeFiles/ei.dir/src/ei_application.c.o.d"
+<<<<<<< HEAD
   "CMakeFiles/ei.dir/src/ei_button.c.o"
   "CMakeFiles/ei.dir/src/ei_button.c.o.d"
+=======
+>>>>>>> refs/remotes/origin/master
   "CMakeFiles/ei.dir/src/ei_draw.c.o"
   "CMakeFiles/ei.dir/src/ei_draw.c.o.d"
   "CMakeFiles/ei.dir/src/ei_event.c.o"
   "CMakeFiles/ei.dir/src/ei_event.c.o.d"
+<<<<<<< HEAD
   "CMakeFiles/ei.dir/src/ei_fct_annexes.c.o"
   "CMakeFiles/ei.dir/src/ei_fct_annexes.c.o.d"
+=======
+>>>>>>> refs/remotes/origin/master
   "CMakeFiles/ei.dir/src/ei_frame_t.c.o"
   "CMakeFiles/ei.dir/src/ei_frame_t.c.o.d"
   "CMakeFiles/ei.dir/src/ei_geometrymanager.c.o"

@@ -4,7 +4,11 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
+<<<<<<< HEAD
 C_INCLUDES = -I/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include -I/usr/include/SDL2
+=======
+C_INCLUDES = -I/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include -I/usr/include/SDL2
+>>>>>>> refs/remotes/origin/master
 
 C_FLAGS = -O3 -DNDEBUG
 

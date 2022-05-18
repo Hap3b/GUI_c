@@ -7,6 +7,10 @@
 #include<ei_variable_globale.h>
 #include <ei_geometrymanager.h>
 #include<ei_event_2.h>
+<<<<<<< HEAD
+=======
+#include <ei_toplevel.h>
+>>>>>>> refs/remotes/origin/master
 
 static ei_surface_t racine = NULL;
 static ei_surface_t surface_cache = NULL;
@@ -24,6 +28,13 @@ ei_surface_t addr_surface_cache(){
 
 void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 {
+<<<<<<< HEAD
+=======
+        ei_widgetclass_register(addr_frame());
+        ei_widgetclass_register(addr_button());
+        ei_widgetclass_register(addr_toplevel());
+        ei_geometrymanager_register(addr_geom_placeur_t());
+>>>>>>> refs/remotes/origin/master
         hw_init();
         ei_widgetclass_register(addr_frame());
         ei_widgetclass_register(addr_button());
@@ -38,6 +49,7 @@ void ei_app_run(void) {/* Create, configure and place the button on screen. */
         hw_surface_update_rects(racine, NULL);
         struct ei_event_t *event_cur = malloc(sizeof(struct ei_event_t));
         while (!quit) {
+<<<<<<< HEAD
                 hw_event_wait_next(event_cur);
 
                 if (event_cur->type == ei_ev_mouse_buttondown)
@@ -50,12 +62,28 @@ void ei_app_run(void) {/* Create, configure and place the button on screen. */
                         }
                         hw_surface_update_rects(racine, NULL);
                 }
+=======
+                    hw_event_wait_next(event_cur);
+                    ei_widget_t* widget = NULL;
+                    event_bind *event_traite = event_recherche(event_cur, &widget);
+                    while (event_traite != NULL) {
+                        ei_bool_t should_continue = event_traite->callback(widget, event_cur,
+                                                                           event_traite->user_param);
+                        event_traite = event_traite->next;
+                    }
+                    hw_surface_update_rects(racine, NULL);
+>>>>>>> refs/remotes/origin/master
         }
 }
 
+
 void ei_app_free(void)
 {
+<<<<<<< HEAD
         return;
+=======
+        hw_quit();
+>>>>>>> refs/remotes/origin/master
 }
 
 ei_widget_t* ei_app_root_widget(void)

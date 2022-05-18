@@ -1,4 +1,5 @@
 CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
+<<<<<<< HEAD
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_geometrymanager.c \
  /usr/include/stdc-predef.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widget.h \
@@ -9,16 +10,34 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+=======
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_geometrymanager.c \
+ /usr/include/stdc-predef.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_draw.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+>>>>>>> refs/remotes/origin/master
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
+<<<<<<< HEAD
+=======
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+>>>>>>> refs/remotes/origin/master
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+<<<<<<< HEAD
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_types.h \
+=======
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_types.h \
+>>>>>>> refs/remotes/origin/master
  /usr/include/SDL2/SDL_keycode.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -28,7 +47,11 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+<<<<<<< HEAD
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/endian.h \
+=======
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h /usr/include/endian.h \
+>>>>>>> refs/remotes/origin/master
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -42,10 +65,16 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+<<<<<<< HEAD
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+=======
+ /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+>>>>>>> refs/remotes/origin/master
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
@@ -53,10 +82,18 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+<<<<<<< HEAD
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+=======
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/alloca.h \
+>>>>>>> refs/remotes/origin/master
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
@@ -71,9 +108,20 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+<<<<<<< HEAD
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/include/SDL2/SDL_scancode.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/hw_interface.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
  /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/include/ei_widget.h
+=======
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
+ /usr/include/SDL2/SDL_scancode.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/hw_interface.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_toplevel.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h
+>>>>>>> refs/remotes/origin/master

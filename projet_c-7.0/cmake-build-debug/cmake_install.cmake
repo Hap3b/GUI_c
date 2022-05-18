@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0
+=======
+# Install script for directory: /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0
+>>>>>>> refs/remotes/origin/master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +54,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> refs/remotes/origin/master
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

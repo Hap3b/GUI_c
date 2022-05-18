@@ -67,6 +67,7 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_unlock(pick_surface);
         hw_surface_lock(surface);
         ei_draw_polygon(surface, &pol1,(frame->color), clipper);
+<<<<<<< HEAD
         widget->requested_size.height -= frame->border_width;
         widget->requested_size.width -= frame->border_width;
         frame->color.blue = frame->color.blue + 10;
@@ -88,6 +89,9 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
                              ((ei_frame_t *) widget)->color_title,
                              clipper);
         }
+=======
+        hw_surface_unlock(surface);
+>>>>>>> refs/remotes/origin/master
 
 };
 static ei_widgetclass_t classe_frame =

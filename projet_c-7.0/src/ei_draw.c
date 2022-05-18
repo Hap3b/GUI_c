@@ -17,8 +17,15 @@ uint32_t*		ei_map_rgba		(ei_surface_t surface, ei_color_t color)
         };
         *tot += color.alpha << (8* (ia));
         return tot;
+<<<<<<< HEAD
 }
 
+=======
+    };
+    tot += color.alpha << (8* (*ia));
+    return tot;
+}
+>>>>>>> refs/remotes/origin/master
 int ei_copy_surface (ei_surface_t		destination,
                      const ei_rect_t*	dst_rect,
                      ei_surface_t		source,

@@ -44,19 +44,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /snap/clion/190/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
 RM = /snap/clion/190/bin/cmake/linux/bin/cmake -E rm -f
+=======
+CMAKE_COMMAND = /snap/clion-2022.1/bin/cmake/linux/bin/cmake
+
+# The command to remove a file.
+RM = /snap/clion-2022.1/bin/cmake/linux/bin/cmake -E rm -f
+>>>>>>> refs/remotes/origin/master
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug
+>>>>>>> refs/remotes/origin/master
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ei.dir/depend.make
@@ -72,6 +86,7 @@ include CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_application.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_application.c.o: ../src/ei_application.c
 CMakeFiles/ei.dir/src/ei_application.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ei.dir/src/ei_application.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_application.c.o -MF CMakeFiles/ei.dir/src/ei_application.c.o.d -o CMakeFiles/ei.dir/src/ei_application.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_application.c
 
@@ -82,10 +97,23 @@ CMakeFiles/ei.dir/src/ei_application.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_application.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_application.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_application.c -o CMakeFiles/ei.dir/src/ei_application.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ei.dir/src/ei_application.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_application.c.o -MF CMakeFiles/ei.dir/src/ei_application.c.o.d -o CMakeFiles/ei.dir/src/ei_application.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_application.c
+
+CMakeFiles/ei.dir/src/ei_application.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_application.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_application.c > CMakeFiles/ei.dir/src/ei_application.c.i
+
+CMakeFiles/ei.dir/src/ei_application.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_application.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_application.c -o CMakeFiles/ei.dir/src/ei_application.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: ../src/ei_geometrymanager.c
 CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ei.dir/src/ei_geometrymanager.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_geometrymanager.c.o -MF CMakeFiles/ei.dir/src/ei_geometrymanager.c.o.d -o CMakeFiles/ei.dir/src/ei_geometrymanager.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_geometrymanager.c
 
@@ -96,10 +124,23 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_geometrymanager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_geometrymanager.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_geometrymanager.c -o CMakeFiles/ei.dir/src/ei_geometrymanager.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ei.dir/src/ei_geometrymanager.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_geometrymanager.c.o -MF CMakeFiles/ei.dir/src/ei_geometrymanager.c.o.d -o CMakeFiles/ei.dir/src/ei_geometrymanager.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_geometrymanager.c
+
+CMakeFiles/ei.dir/src/ei_geometrymanager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_geometrymanager.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_geometrymanager.c > CMakeFiles/ei.dir/src/ei_geometrymanager.c.i
+
+CMakeFiles/ei.dir/src/ei_geometrymanager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_geometrymanager.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_geometrymanager.c -o CMakeFiles/ei.dir/src/ei_geometrymanager.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_widget.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_widget.c.o: ../src/ei_widget.c
 CMakeFiles/ei.dir/src/ei_widget.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ei.dir/src/ei_widget.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_widget.c.o -MF CMakeFiles/ei.dir/src/ei_widget.c.o.d -o CMakeFiles/ei.dir/src/ei_widget.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_widget.c
 
@@ -110,10 +151,23 @@ CMakeFiles/ei.dir/src/ei_widget.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_widget.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_widget.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_widget.c -o CMakeFiles/ei.dir/src/ei_widget.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ei.dir/src/ei_widget.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_widget.c.o -MF CMakeFiles/ei.dir/src/ei_widget.c.o.d -o CMakeFiles/ei.dir/src/ei_widget.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widget.c
+
+CMakeFiles/ei.dir/src/ei_widget.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_widget.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widget.c > CMakeFiles/ei.dir/src/ei_widget.c.i
+
+CMakeFiles/ei.dir/src/ei_widget.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_widget.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widget.c -o CMakeFiles/ei.dir/src/ei_widget.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_draw.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_draw.c.o: ../src/ei_draw.c
 CMakeFiles/ei.dir/src/ei_draw.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ei.dir/src/ei_draw.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_draw.c.o -MF CMakeFiles/ei.dir/src/ei_draw.c.o.d -o CMakeFiles/ei.dir/src/ei_draw.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_draw.c
 
@@ -124,10 +178,23 @@ CMakeFiles/ei.dir/src/ei_draw.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_draw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_draw.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_draw.c -o CMakeFiles/ei.dir/src/ei_draw.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ei.dir/src/ei_draw.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_draw.c.o -MF CMakeFiles/ei.dir/src/ei_draw.c.o.d -o CMakeFiles/ei.dir/src/ei_draw.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_draw.c
+
+CMakeFiles/ei.dir/src/ei_draw.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_draw.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_draw.c > CMakeFiles/ei.dir/src/ei_draw.c.i
+
+CMakeFiles/ei.dir/src/ei_draw.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_draw.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_draw.c -o CMakeFiles/ei.dir/src/ei_draw.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_parser.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_parser.c.o: ../src/ei_parser.c
 CMakeFiles/ei.dir/src/ei_parser.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ei.dir/src/ei_parser.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_parser.c.o -MF CMakeFiles/ei.dir/src/ei_parser.c.o.d -o CMakeFiles/ei.dir/src/ei_parser.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_parser.c
 
@@ -138,10 +205,23 @@ CMakeFiles/ei.dir/src/ei_parser.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_parser.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_parser.c -o CMakeFiles/ei.dir/src/ei_parser.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ei.dir/src/ei_parser.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_parser.c.o -MF CMakeFiles/ei.dir/src/ei_parser.c.o.d -o CMakeFiles/ei.dir/src/ei_parser.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_parser.c
+
+CMakeFiles/ei.dir/src/ei_parser.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_parser.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_parser.c > CMakeFiles/ei.dir/src/ei_parser.c.i
+
+CMakeFiles/ei.dir/src/ei_parser.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_parser.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_parser.c -o CMakeFiles/ei.dir/src/ei_parser.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_types.cpp.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_types.cpp.o: ../src/ei_types.cpp
 CMakeFiles/ei.dir/src/ei_types.cpp.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ei.dir/src/ei_types.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_types.cpp.o -MF CMakeFiles/ei.dir/src/ei_types.cpp.o.d -o CMakeFiles/ei.dir/src/ei_types.cpp.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_types.cpp
 
@@ -152,10 +232,23 @@ CMakeFiles/ei.dir/src/ei_types.cpp.i: cmake_force
 CMakeFiles/ei.dir/src/ei_types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ei.dir/src/ei_types.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_types.cpp -o CMakeFiles/ei.dir/src/ei_types.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ei.dir/src/ei_types.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_types.cpp.o -MF CMakeFiles/ei.dir/src/ei_types.cpp.o.d -o CMakeFiles/ei.dir/src/ei_types.cpp.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_types.cpp
+
+CMakeFiles/ei.dir/src/ei_types.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ei.dir/src/ei_types.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_types.cpp > CMakeFiles/ei.dir/src/ei_types.cpp.i
+
+CMakeFiles/ei.dir/src/ei_types.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ei.dir/src/ei_types.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_types.cpp -o CMakeFiles/ei.dir/src/ei_types.cpp.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_utils.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_utils.c.o: ../src/ei_utils.c
 CMakeFiles/ei.dir/src/ei_utils.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ei.dir/src/ei_utils.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_utils.c.o -MF CMakeFiles/ei.dir/src/ei_utils.c.o.d -o CMakeFiles/ei.dir/src/ei_utils.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_utils.c
 
@@ -166,10 +259,23 @@ CMakeFiles/ei.dir/src/ei_utils.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_utils.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_utils.c -o CMakeFiles/ei.dir/src/ei_utils.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ei.dir/src/ei_utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_utils.c.o -MF CMakeFiles/ei.dir/src/ei_utils.c.o.d -o CMakeFiles/ei.dir/src/ei_utils.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_utils.c
+
+CMakeFiles/ei.dir/src/ei_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_utils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_utils.c > CMakeFiles/ei.dir/src/ei_utils.c.i
+
+CMakeFiles/ei.dir/src/ei_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_utils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_utils.c -o CMakeFiles/ei.dir/src/ei_utils.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: ../src/ei_widgetclass.c
 CMakeFiles/ei.dir/src/ei_widgetclass.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ei.dir/src/ei_widgetclass.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_widgetclass.c.o -MF CMakeFiles/ei.dir/src/ei_widgetclass.c.o.d -o CMakeFiles/ei.dir/src/ei_widgetclass.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_widgetclass.c
 
@@ -180,10 +286,23 @@ CMakeFiles/ei.dir/src/ei_widgetclass.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_widgetclass.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_widgetclass.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_widgetclass.c -o CMakeFiles/ei.dir/src/ei_widgetclass.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ei.dir/src/ei_widgetclass.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_widgetclass.c.o -MF CMakeFiles/ei.dir/src/ei_widgetclass.c.o.d -o CMakeFiles/ei.dir/src/ei_widgetclass.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widgetclass.c
+
+CMakeFiles/ei.dir/src/ei_widgetclass.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_widgetclass.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widgetclass.c > CMakeFiles/ei.dir/src/ei_widgetclass.c.i
+
+CMakeFiles/ei.dir/src/ei_widgetclass.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_widgetclass.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widgetclass.c -o CMakeFiles/ei.dir/src/ei_widgetclass.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_interface.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_interface.c.o: ../src/ei_interface.c
 CMakeFiles/ei.dir/src/ei_interface.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ei.dir/src/ei_interface.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_interface.c.o -MF CMakeFiles/ei.dir/src/ei_interface.c.o.d -o CMakeFiles/ei.dir/src/ei_interface.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_interface.c
 
@@ -194,10 +313,23 @@ CMakeFiles/ei.dir/src/ei_interface.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_interface.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_interface.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_interface.c -o CMakeFiles/ei.dir/src/ei_interface.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ei.dir/src/ei_interface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_interface.c.o -MF CMakeFiles/ei.dir/src/ei_interface.c.o.d -o CMakeFiles/ei.dir/src/ei_interface.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_interface.c
+
+CMakeFiles/ei.dir/src/ei_interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_interface.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_interface.c > CMakeFiles/ei.dir/src/ei_interface.c.i
+
+CMakeFiles/ei.dir/src/ei_interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_interface.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_interface.c -o CMakeFiles/ei.dir/src/ei_interface.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_frame_t.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_frame_t.c.o: ../src/ei_frame_t.c
 CMakeFiles/ei.dir/src/ei_frame_t.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ei.dir/src/ei_frame_t.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_frame_t.c.o -MF CMakeFiles/ei.dir/src/ei_frame_t.c.o.d -o CMakeFiles/ei.dir/src/ei_frame_t.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_frame_t.c
 
@@ -208,10 +340,23 @@ CMakeFiles/ei.dir/src/ei_frame_t.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_frame_t.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_frame_t.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_frame_t.c -o CMakeFiles/ei.dir/src/ei_frame_t.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ei.dir/src/ei_frame_t.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_frame_t.c.o -MF CMakeFiles/ei.dir/src/ei_frame_t.c.o.d -o CMakeFiles/ei.dir/src/ei_frame_t.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_frame_t.c
+
+CMakeFiles/ei.dir/src/ei_frame_t.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_frame_t.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_frame_t.c > CMakeFiles/ei.dir/src/ei_frame_t.c.i
+
+CMakeFiles/ei.dir/src/ei_frame_t.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_frame_t.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_frame_t.c -o CMakeFiles/ei.dir/src/ei_frame_t.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_button.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_button.c.o: ../src/ei_button.c
 CMakeFiles/ei.dir/src/ei_button.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ei.dir/src/ei_button.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_button.c.o -MF CMakeFiles/ei.dir/src/ei_button.c.o.d -o CMakeFiles/ei.dir/src/ei_button.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_button.c
 
@@ -222,10 +367,23 @@ CMakeFiles/ei.dir/src/ei_button.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_button.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_button.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_button.c -o CMakeFiles/ei.dir/src/ei_button.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ei.dir/src/ei_button.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_button.c.o -MF CMakeFiles/ei.dir/src/ei_button.c.o.d -o CMakeFiles/ei.dir/src/ei_button.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_button.c
+
+CMakeFiles/ei.dir/src/ei_button.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_button.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_button.c > CMakeFiles/ei.dir/src/ei_button.c.i
+
+CMakeFiles/ei.dir/src/ei_button.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_button.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_button.c -o CMakeFiles/ei.dir/src/ei_button.c.s
+>>>>>>> refs/remotes/origin/master
 
 CMakeFiles/ei.dir/src/ei_event.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/src/ei_event.c.o: ../src/ei_event.c
 CMakeFiles/ei.dir/src/ei_event.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ei.dir/src/ei_event.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_event.c.o -MF CMakeFiles/ei.dir/src/ei_event.c.o.d -o CMakeFiles/ei.dir/src/ei_event.c.o -c /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_event.c
 
@@ -250,6 +408,32 @@ CMakeFiles/ei.dir/src/ei_fct_annexes.c.i: cmake_force
 CMakeFiles/ei.dir/src/ei_fct_annexes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_fct_annexes.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/src/ei_fct_annexes.c -o CMakeFiles/ei.dir/src/ei_fct_annexes.c.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ei.dir/src/ei_event.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_event.c.o -MF CMakeFiles/ei.dir/src/ei_event.c.o.d -o CMakeFiles/ei.dir/src/ei_event.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_event.c
+
+CMakeFiles/ei.dir/src/ei_event.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_event.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_event.c > CMakeFiles/ei.dir/src/ei_event.c.i
+
+CMakeFiles/ei.dir/src/ei_event.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_event.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_event.c -o CMakeFiles/ei.dir/src/ei_event.c.s
+
+CMakeFiles/ei.dir/src/ei_toplevel.c.o: CMakeFiles/ei.dir/flags.make
+CMakeFiles/ei.dir/src/ei_toplevel.c.o: ../src/ei_toplevel.c
+CMakeFiles/ei.dir/src/ei_toplevel.c.o: CMakeFiles/ei.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ei.dir/src/ei_toplevel.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/src/ei_toplevel.c.o -MF CMakeFiles/ei.dir/src/ei_toplevel.c.o.d -o CMakeFiles/ei.dir/src/ei_toplevel.c.o -c /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_toplevel.c
+
+CMakeFiles/ei.dir/src/ei_toplevel.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ei.dir/src/ei_toplevel.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_toplevel.c > CMakeFiles/ei.dir/src/ei_toplevel.c.i
+
+CMakeFiles/ei.dir/src/ei_toplevel.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ei.dir/src/ei_toplevel.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_toplevel.c -o CMakeFiles/ei.dir/src/ei_toplevel.c.s
+>>>>>>> refs/remotes/origin/master
 
 # Object files for target ei
 ei_OBJECTS = \
@@ -265,7 +449,11 @@ ei_OBJECTS = \
 "CMakeFiles/ei.dir/src/ei_frame_t.c.o" \
 "CMakeFiles/ei.dir/src/ei_button.c.o" \
 "CMakeFiles/ei.dir/src/ei_event.c.o" \
+<<<<<<< HEAD
 "CMakeFiles/ei.dir/src/ei_fct_annexes.c.o"
+=======
+"CMakeFiles/ei.dir/src/ei_toplevel.c.o"
+>>>>>>> refs/remotes/origin/master
 
 # External object files for target ei
 ei_EXTERNAL_OBJECTS =
@@ -282,10 +470,17 @@ libei.a: CMakeFiles/ei.dir/src/ei_interface.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_frame_t.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_button.c.o
 libei.a: CMakeFiles/ei.dir/src/ei_event.c.o
+<<<<<<< HEAD
 libei.a: CMakeFiles/ei.dir/src/ei_fct_annexes.c.o
 libei.a: CMakeFiles/ei.dir/build.make
 libei.a: CMakeFiles/ei.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libei.a"
+=======
+libei.a: CMakeFiles/ei.dir/src/ei_toplevel.c.o
+libei.a: CMakeFiles/ei.dir/build.make
+libei.a: CMakeFiles/ei.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libei.a"
+>>>>>>> refs/remotes/origin/master
 	$(CMAKE_COMMAND) -P CMakeFiles/ei.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ei.dir/link.txt --verbose=$(VERBOSE)
 
@@ -298,6 +493,10 @@ CMakeFiles/ei.dir/clean:
 .PHONY : CMakeFiles/ei.dir/clean
 
 CMakeFiles/ei.dir/depend:
+<<<<<<< HEAD
 	cd /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0 /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0 /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0 /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0 /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles/ei.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> refs/remotes/origin/master
 .PHONY : CMakeFiles/ei.dir/depend
 

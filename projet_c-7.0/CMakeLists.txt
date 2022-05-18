@@ -99,7 +99,11 @@ set(LIB_EI_SOURCES
 	${SRC}/ei_frame_t.c
 	${SRC}/ei_button.c
 	${SRC}/ei_event.c
+<<<<<<< HEAD
 	${SRC}/ei_fct_annexes.c
+=======
+	${SRC}/ei_toplevel.c
+>>>>>>> refs/remotes/origin/master
 	)
 
 add_library(ei STATIC			${LIB_EI_SOURCES})

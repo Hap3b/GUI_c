@@ -11,12 +11,17 @@
 typedef struct event_bind {
         ei_eventtype_t*  eventtype;
         ei_widget_t*    widget;
+<<<<<<< HEAD
         ei_tag_t*        tag;
+=======
+        ei_tag_t        tag;
+>>>>>>> refs/remotes/origin/master
         ei_callback_t   callback;
         void*           user_param;
         struct event_bind*      next;
 }event_bind;
 
+<<<<<<< HEAD
 /**
  * @brief Select the pick_color in the offscreen
  *
@@ -50,6 +55,14 @@ event_bind* event_recherche(ei_event_t* event);
  *
  * @param       frame           Frame to configure by default.
  */
+=======
+ei_color_t recherche_pick_color(int x, int y);
+
+ei_callback_t addr_boutton_origin();
+
+event_bind* event_recherche(ei_event_t* event, ei_widget_t** widget);
+
+>>>>>>> refs/remotes/origin/master
 ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
                                         struct ei_event_t*	event,
                                         void*			user_param);

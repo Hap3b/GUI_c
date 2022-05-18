@@ -48,19 +48,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /snap/clion/190/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
 RM = /snap/clion/190/bin/cmake/linux/bin/cmake -E rm -f
+=======
+CMAKE_COMMAND = /snap/clion-2022.1/bin/cmake/linux/bin/cmake
+
+# The command to remove a file.
+RM = /snap/clion-2022.1/bin/cmake/linux/bin/cmake -E rm -f
+>>>>>>> refs/remotes/origin/master
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release
+=======
+CMAKE_SOURCE_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release
+>>>>>>> refs/remotes/origin/master
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +82,11 @@ CMAKE_BINARY_DIR = /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	/snap/clion/190/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+	/snap/clion-2022.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+>>>>>>> refs/remotes/origin/master
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +96,11 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	/snap/clion/190/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	/snap/clion-2022.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> refs/remotes/origin/master
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +109,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles 0
+>>>>>>> refs/remotes/origin/master
 .PHONY : all
 
 # The main clean target
@@ -270,6 +298,7 @@ src/ei_application.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_application.c.s
 .PHONY : src/ei_application.c.s
 
+<<<<<<< HEAD
 src/ei_button.o: src/ei_button.c.o
 .PHONY : src/ei_button.o
 
@@ -294,6 +323,8 @@ src/ei_button.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.s
 .PHONY : src/ei_button.c.s
 
+=======
+>>>>>>> refs/remotes/origin/master
 src/ei_draw.o: src/ei_draw.c.o
 .PHONY : src/ei_draw.o
 
@@ -342,6 +373,7 @@ src/ei_event.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_event.c.s
 .PHONY : src/ei_event.c.s
 
+<<<<<<< HEAD
 src/ei_fct_annexes.o: src/ei_fct_annexes.c.o
 .PHONY : src/ei_fct_annexes.o
 
@@ -366,6 +398,8 @@ src/ei_fct_annexes.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_fct_annexes.c.s
 .PHONY : src/ei_fct_annexes.c.s
 
+=======
+>>>>>>> refs/remotes/origin/master
 src/ei_frame_t.o: src/ei_frame_t.c.o
 .PHONY : src/ei_frame_t.o
 
@@ -771,18 +805,24 @@ help:
 	@echo "... src/ei_application.o"
 	@echo "... src/ei_application.i"
 	@echo "... src/ei_application.s"
+<<<<<<< HEAD
 	@echo "... src/ei_button.o"
 	@echo "... src/ei_button.i"
 	@echo "... src/ei_button.s"
+=======
+>>>>>>> refs/remotes/origin/master
 	@echo "... src/ei_draw.o"
 	@echo "... src/ei_draw.i"
 	@echo "... src/ei_draw.s"
 	@echo "... src/ei_event.o"
 	@echo "... src/ei_event.i"
 	@echo "... src/ei_event.s"
+<<<<<<< HEAD
 	@echo "... src/ei_fct_annexes.o"
 	@echo "... src/ei_fct_annexes.i"
 	@echo "... src/ei_fct_annexes.s"
+=======
+>>>>>>> refs/remotes/origin/master
 	@echo "... src/ei_frame_t.o"
 	@echo "... src/ei_frame_t.i"
 	@echo "... src/ei_frame_t.s"

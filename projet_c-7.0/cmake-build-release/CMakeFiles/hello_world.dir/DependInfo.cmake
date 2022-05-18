@@ -8,12 +8,20 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+<<<<<<< HEAD
   "/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/tests/hello_world.c" "CMakeFiles/hello_world.dir/tests/hello_world.c.o" "gcc" "CMakeFiles/hello_world.dir/tests/hello_world.c.o.d"
+=======
+  "/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/tests/hello_world.c" "CMakeFiles/hello_world.dir/tests/hello_world.c.o" "gcc" "CMakeFiles/hello_world.dir/tests/hello_world.c.o.d"
+>>>>>>> refs/remotes/origin/master
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+<<<<<<< HEAD
   "/home/hb/Ensimag/C/Projet-C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles/ei.dir/DependInfo.cmake"
+=======
+  "/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-release/CMakeFiles/ei.dir/DependInfo.cmake"
+>>>>>>> refs/remotes/origin/master
   )
 
 # Fortran module output directory.
