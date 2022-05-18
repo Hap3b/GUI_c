@@ -277,26 +277,26 @@ void			ei_toplevel_configure		(ei_widget_t*		widget,
         }
         if (color != NULL)
         {
-                toplevel->color = color;
+                toplevel->color = *color;
         }
         if (border_width != NULL)
         {
-                toplevel-> border_width = border_width;
+                toplevel-> border_width = *border_width;
         }
         if (title != NULL)
         {
-                toplevel->title = title;
+                toplevel->title = *title;
         }
         if (closable != NULL)
         {
-                toplevel->closable = closable;
+                toplevel->closable = *closable;
         }
         if (resizable != NULL)
         {
-                toplevel->resizable = resizable;
+                toplevel->resizable = *resizable;
         }
         if (min_size != NULL)
         {
-                toplevel->min_size = min_size;
+                toplevel->min_size = *min_size;
         }
 }
