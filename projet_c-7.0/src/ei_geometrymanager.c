@@ -4,6 +4,7 @@
 
 #include<ei_widget.h>
 #include<ei_geometrymanager.h>
+#include <ei_toplevel.h>
 static ei_geometrymanager_t* geometrymanager_cree = NULL;
 
 typedef struct ei_geometry_placeur_t {
@@ -227,6 +228,12 @@ void			ei_place			(ei_widget_t*		widget,
         placeur_widget -> manager = &geom_placeur_t;
         widget -> geom_params = (ei_geometry_param_t *)placeur_widget;
         ei_runfunc_placeur_t(widget);
+        if (strcmp(widget->wclass->name, "toplevel") == 0 && ((ei_toplevel_t*) widget)->closable == EI_TRUE) {
+                ei_anchor_t	button_anchor	= ei_anc_northwest;
+                int           button_x    = 10;
+                int           button_y    = 20;
+                ei_place((widget->children_head), &button_anchor, &button_x, &button_y, NULL, NULL, NULL, NULL, NULL, NULL);
+        }
 
 }
 

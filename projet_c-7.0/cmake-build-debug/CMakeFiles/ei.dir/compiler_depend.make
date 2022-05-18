@@ -558,7 +558,9 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: ../src/ei_geometrymanager.c \
   ../include/hw_interface.h \
   ../include/ei_widgetclass.h \
   ../include/ei_geometrymanager.h \
-  ../include/ei_widget.h
+  ../include/ei_widget.h \
+  ../include/ei_toplevel.h \
+  ../include/ei_widgetclass.h
 
 CMakeFiles/ei.dir/src/ei_interface.c.o: ../src/ei_interface.c \
   /usr/include/stdc-predef.h

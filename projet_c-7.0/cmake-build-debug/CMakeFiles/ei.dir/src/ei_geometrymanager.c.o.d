@@ -75,4 +75,6 @@ CMakeFiles/ei.dir/src/ei_geometrymanager.c.o: \
  /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/hw_interface.h \
  /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h \
  /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
- /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_toplevel.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h
