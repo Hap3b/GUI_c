@@ -17,8 +17,8 @@ void    arc           (ei_point_t*     centre,
                                                 ei_linked_point_t** fin)
 {
         if(*pre_angle > *deu_angle) {
-                for (int i = 0; i <= 100; i++) {
-                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 100;
+                for (int i = 0; i <= 10; i++) {
+                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 10;
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
                         long oui = lround((float) *rayon * cos(pas));
                         nv_point2->x = centre->x + (int) oui;
@@ -34,8 +34,8 @@ void    arc           (ei_point_t*     centre,
         }
         else
         {
-                for (int i = 0; i <= 100; i++) {
-                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 100;
+                for (int i = 0; i <= 10; i++) {
+                        double pas = (double) *pre_angle + i * (double) (*deu_angle - *pre_angle) / 10;
                         ei_point_t *nv_point2 = malloc(sizeof(ei_point_t));
                         long oui = lround((float) *rayon * cos(pas));
                         nv_point2->x = centre->x + (int) oui;
@@ -100,6 +100,7 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin2-> next = malloc(sizeof (ei_linked_point_t));
                         fin2 -> next -> point.x = rectangle->size.width -2*h + fin2 ->point .x;
                         fin2->next->point.y = fin2->point.y;
+                        fin2->next->next = NULL;
                         *cadre = deb;
                         break;
                 case 1:
@@ -128,6 +129,7 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin2-> next = malloc(sizeof (ei_linked_point_t));
                         fin2 -> next -> point.x = fin2 ->point .x - rectangle->size.width +2*h ;
                         fin2->next->point.y = fin2->point.y;
+                        fin2 -> next->next =NULL;
                         *cadre = deb;
 
 
@@ -171,6 +173,7 @@ void       rounded_frame              (ei_rect_t*     rectangle,
                         fin4 = fin4 -> next;
                         fin5 = fin4;
                         arc(centre_r,rayon,zero,pii,&fin4,&fin5 );
+                        fin5->next = NULL;
 
                         *cadre = deb;
         }
@@ -243,19 +246,18 @@ void	ei_button_drawfunc_t		(struct ei_widget_t*	widget,
         hw_surface_lock(surface);
         hw_surface_lock(pick_surface);
 
+
         if (button->relief == ei_relief_raised) {
-                partie = 0;
                 ei_draw_polygon(surface, cadre_haut, *clair,clipper);
                 ei_draw_polygon(surface, cadre_bas, *sombre,clipper);
         } else
         {
-                ei_draw_polygon(surface, cadre_haut, *sombre,clipper);
                 ei_draw_polygon(surface, cadre_bas, *clair,clipper);
+                ei_draw_polygon(surface, cadre_haut, *sombre,clipper);
         }
 
         ei_draw_polygon(pick_surface, cadre, *(widget->pick_color),clipper);
         ei_draw_polygon(surface, cadre, button->color ,clipper);
-
         hw_surface_unlock(surface);
         hw_surface_unlock(pick_surface);
 }
@@ -310,17 +312,17 @@ ei_bool_t	boutton_origin  	(ei_widget_t*		widget,
                                           void*			user_param){
 
         ei_button_t* button = (ei_button_t*) widget;
+        ei_relief_t relief_act;
         if ((button ->relief) == ei_relief_raised)
         {
-                button ->relief = ei_relief_sunken;
+                relief_act = ei_relief_sunken;
         }
         else
         {
-                ei_relief_t base = ei_relief_raised;
-                button ->relief = base;
+                relief_act = ei_relief_raised;
         }
-        ei_button_drawfunc_t(widget, ei_app_root_surface(), addr_surface_cache(), &(widget->screen_location));
-        hw_surface_update_rects(ei_app_root_surface(), NULL);
+        ei_button_configure(widget, NULL, NULL, NULL, NULL,&relief_act, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+        ei_button_drawfunc_t(widget, ei_app_root_surface(), addr_surface_cache(), NULL);
         return EI_FALSE;
 }
 

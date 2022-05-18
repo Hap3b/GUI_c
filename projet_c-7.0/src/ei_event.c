@@ -106,8 +106,15 @@ ei_bool_t widget_concerne(event_bind* lien_event,ei_event_t* event)
         }
         else
         {
-                ei_color_t pick_color = recherche_pick_color(event ->param.mouse.where.x, event -> param.mouse.where.y);
-                return (comp_color(&pick_color, lien_event ->widget ->pick_color));
+            if(lien_event->widget != NULL) {
+                ei_color_t pick_color = recherche_pick_color(event->param.mouse.where.x, event->param.mouse.where.y);
+                return (comp_color(&pick_color, lien_event->widget->pick_color));
+            }
+            else
+            {
+                ei_color_t pick_color = recherche_pick_color(event->param.mouse.where.x, event->param.mouse.where.y);
+                return strcmp(lien_event->tag, )
+            }
         }
 }
 
