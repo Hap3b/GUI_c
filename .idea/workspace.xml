@@ -23,9 +23,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9fc4179-ea8b-4ef0-9583-19c243a8c495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/include/ei_toplevel.h" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/include/ei_toplevel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_toplevel.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_toplevel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_c-7.0/src/ei_widget.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/src/ei_widget.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_c-7.0/tests/hello_world.c" beforeDir="false" afterPath="$PROJECT_DIR$/projet_c-7.0/tests/hello_world.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,25 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "cmake.loaded.for.project": "true",
-    "last_opened_file_path": "/home/axel/Devoirs/PROJETTTT/projet-c",
-    "settings.editor.selected.configurable": "CMakeSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cmake.loaded.for.project&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/axel/Downloads/projet-c-hugo2/projet_c-7.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="CMake Application.hello_world">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/projet_c-7.0" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -158,7 +151,8 @@
       <workItem from="1652381848467" duration="4480000" />
       <workItem from="1652457252402" duration="598000" />
       <workItem from="1652542729752" duration="259000" />
-      <workItem from="1652821944366" duration="15265000" />
+      <workItem from="1652821944366" duration="19878000" />
+      <workItem from="1652843190156" duration="78000" />
     </task>
     <servers />
   </component>
@@ -188,6 +182,11 @@
           <url>file://$PROJECT_DIR$/projet_c-7.0/src/ei_toplevel.c</url>
           <line>77</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/projet_c-7.0/tests/hello_world.c</url>
+          <line>64</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -53,10 +53,10 @@ RM = /snap/clion-2022.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0
+CMAKE_SOURCE_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug
+CMAKE_BINARY_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug
 
 # Utility rule file for doc.
 
@@ -67,7 +67,7 @@ include CMakeFiles/doc.dir/compiler_depend.make
 include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
-	cd /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 && doxygen /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/docs/doxygen.cfg
+	cd /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0 && doxygen /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/docs/doxygen.cfg
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/doc.dir/clean:
 .PHONY : CMakeFiles/doc.dir/clean
 
 CMakeFiles/doc.dir/depend:
-	cd /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0 /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0 /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0 /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc.dir/depend
 

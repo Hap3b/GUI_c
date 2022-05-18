@@ -1,8 +1,8 @@
 CMakeFiles/ei.dir/src/ei_widget.c.o: \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/src/ei_widget.c \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/src/ei_widget.c \
  /usr/include/stdc-predef.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widget.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_draw.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_draw.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -17,7 +17,7 @@ CMakeFiles/ei.dir/src/ei_widget.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_types.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_types.h \
  /usr/include/SDL2/SDL_keycode.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -72,11 +72,16 @@ CMakeFiles/ei.dir/src/ei_widget.c.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
  /usr/include/SDL2/SDL_scancode.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/hw_interface.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widgetclass.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_variable_globale.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widget.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_application.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_frame_t.h \
- /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/include/ei_widgetclass.h
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/hw_interface.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_variable_globale.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_geometrymanager.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widget.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_event.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_application.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_frame_t.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_widgetclass.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_event_2.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_event.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_button.h \
+ /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/include/ei_toplevel.h

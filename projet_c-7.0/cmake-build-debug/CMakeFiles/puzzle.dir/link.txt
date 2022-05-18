@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/puzzle.dir/tests/puzzle.c.o -o puzzle  libei.a ../_x11/libeibase64.a -L/home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 
+/usr/bin/c++ -g -rdynamic CMakeFiles/puzzle.dir/tests/puzzle.c.o -o puzzle  libei.a ../_x11/libeibase64.a -L/home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/_x11 -lfreeimage -lSDL2 -lSDL2_ttf -lSDL2_gfx -lm 

@@ -57,10 +57,10 @@ RM = /snap/clion-2022.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0
+CMAKE_SOURCE_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug
+CMAKE_BINARY_DIR = /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/Projet_C/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axel/Devoirs/PROJETTTT/projet-c/projet_c-7.0/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -270,6 +270,30 @@ src/ei_application.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_application.c.s
 .PHONY : src/ei_application.c.s
 
+src/ei_button.o: src/ei_button.c.o
+.PHONY : src/ei_button.o
+
+# target to build an object file
+src/ei_button.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.o
+.PHONY : src/ei_button.c.o
+
+src/ei_button.i: src/ei_button.c.i
+.PHONY : src/ei_button.i
+
+# target to preprocess a source file
+src/ei_button.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.i
+.PHONY : src/ei_button.c.i
+
+src/ei_button.s: src/ei_button.c.s
+.PHONY : src/ei_button.s
+
+# target to generate assembly for a file
+src/ei_button.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_button.c.s
+.PHONY : src/ei_button.c.s
+
 src/ei_draw.o: src/ei_draw.c.o
 .PHONY : src/ei_draw.o
 
@@ -413,6 +437,30 @@ src/ei_parser.s: src/ei_parser.c.s
 src/ei_parser.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_parser.c.s
 .PHONY : src/ei_parser.c.s
+
+src/ei_toplevel.o: src/ei_toplevel.c.o
+.PHONY : src/ei_toplevel.o
+
+# target to build an object file
+src/ei_toplevel.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_toplevel.c.o
+.PHONY : src/ei_toplevel.c.o
+
+src/ei_toplevel.i: src/ei_toplevel.c.i
+.PHONY : src/ei_toplevel.i
+
+# target to preprocess a source file
+src/ei_toplevel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_toplevel.c.i
+.PHONY : src/ei_toplevel.c.i
+
+src/ei_toplevel.s: src/ei_toplevel.c.s
+.PHONY : src/ei_toplevel.s
+
+# target to generate assembly for a file
+src/ei_toplevel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ei.dir/build.make CMakeFiles/ei.dir/src/ei_toplevel.c.s
+.PHONY : src/ei_toplevel.c.s
 
 src/ei_types.o: src/ei_types.cpp.o
 .PHONY : src/ei_types.o
@@ -723,6 +771,9 @@ help:
 	@echo "... src/ei_application.o"
 	@echo "... src/ei_application.i"
 	@echo "... src/ei_application.s"
+	@echo "... src/ei_button.o"
+	@echo "... src/ei_button.i"
+	@echo "... src/ei_button.s"
 	@echo "... src/ei_draw.o"
 	@echo "... src/ei_draw.i"
 	@echo "... src/ei_draw.s"
@@ -741,6 +792,9 @@ help:
 	@echo "... src/ei_parser.o"
 	@echo "... src/ei_parser.i"
 	@echo "... src/ei_parser.s"
+	@echo "... src/ei_toplevel.o"
+	@echo "... src/ei_toplevel.i"
+	@echo "... src/ei_toplevel.s"
 	@echo "... src/ei_types.o"
 	@echo "... src/ei_types.i"
 	@echo "... src/ei_types.s"
