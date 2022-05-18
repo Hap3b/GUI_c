@@ -196,9 +196,9 @@ void			ei_draw_text		(ei_surface_t		surface,
         if (font == NULL){
                 font = ei_default_font;
         }
-        ei_color_t* color_init = &color;
+        /*ei_color_t* color_init = &color;
         char** text_init = (char **) &text;
-        ei_font_t* font_init = &font;
+        ei_font_t* font_init = &font;*/
         ei_surface_t surfa_text = hw_text_create_surface(text, font, color);
         hw_surface_lock(surfa_text);
         int width;

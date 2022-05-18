@@ -85,7 +85,7 @@ void	ei_frame_drawfunc_t		(struct ei_widget_t*	widget,
                              where_text,
                              ((ei_frame_t *) widget)->title,
                              ((ei_frame_t *) widget)->title_fonte,
-                             ((ei_frame_t *) widget)->color,
+                             ((ei_frame_t *) widget)->color_title,
                              clipper);
         }
 

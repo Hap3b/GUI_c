@@ -24,10 +24,10 @@ ei_surface_t addr_surface_cache(){
 
 void ei_app_create(ei_size_t main_window_size, ei_bool_t fullscreen)
 {
+        hw_init();
         ei_widgetclass_register(addr_frame());
         ei_widgetclass_register(addr_button());
         ei_geometrymanager_register(addr_geom_placeur_t());
-        hw_init();
         racine = hw_create_window(main_window_size, fullscreen);
         surface_cache = hw_surface_create(racine, main_window_size, EI_FALSE);
 }
