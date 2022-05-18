@@ -110,6 +110,10 @@ void			ei_place			(ei_widget_t*		widget,
         struct ei_geometry_placeur_t* placeur_widget = malloc(sizeof(struct ei_geometry_placeur_t));
         ei_anchor_t* base = malloc(sizeof(ei_anchor_t));
         *base = ei_anc_northwest;
+        int * nv_height = malloc(sizeof(int));
+        *nv_height = widget->parent->screen_location.size.height/10;
+        int * nv_width = malloc(sizeof(int));
+        *nv_width = widget->parent->screen_location.size.width/10;
         float* zero = malloc(sizeof(float));
         *zero = 0;
         if (anchor != NULL)
@@ -143,7 +147,9 @@ void			ei_place			(ei_widget_t*		widget,
         {
             if (rel_width == NULL)
             {
-                    placeur_widget -> width = &(widget -> requested_size.width);
+                    if (widget->requested_size.width == 0) {
+                            *placeur_widget->width = widget->parent->screen_location.size.width/10;
+                    } else {placeur_widget->width = &(widget->requested_size.width);}
                     placeur_widget -> rel_width = zero;
             }
             else
@@ -156,12 +162,16 @@ void			ei_place			(ei_widget_t*		widget,
         {
                 if (rel_width == NULL)
                 {
-                        placeur_widget->width = &(widget->requested_size.width);
+                        if (widget->requested_size.width == 0) {
+                                placeur_widget->width = nv_width;
+                        } else {placeur_widget->width = &(widget->requested_size.width);}
                         placeur_widget->rel_width = zero;
                 }
                 else
                 {
-                        placeur_widget->width = &(widget->requested_size.width);
+                        if (widget->requested_size.width == 0) {
+                                placeur_widget->width = nv_width;
+                        } else {placeur_widget->width = &(widget->requested_size.width);}
                         placeur_widget->rel_width = rel_width;
                 }
         }
@@ -170,7 +180,9 @@ void			ei_place			(ei_widget_t*		widget,
         {
                 if (rel_height == NULL)
                 {
-                        placeur_widget -> height = &(widget -> requested_size.height);
+                        if (widget->requested_size.height == 0) {
+                                placeur_widget->height = nv_height;
+                        } else {placeur_widget->height = &(widget->requested_size.height);}
                         placeur_widget -> rel_height = zero;
                 }
                 else
@@ -183,11 +195,15 @@ void			ei_place			(ei_widget_t*		widget,
         {
                 if (rel_height == NULL)
                 {
-                        placeur_widget->height = &(widget->requested_size.height);
+                        if (widget->requested_size.height == 0) {
+                                placeur_widget->height = nv_height;
+                        } else {placeur_widget->height = &(widget->requested_size.height);}
                         placeur_widget->rel_height = zero;
                 } else
                 {
-                        placeur_widget->height = &(widget->requested_size.height);
+                        if (widget->requested_size.height == 0) {
+                                placeur_widget->height = nv_height;
+                        } else {placeur_widget->height = &(widget->requested_size.height);}
                         placeur_widget->rel_height = rel_height;
                 }
         }

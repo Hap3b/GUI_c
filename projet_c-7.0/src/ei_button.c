@@ -293,8 +293,8 @@ void	ei_button_setdefaultsfunc_t	(struct ei_widget_t*	button)
         button_bis -> user_param = NULL;
 
         button -> wclass = &classe_button;
-        button->requested_size.height = 540; /* Half screen on a 1920x1080 screen*/
-        button->requested_size.width = 960;
+        button->requested_size.height = 0; /* Half screen on a 1920x1080 screen*/
+        button->requested_size.width = 0;
         button ->user_data = NULL;
         button-> destructor = NULL;
         button->parent = NULL;
